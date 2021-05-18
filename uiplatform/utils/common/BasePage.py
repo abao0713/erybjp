@@ -12,14 +12,17 @@ from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.select import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import WebDriverException
 from appium.webdriver.common.mobileby import MobileBy
-from .exceptions import PageElementError
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support.expected_conditions import presence_of_element_located
+from .exceptions import PageElementError, PageSelectException
 from .exceptions import FindElementTypesError
-from poium.common import logging
+from flask import current_app as app
 from func_timeout import func_set_timeout
 from func_timeout.exceptions import FunctionTimedOut
 
@@ -121,18 +124,18 @@ class Element(object):
                 elems = []
 
             if len(elems) == 1:
-                logging.info("✅ Find element: {by}={value} ".format(
+                app.logger.info("✅ Find element: {by}={value} ".format(
                     by=elem[0], value=elem[1]))
                 break
             elif len(elems) > 1:
-                logging.info("❓ Find {n} elements through: {by}={value}".format(
+                app.logger.info("❓ Find {n} elements through: {by}={value}".format(
                     n=len(elems), by=elem[0], value=elem[1]))
                 break
             else:
                 sleep(1)
         else:
             error_msg = "❌ Find 0 elements through: {by}={value}".format(by=elem[0], value=elem[1])
-            logging.error(error_msg)
+            app.logger.error(error_msg)
             raise NoSuchElementException(error_msg)
 
     def __get_element(self, by, value):
@@ -225,7 +228,7 @@ class Element(object):
     def clear(self):
         """清空输入框中涉及到的文本，基本每次输入都需要调用此方法"""
         elem = self.__get_element(self.k, self.v)
-        logging.info("clear element: {}".format(self.desc))
+        app.logger.info("clear element: {}".format(self.desc))
         elem.clear()
 
     def send_keys(self, value):
@@ -233,19 +236,19 @@ class Element(object):
         输入信息value
         """
         elem = self.__get_element(self.k, self.v)
-        logging.info("🖋 input element: {}".format(self.desc))
+        app.logger.info("🖋 input element: {}".format(self.desc))
         elem.send_keys(value)
 
     def click(self):
         """点击操作"""
         elem = self.__get_element(self.k, self.v)
-        logging.info("🖱 click element: {}".format(self.desc))
+        app.logger.info("🖱 click element: {}".format(self.desc))
         elem.click()
 
     def submit(self):
         """表单提交操作"""
         elem = self.__get_element(self.k, self.v)
-        logging.info("submit element: {}".format(self.desc))
+        app.logger.info("submit element: {}".format(self.desc))
         elem.submit()
 
     @property
@@ -497,7 +500,7 @@ class Elements(object):
             elems = context.find_elements(*self.locator)
         except NoSuchElementException:
             elems = []
-        logging.info("✨ Find {n} elements through: {by}={value}, describe:{desc}".format(
+        app.logger.info("✨ Find {n} elements through: {by}={value}, describe:{desc}".format(
             n=len(elems), by=self.k, value=self.v, desc=self.describe))
         return elems
 
@@ -520,3 +523,72 @@ class Elements(object):
         if not elems:
             raise PageElementError("Can't set value, no elements found")
         [elem.send_keys(value) for elem in elems]
+
+
+class PageSelect(object):
+    """
+    Processing select drop-down selection box
+    """
+
+    def __init__(self, select_elem, value=None, text=None, index=None):
+        if value is not None:
+            Select(select_elem).select_by_value(value)
+        elif text is not None:
+            Select(select_elem).select_by_visible_text(text)
+        elif index is not None:
+            Select(select_elem).select_by_index(index)
+        else:
+            raise PageSelectException('"value" or "text" or "index" options can not be all empty.')
+
+
+class PageWait(object):
+    def __init__(self, elem, timeout=3):
+        """
+        等待元素可见
+        """
+        # 如果定义元素时没有找到元素，此处将继续查找元素，直至超时；
+        if not page_exist(elem):
+            elem = WebDriverWait(driver=elem.context, timeout=int(timeout - 0),
+                                 poll_frequency=0.5).until(presence_of_element_located(elem.locator))
+
+        # 找到元素后，才开始判断是否可见；
+        for i in range(timeout):
+            try:
+                if elem.is_displayed():
+                    break
+                else:
+                    sleep(1)
+            except:
+                sleep(1)
+        else:
+            raise TimeoutError("超时，元素不可见")
+
+
+class PageWaitDisappear(object):
+    def __init__(self, elem, timeout=3):
+        """
+        等待元素消失
+        """
+        try:
+            PageWait(elem)  # 指定时间内未出现，则判断元素不可见；若出现了，则循环等待判断元素不可见；
+        except:
+            return
+
+        for i in range(timeout):
+            try:
+                if elem.is_displayed():
+                    sleep(1)
+                else:
+                    return
+            except:
+                break
+        else:
+            raise TimeoutError('超时，元素仍可见')
+
+
+def page_exist(elem):
+    """返回元素是否存在"""
+    if type(elem).__name__ == 'WebElement':
+        return True
+    else:
+        return False

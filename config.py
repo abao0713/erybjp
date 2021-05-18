@@ -71,7 +71,7 @@ class Config(object):
 class DevelopmentConfig(Config):
     DEBUG = True
     MAIL_USE_TLS = True
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:305634841@127.0.0.1/flasken?charset=utf8"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/flasken?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
     @classmethod

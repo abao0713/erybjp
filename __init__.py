@@ -14,7 +14,7 @@ from logging.handlers import SMTPHandler
 from flask import Flask
 from config import config
 # from interface_platform.extensions import bootstrap, db, moment, ckeditor, mail, loginManager
-from uiplatform.extensions import db, cors
+from extensions import cors, db
 import os
 
 def create_app(config_name = None):
@@ -119,12 +119,7 @@ def register_extensions(app):
 
 def register_blueprints(app):
     # app.register_blueprint(auth, url_prefix = '/auth')
-    from uiplatform.routes.permissions import manage
-    app.register_blueprint(manage, url_prefix='/manage')
-    from uiplatform.routes.user import user
-    app.register_blueprint(user, url_prefix='/user')
-    from uiplatform.routes.rights_management import auth
-    app.register_blueprint(auth, url_prefix='/auth')
+    pass
 
 def register_shell_context(app):
     @app.shell_context_processor
