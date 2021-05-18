@@ -7,7 +7,7 @@
 #----------------------------
 
 
-from . import create_app
+from uiplatform import create_app
 app = create_app(config_name='development')
 from extensions import db
 db.create_all()

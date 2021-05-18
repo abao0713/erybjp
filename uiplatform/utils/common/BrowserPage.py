@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-# 
 #-------------------------------------------------------------------------------
-# Name:         Browser.py
+# Name:         BrowserPage.py
 # Description:  
 # Author:       yuanbaojun
 # Date:         2021/5/12
@@ -12,7 +12,6 @@ from time import sleep
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import NoAlertPresentException
-from selenium.common.exceptions import NoSuchElementException
 from appium.webdriver.common.touch_action import TouchAction as MobileTouchAction
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -452,13 +451,4 @@ class Page(PageObject):
             sleep(1)
         else:
             app.logger.info('页面未加载完成')
-
-
-
-
-
-
-
-
-
 

@@ -7,7 +7,7 @@
 #----------------------------
 
 
-from .Browser import Page
+from .BrowserPage import Page
 from .BasePage import Element
 from .BasePage import Elements
 from .BaseAssert import BaseAssert

@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-# 
 #-------------------------------------------------------------------------------
-# Name:         Baidu.py
+# Name:         config_object.py
 # Description:  
 # Author:       yuanbaojun
 # Date:         2021/5/18
 #----------------------------
-from ..logicobject.Baidudupage import baidu_page
 
-def baidu(text):
-    baidu_page.input.clear()
-    baidu_page.input.set_text(text)
-    baidu_page.button.click()
+
+class Browser:
+    # Default browser driver
+    driver = None
+
+    # Adds a border to the action element of the operation
+    show = True
 

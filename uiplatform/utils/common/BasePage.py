@@ -6,13 +6,11 @@
 # Date:         2021/5/12
 #----------------------------
 
-import warnings
 import platform
 from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.select import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
@@ -25,9 +23,9 @@ from .exceptions import FindElementTypesError
 from flask import current_app as app
 from func_timeout import func_set_timeout
 from func_timeout.exceptions import FunctionTimedOut
+from uiplatform.utils.data.config_object import Browser
 
 
-Browser = None
 # Map PageElement constructor arguments to webdriver locator enums
 LOCATOR_LIST = {
     # selenium
@@ -124,8 +122,8 @@ class Element(object):
                 elems = []
 
             if len(elems) == 1:
-                app.logger.info("✅ Find element: {by}={value} ".format(
-                    by=elem[0], value=elem[1]))
+                # app.logger.info("✅ Find element: {by}={value} ".format(by=elem[0], value=elem[1]))
+                print("✅ Find element: {by}={value} ".format(by=elem[0], value=elem[1]))
                 break
             elif len(elems) > 1:
                 app.logger.info("❓ Find {n} elements through: {by}={value}".format(
@@ -135,7 +133,8 @@ class Element(object):
                 sleep(1)
         else:
             error_msg = "❌ Find 0 elements through: {by}={value}".format(by=elem[0], value=elem[1])
-            app.logger.error(error_msg)
+            # app.logger.error(error_msg)
+            print(error_msg)
             raise NoSuchElementException(error_msg)
 
     def __get_element(self, by, value):
@@ -236,13 +235,15 @@ class Element(object):
         输入信息value
         """
         elem = self.__get_element(self.k, self.v)
-        app.logger.info("🖋 input element: {}".format(self.desc))
+        # app.logger.info("🖋 input element: {}".format(self.desc))
+        print("🖋 input element: {}".format(self.desc))
         elem.send_keys(value)
 
     def click(self):
         """点击操作"""
         elem = self.__get_element(self.k, self.v)
-        app.logger.info("🖱 click element: {}".format(self.desc))
+        # app.logger.info("🖱 click element: {}".format(self.desc))
+        print("🖱 click element: {}".format(self.desc))
         elem.click()
 
     def submit(self):
