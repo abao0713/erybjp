@@ -118,8 +118,9 @@ def register_extensions(app):
     # moment.init_app(app)
 
 def register_blueprints(app):
-    # app.register_blueprint(auth, url_prefix = '/auth')
-    pass
+    from uiplatform.router.run_testcase import user
+    app.register_blueprint(user, url_prefix = '/auth')
+
 
 def register_shell_context(app):
     @app.shell_context_processor
