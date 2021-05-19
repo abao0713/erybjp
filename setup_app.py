@@ -10,6 +10,7 @@
 from . import create_app
 app = create_app(config_name='development')
 from extensions import db
+from uiplatform.models.elemodel import UielementInfo
 db.create_all()
 url_map = app.url_map
 print(url_map)

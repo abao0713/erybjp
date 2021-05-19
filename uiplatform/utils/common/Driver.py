@@ -16,7 +16,7 @@ def browser():
     global driver
     options = webdriver.ChromeOptions()
     # 無頭
-    # options.add_argument('--headless')
+    options.add_argument('--headless')
     chrome_driver = r"D:\AutoTest\erybjp\uiplatform\utils\data\chromedriver.exe"
     driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
     return driver
