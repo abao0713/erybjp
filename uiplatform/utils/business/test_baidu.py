@@ -21,6 +21,7 @@ class TestBaidu:
         page.search_button.click()
         page.screenshots(path="uiplatform/utils/data/picture")
         page.get("http://www.51testing.com/html/60/n-3724060-2.html")
+        page.screenshots(path="uiplatform/utils/data/picture")
         BaiduPage(browser_close)
 
 

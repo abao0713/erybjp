@@ -21,7 +21,7 @@ def create_app(config_name = None):
     if config_name is None:
         config_name = os.environ.get('FLASK_CONFIG', 'development')
 
-    app = Flask('interface_platform')
+    app = Flask('erybjp', static_folder="uiplatform/utils/data/picture")
     app.config.from_object(config[config_name])
 
     register_logging(app)  # 注册日志处理器

@@ -144,7 +144,7 @@ class Page(PageObject):
         if path is None:
             path = os.getcwd()
         if filename is None:
-            filename = str(time.time()).split(".")[0] + ".png"
+            filename = str(time.time()*100000).split(".")[0] + ".png"
         file_path = os.path.join(path, filename)
         self.driver.save_screenshot(file_path)
 
