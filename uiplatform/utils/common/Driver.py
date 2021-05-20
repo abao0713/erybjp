@@ -9,7 +9,7 @@
 
 import pytest
 from selenium import webdriver
-
+from config import basedir
 
 @pytest.fixture(scope='session', autouse=True)
 def browser():
@@ -17,7 +17,9 @@ def browser():
     options = webdriver.ChromeOptions()
     # 無頭
     options.add_argument('--headless')
-    chrome_driver = r"D:\AutoTest\erybjp\uiplatform\utils\data\chromedriver.exe"
+    options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
+    a=basedir
+    chrome_driver = basedir+"\\"+r"uiplatform\utils\data\chromedriver.exe"
     driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
     return driver
 

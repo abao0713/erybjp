@@ -73,7 +73,7 @@ class PageObject(object):
         """
         root_uri = self.root_uri or ''
         self.driver.get(root_uri + uri)
-        self.driver.implicitly_wait(5)
+        self.driver.implicitly_wait(6)
 
 
 class Element(object):
