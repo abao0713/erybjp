@@ -13,6 +13,7 @@ from logging.handlers import TimedRotatingFileHandler
 from logging.handlers import SMTPHandler
 from flask import Flask
 from config import config
+from extensions import scheduler
 # from interface_platform.extensions import bootstrap, db, moment, ckeditor, mail, loginManager
 from extensions import cors, db
 import os
@@ -113,6 +114,8 @@ def register_extensions(app):
     db.app=app
     db.init_app(app=app)
     cors.init_app(app, resources=r'/*')
+    scheduler.init_app(app)
+    scheduler.start()
     # ckeditor.init_app(app)
     # mail.init_app(app)
     # moment.init_app(app)

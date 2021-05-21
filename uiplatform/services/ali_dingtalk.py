@@ -130,10 +130,19 @@ class DingtalkRobot(object):
                 return result
 
 
+def alidingcheck(filename, cur_time, title="巡检异常预警调试"):
+    url = "http://127.0.0.1:5000/data/picture/"+filename
+    text = f"#### 巡检异常预警调试\n> 热方式方式的的萨芬撒\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
+    DingtalkRobot().send_markdown(title, text, [])
+
+
+
+
 if __name__ == '__main__':
-    URL = "https://oapi.dingtalk.com/robot/send?access_token=05ac3092d2b9b50ab496f81b46010aeef79b66dcec1b399e461a0d1ff0d628c8"
-    SIGN = "SECf6c901d14cbe717898349897756972afc9adb9a665d775eb3d3e25ebf96eea90"
+    URL = "https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
+    SIGN = "SEC4cf8edcdeb0cd0066b4f42e005585c833ec119c642b0c5bf2881d39a221d4940"
     ding = DingtalkRobot(URL, SIGN)
-    a = "用例执行预警"
-    b="#### 测试用例执行告警\n> 执行完成统计结果失败10条，共运行35条用例，达到了告警阈值\n> ###### 2020-11-11 10:43:00提示，详情点击查看 [测试报告](http://autotest.codemao.cn/detail/202) \n"
+    a = "巡检异常预警调试"
+    b = "#### 巡检异常预警调试\n> 热方式方式的的萨芬撒\n> ###### 2025-11-11 10:43:00提示，详情点击查看 [预警截图](http://www.baidu.com) \n"
+    DingtalkRobot().send_markdown(a, b, [])
     print(ding.send_markdown(a,b,[]))

@@ -10,52 +10,41 @@ from time import strftime
 from random import randint
 from flask import Blueprint, jsonify, request
 from sqlalchemy import text
-import pytest
+import pytest, re, os
+from urllib.parse import unquote
+from threading import Thread
 user = Blueprint('user', __name__)
+cur_dir = os.path.dirname(__file__).split('server')[0]
 
 
+@user.route('/ui_test/run', methods=["POST"])
+def run_test():
+    args = request.json()
 
-# @user.route('/ui_test/run', methods=["POST"])
-# def test_adjjdjf():
-#     # pytest命令参数
-#     args = request.get_json()
-#     dir_time = strftime('%Y%m%d_%H%M%S')
-#     session_id = f'{dir_time}_{randint(10, 99)}'
-#     try:
-#         report_file = rf'uiplatform/utils/data/report/{session_id}/{dir_time}/report.html'
-#         pytest_args = [rf'--html={report_file}', '--self-contained-html', f'--reruns=1']
-#
-#         # 使用testsuite.yaml定义的用例运行
-#         parent_case_dir = rf'{product_path}/testcase/web/'
-#         if args.testsuite:
-#             suite_path = f'{parent_case_dir}{args.testsuite}'
-#             for testcase in get_yaml(suite_path)['testcase']:
-#                 if isinstance(testcase, list):
-#                     testcase = testcase[0]
-#                 pytest_args.append(parent_case_dir + testcase)  # 加入用例参数
-#         # 指定用例目录或用例文件运行
-#         elif dir:
-#             dir_list = dir.split(' ')
-#             for d in dir_list:
-#                 each_case_dir = parent_case_dir + d
-#                 pytest_args.append(each_case_dir)
-#         # 不定义testsuite和dir，使用默认目录运行
-#         else:
-#             pytest_args.append(parent_case_dir)
-#         # 添加用例标记
-#         if mark:
-#             pytest_args.append(f'-m {mark}')
-#         # 运行
-#         print(pytest_args)
-#         pytest.main(pytest_args)
-#     except:
-#         traceback.print_exc()
-#     finally:
-#     # 单个运行完成后，立即发送报告
-#         pass
-#     return jsonify(code=200, msg="ok", data='')
+    result = request.form
+    try:
+        if 'cmd' not in result:
+            raise Exception('请传入cmd参数')
+        else:
+            cmd = result['cmd']
+    except Exception as e:
+        return str(e)
+    print(cmd)
+    cmd = unquote(cmd)
+    print(cmd)
+    valid_re_list = [r'run_.*\.py', r'batch_run_.*\.py']
+    for valid_re in valid_re_list:
+        if re.findall(valid_re, cmd):
+            cmd = re.sub('python ', f'python {cur_dir}', cmd)  # 执行命令加入路径
+            print(cmd)
+            Thread(target=lambda: os.system('start ' + cmd)).start()
+            return '命令已下发'
+    else:
+        return '不支持该命令，请重新输入(当前仅支持%s)' % str(valid_re_list)
+
+
 
 @user.route('/ui_test/element_info', methods=["GET"])
 def test_adjjdjf():
-    pytest.main(["uiplatform/utils/business/"])
+    pytest.main(["uiplatform/utils/business/test_h5_normal.py"])
     return jsonify(code=200, msg="ok", data='')

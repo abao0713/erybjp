@@ -14,6 +14,17 @@ import logging
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
+    SCHEDULER_API_ENABLED = True
+    JOBS = [
+        {
+            'id': 'ybj001',  # 任务唯一ID
+            'func': 'uiplatform.services.scheduler:h5check_job',
+            # 执行任务的function名称，app.test 就是 app下面的`test.py` 文件，`shishi` 是方法名称。文件模块和方法之间用冒号":"，而不是用英文的"."
+            'args': '',  # 如果function需要参数，就在这里添加
+            'trigger': 'interval',
+            'seconds': 1800
+        }
+    ]
     SECRET_KEY = 'hard to guess string'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'

@@ -51,27 +51,27 @@ class GivequanPage(Page):
 # 定制课落地页龚绍来提供
 class LessonOrderPage(Page):
     """付费落地页"""
-    url = "https://partner.codemao.cn/entry"
-    search_element = Element(xpath="//a[contains(text(),'立即登录')]")
+    url = "https://marketing.codemao.cn/lesson-order/order?id=10"
+    search_element = Element(xpath="//button[contains(text(),'确认支付')]")
 
 
 
 class CommunityPage(Page):
     """社群进线落地页"""
-    url = "https://partner.codemao.cn/entry"
-    search_element = Element(xpath="//a[contains(text(),'立即登录')]")
+    url = "https://marketing.codemao.cn/community/order?sku=219702020001 "
+    search_element = Element(xpath="//button[contains(text(),'确认支付')]")
 
 
 
 class HiorderPage(Page):
     """PC落地页"""
-    url = "https://partner.codemao.cn/entry"
+    url = "https://hi.codemao.cn/ "
     search_element = Element(xpath="//a[contains(text(),'立即登录')]")
 
 
 
 class MorderPage(Page):
     """免费落地页"""
-    url = "https://partner.codemao.cn/entry"
-    search_element = Element(xpath="//a[contains(text(),'立即登录')]")
+    url = "https://m.codemao.cn/v9/"
+    search_element = Element(xpath="//button[contains(text(),'立即免费领取')]")
 

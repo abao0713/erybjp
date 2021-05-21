@@ -10,7 +10,7 @@ from uiplatform.utils import BaiduPage
 import pytest
 from uiplatform.utils.common.Driver import browser, browser_close
 
-@pytest.mark.test1
+@pytest.mark.skipif()
 class TestBaidu:
     """百度搜索测试用例"""
 

@@ -11,6 +11,11 @@ import pytest
 from selenium import webdriver
 from config import basedir
 
+
+def config_browser():
+    pass
+
+
 @pytest.fixture(scope='session', autouse=True)
 def browser():
     global driver

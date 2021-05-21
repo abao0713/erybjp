@@ -147,6 +147,7 @@ class Page(PageObject):
             filename = str(time.time()*100000).split(".")[0] + ".png"
         file_path = os.path.join(path, filename)
         self.driver.save_screenshot(file_path)
+        return filename
 
     def switch_to_app(self):
         """
