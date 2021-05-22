@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-# 
 #-------------------------------------------------------------------------------
-# Name:         test_baidu.py
+# Name:         baidu.py
 # Description:  
 # Author:       yuanbaojun
 # Date:         2021/5/18
