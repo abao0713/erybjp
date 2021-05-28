@@ -20,7 +20,7 @@ try:
 except AttributeError:
     JSONDecodeError = ValueError
 
-URL = "https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
+URL = "1https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
 SIGN = "SEC4cf8edcdeb0cd0066b4f42e005585c833ec119c642b0c5bf2881d39a221d4940"
 def is_not_null_and_blank_str(content):
     if content and content.strip():
@@ -130,19 +130,15 @@ class DingtalkRobot(object):
                 return result
 
 
-def alidingcheck(filename, cur_time, title="巡检异常预警调试"):
+def alidingcheck(filename, cur_time, page='', title="巡检异常预警"):
     url = "http://127.0.0.1:5000/data/picture/"+filename
-    text = f"#### 巡检异常预警调试\n> 热方式方式的的萨芬撒\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
+    text = f"#### {title}\n> 打开落地页地址{page} 探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
     DingtalkRobot().send_markdown(title, text, [])
 
 
 
 
 if __name__ == '__main__':
-    URL = "https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
-    SIGN = "SEC4cf8edcdeb0cd0066b4f42e005585c833ec119c642b0c5bf2881d39a221d4940"
-    ding = DingtalkRobot(URL, SIGN)
-    a = "巡检异常预警调试"
-    b = "#### 巡检异常预警调试\n> 热方式方式的的萨芬撒\n> ###### 2025-11-11 10:43:00提示，详情点击查看 [预警截图](http://www.baidu.com) \n"
-    DingtalkRobot().send_markdown(a, b, [])
-    print(ding.send_markdown(a,b,[]))
+    URL = "162193303881437.png"
+    cur_time = ''
+    alidingcheck(URL, cur_time=cur_time)

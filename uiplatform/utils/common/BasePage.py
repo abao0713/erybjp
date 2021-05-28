@@ -24,8 +24,9 @@ from flask import current_app as app
 from func_timeout import func_set_timeout
 from func_timeout.exceptions import FunctionTimedOut
 from uiplatform.utils.data.config_object import Browser
-
-
+from selenium import webdriver
+from config import basedir
+from uiplatform.utils.common.decorator import singleton
 # Map PageElement constructor arguments to webdriver locator enums
 LOCATOR_LIST = {
     # selenium
@@ -67,13 +68,13 @@ class PageObject(object):
         self.driver = driver
         self.root_uri = url if url else getattr(self.driver, 'url', None)
 
-    def get(self, uri):
+    def get(self, uri, headless=True, browser_name='chrome', is_mobile=True):
         """
         :param uri:  URI to GET, based off of the root_uri attribute.
         """
         root_uri = self.root_uri or ''
         self.driver.get(root_uri + uri)
-        self.driver.implicitly_wait(6)
+        self.driver.implicitly_wait(4)
 
 
 class Element(object):

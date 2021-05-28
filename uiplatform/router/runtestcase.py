@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-# 
 #-------------------------------------------------------------------------------
-# Name:         run_testcase.py
+# Name:         runtestcase.py
 # Description:  
 # Author:       yuanbaojun
 # Date:         2021/5/18
@@ -44,7 +44,9 @@ def run_test():
 
 
 
-@user.route('/ui_test/element_info', methods=["GET"])
-def test_adjjdjf():
-    pytest.main(["uiplatform/utils/business/test_h5_normal.py"])
+@user.route('/ui_test/test', methods=["GET"])
+def run_only_test():
+    pytest.main(["uiplatform/utils/business/test.py"])
     return jsonify(code=200, msg="ok", data='')
+
+

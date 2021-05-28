@@ -10,7 +10,11 @@
 import pytest
 from selenium import webdriver
 from config import basedir
+from uiplatform.services.proxy_server import ProxyServer
+from filelock import FileLock
 
+
+driver = None
 
 def config_browser():
     pass
@@ -19,13 +23,15 @@ def config_browser():
 @pytest.fixture(scope='session', autouse=True)
 def browser():
     global driver
-    options = webdriver.ChromeOptions()
-    # 無頭
-    options.add_argument('--headless')
-    options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
-    a=basedir
-    chrome_driver = basedir+"\\"+r"uiplatform\utils\data\chromedriver.exe"
-    driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
+    if driver is None:
+        options = webdriver.ChromeOptions()
+        # 無頭
+        options.add_argument('--headless')
+        # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
+        options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
+        chrome_driver = basedir+"\\"+r"uiplatform\utils\data\chromedriver.exe"
+        driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
+        print(driver)
     return driver
 
 

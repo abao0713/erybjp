@@ -121,7 +121,7 @@ def register_extensions(app):
     # moment.init_app(app)
 
 def register_blueprints(app):
-    from uiplatform.router.run_testcase import user
+    from uiplatform.router.runtestcase import user
     app.register_blueprint(user, url_prefix = '/auth')
 
 

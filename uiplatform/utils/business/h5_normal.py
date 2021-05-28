@@ -1,32 +1,36 @@
 # -*- coding: utf-8 -*-# 
 #-------------------------------------------------------------------------------
-# Name:         test_h5_normal.py
+# Name:         h5_normal.py
 # Description:  
 # Author:       yuanbaojun
 # Date:         2021/5/19
 #----------------------------
 import pytest, time
-from uiplatform.utils.common.Driver import browser, browser_close
+
+from uiplatform.utils.business.conftest import browser, browser_close
 from uiplatform.utils.logicobject.H5NormalPage import *
 from uiplatform.utils.common.BaseAssert import BaseAssert
 from uiplatform.services.ali_dingtalk import alidingcheck
 from selenium.common.exceptions import NoSuchElementException
 
-@pytest.mark.test
+
+
+
+
 class TestHinfo:
     """落地页巡检测试用例"""
 
-    def test_partnerpage(self, browser, browser_close):
+    def test_partnerpage(self, browser,browser_close):
         page = PartnerPage(browser)
         page.get(page.url)
-        try:
-            ele = page.search_element
-            BaseAssert().assert_text_in_elem("立即登录", ele)
-        except (NoSuchElementException, AssertionError):
-            print("页面元素找不到返回失败")
-            filename = page.screenshots(path="uiplatform/utils/data/picture")
-            cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-            alidingcheck(filename, cur_time)
+
+        ele = page.search_element
+        BaseAssert().assert_text_in_elem("立即登录", ele, mode="accurate")
+        # except (NoSuchElementException, AssertionError):
+        #     print("页面元素找不到返回失败")
+            # filename = page.screenshots(path="uiplatform/utils/data/picture")
+            # cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+            # alidingcheck(filename, cur_time, page=page.url)
         PartnerPage(browser_close)
 
 
@@ -144,4 +148,4 @@ class TestHinfo:
 
 
 if __name__ == '__main__':
-    pytest.main(["--html=report.html"])
+    pytest.main()
