@@ -69,6 +69,14 @@ class Config(object):
     EMAIL_RECEIVER = "305634841@qq.com,2870550420@qq.com"
     # 缓存设置
     CACHE_TYPE = "redis"
+
+    # UI自动化框架的参数配置动态化
+    BROWSER_NAME = "chrome"
+    HEADLESS = True
+    IS_MOBILE = True
+
+
+
     # 静态回调, 引入APP
     @staticmethod
     def init_app(app):

@@ -15,7 +15,7 @@ from ..common.BrowserPage import Page
 class PartnerPage(Page):
     """分销者落地页对象"""
     url = "https://partner.codemao.cn/entry"
-    search_element = Element(xpath="//a[contains(text(),'立即56登录')]")
+    search_element = Element(xpath="//a[contains(text(),'立即登录')]")
 
 
 class LbkMobilePage(Page):

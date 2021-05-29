@@ -13,10 +13,10 @@ from uiplatform.services.ali_dingtalk import alidingcheck
 from uiplatform.utils.common.BasePage import PageObject
 from uiplatform.utils.common.BrowserPage import Page
 from selenium import webdriver
-from config import basedir
+from config import basedir,Config
 
 
-
+driver = None
 
 # 用例失败时截图
 @pytest.mark.hookwrapper
@@ -62,9 +62,9 @@ def _capture_screenshot(path, filename=None):
 def browser():
     global driver
     if driver is None:
-        browser_name = "chrome"
-        headless = True
-        is_mobile = True
+        browser_name = Config.BROWSER_NAME
+        headless = Config.HEADLESS
+        is_mobile = Config.IS_MOBILE
         if browser_name == "chrome":
             options = webdriver.ChromeOptions()
             # 無頭
