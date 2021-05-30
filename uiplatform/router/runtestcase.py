@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-# 
+# -*- coding: utf-8 -*-#
 #-------------------------------------------------------------------------------
 # Name:         runtestcase.py
-# Description:  
+# Description:
 # Author:       yuanbaojun
 # Date:         2021/5/18
 #----------------------------
@@ -13,6 +13,9 @@ from sqlalchemy import text
 import pytest, re, os
 from urllib.parse import unquote
 from threading import Thread
+from config import basedir,Config
+
+
 user = Blueprint('user', __name__)
 cur_dir = os.path.dirname(__file__).split('server')[0]
 
@@ -46,7 +49,15 @@ def run_test():
 
 @user.route('/ui_test/test', methods=["GET"])
 def run_only_test():
-    pytest.main(["uiplatform/utils/business/test.py"])
+    pytest.main(["uiplatform/utils/business/test_check_web.py::TestHinfo"])
     return jsonify(code=200, msg="ok", data='')
 
-
+@user.route('/ui_test/test1', methods=["GET"])
+def run_only_test01():
+    pytest.main(["uiplatform/utils/business/test_check_web.py::TestHinfo1"])
+    return jsonify(code=200, msg="ok", data='')
+@user.route('/ui_test/t', methods=["GET"])
+def run_po_test():
+    Config.IS_MOBILE = not Config.IS_MOBILE
+    Config.HEADLESS = not Config.HEADLESS
+    return jsonify(code=200, msg="ok", data='')

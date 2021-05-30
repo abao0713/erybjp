@@ -1,14 +1,14 @@
-# -*- coding: utf-8 -*-# 
+# -*- coding: utf-8 -*-#
 #-------------------------------------------------------------------------------
 # Name:         proxy_server.py
-# Description:  
+# Description:
 # Author:       yuanbaojun
 # Date:         2021/5/27
 #----------------------------
 
 
 from selenium import webdriver
-from browsermobproxy import Server
+# from browsermobproxy import Server
 from selenium.webdriver.chrome.options import Options
 from config import basedir
 

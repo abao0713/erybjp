@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-# 
+# -*- coding: utf-8 -*-#
 #-------------------------------------------------------------------------------
 # Name:         elemodel.py
-# Description:  
+# Description:
 # Author:       yuanbaojun
 # Date:         2021/5/19
 #----------------------------
@@ -42,6 +42,7 @@ class Uicaseinfo(BaseModel):
     class_type = db.Column(db.String(20), comment="用例函数名称")
     class_file_name = db.Column(db.String(20), comment="用例对象类所在文件名称")
     source_url = db.Column(db.String(200), default=1, comment="用例对应的项目url")
+    is_mobile = db.Column(db.Integer, default=1, comment="是否手机打开 0：否，1：是")
     is_deleted = db.Column(db.Integer, default=0, comment="是否删除 0：否，1：是")
 
 class Uiresultinfo(BaseModel):

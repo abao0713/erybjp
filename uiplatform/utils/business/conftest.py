@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-# 
+# -*- coding: utf-8 -*-#
 #-------------------------------------------------------------------------------
 # Name:         conftest.py
-# Description:  
+# Description:
 # Author:       yuanbaojun
 # Date:         2021/5/27
 #----------------------------
@@ -9,12 +9,16 @@ import os
 
 import pytest, time
 from uiplatform.models.elemodel import Uiresultinfo
+from flask import current_app as app
 from uiplatform.services.ali_dingtalk import alidingcheck
-from uiplatform.utils.common.BasePage import PageObject
-from uiplatform.utils.common.BrowserPage import Page
 from selenium import webdriver
 from config import basedir,Config
+import json
+import os
+from random import random
+from filelock import FileLock
 
+from uiplatform.utils.common.Driver import _capture_screenshot
 
 driver = None
 
@@ -36,6 +40,7 @@ def pytest_runtest_makereport(item, call):
         model.result = report.outcome
         model.consume_time = report.duration
         model.version = 1
+        print(item.funcargs.get("browser").session_id)
         model.case_id = 123
         model.class_type = item.name
         model.title = item.funcargs.get("browser").title
@@ -46,42 +51,45 @@ def pytest_runtest_makereport(item, call):
             cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
             # alidingcheck(filename, cur_time, page=item.funcargs.get("browser").current_url)
             model.fail_pic = filename
+        # 多进程是这里访问数据库会出错
         model.save()
     print('测试报告：%s' % report)
 
 
-def _capture_screenshot(path, filename=None):
-    if filename is None:
-        filename = str(time.time()*100000).split(".")[0] + ".png"
-    file_path = os.path.join(path, filename)
-    driver.save_screenshot(file_path)
-    return filename
+# def _capture_screenshot(path, filename=None):
+#     global driver
+#     if filename is None:
+#         filename = str(time.time()*100000).split(".")[0] + ".png"
+#     file_path = os.path.join(path, filename)
+#     driver.save_screenshot(file_path)
+#     return filename
 
-
-@pytest.fixture(scope='session', autouse=True)
-def browser():
-    global driver
-    if driver is None:
-        browser_name = Config.BROWSER_NAME
-        headless = Config.HEADLESS
-        is_mobile = Config.IS_MOBILE
-        if browser_name == "chrome":
-            options = webdriver.ChromeOptions()
-            # 無頭
-            if bool(headless):
-                options.add_argument('--headless')
-            # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
-            if bool(is_mobile):
-                options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
-            chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
-            driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
-    return driver
-
-
-@pytest.fixture(scope="session", autouse=True)
-def browser_close():
-    yield driver
-    driver.quit()
+#
+# @pytest.fixture(scope='session', autouse=True)
+# def browser():
+#     global driver
+#     if driver is None:
+#         browser_name = Config.BROWSER_NAME
+#         headless = Config.HEADLESS
+#         is_mobile = Config.IS_MOBILE
+#         if browser_name == "chrome":
+#             options = webdriver.ChromeOptions()
+#             # 無頭
+#             if bool(headless):
+#                 options.add_argument('--headless')
+#             # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
+#             if bool(is_mobile):
+#                 options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
+#             options.add_experimental_option('useAutomationExtension', False)
+#             chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
+#             driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
+#     return driver
+#
+#
+# @pytest.fixture(scope="session", autouse=True)
+# def browser_close():
+#     yield driver
+#     driver.quit()
 
 #
 # @pytest.fixture(autouse=True)

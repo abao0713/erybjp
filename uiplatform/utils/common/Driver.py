@@ -1,13 +1,14 @@
-# -*- coding: utf-8 -*-# 
+# -*- coding: utf-8 -*-#
 #-------------------------------------------------------------------------------
 # Name:         Driver.py
-# Description:  
+# Description:
 # Author:       yuanbaojun
 # Date:         2021/5/18
 #----------------------------
 
 
-import pytest
+import pytest, time, os
+from config import basedir,Config
 from selenium import webdriver
 from config import basedir
 from uiplatform.services.proxy_server import ProxyServer
@@ -16,29 +17,61 @@ from filelock import FileLock
 
 driver = None
 
-def config_browser():
-    pass
-
-
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='module', autouse=True)
 def browser():
     global driver
     if driver is None:
-        options = webdriver.ChromeOptions()
-        # 無頭
-        options.add_argument('--headless')
-        # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
-        options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
-        chrome_driver = basedir+"\\"+r"uiplatform\utils\data\chromedriver.exe"
-        driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
-        print(driver)
+        browser_name = Config.BROWSER_NAME
+        headless = Config.HEADLESS
+        is_mobile = Config.IS_MOBILE
+        if browser_name == "chrome":
+            options = webdriver.ChromeOptions()
+            # 無頭
+            if bool(headless):
+                options.add_argument('--headless')
+            # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
+            if bool(is_mobile):
+                options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
+            options.add_experimental_option('useAutomationExtension', False)
+            chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
+            driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
     return driver
 
 
-@pytest.fixture(scope="session", autouse=True)
+
+@pytest.fixture(scope='module', autouse=True)
+def browser1():
+    global driver
+    if driver is None:
+        browser_name = Config.BROWSER_NAME
+        headless = False
+        is_mobile = False
+        if browser_name == "chrome":
+            options = webdriver.ChromeOptions()
+            # 無頭
+            if bool(headless):
+                options.add_argument('--headless')
+            # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
+            if bool(is_mobile):
+                options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
+            options.add_experimental_option('useAutomationExtension', False)
+            chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
+            driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
+    return driver
+
+@pytest.fixture(scope="module", autouse=True)
 def browser_close():
     yield driver
     driver.quit()
+
+def _capture_screenshot(path, filename=None):
+    global driver
+    if filename is None:
+        filename = str(time.time()*100000).split(".")[0] + ".png"
+    file_path = os.path.join(path, filename)
+    driver.save_screenshot(file_path)
+    return filename
+
 
 
 @pytest.fixture(autouse=True)
