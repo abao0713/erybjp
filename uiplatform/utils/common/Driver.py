@@ -17,13 +17,14 @@ from filelock import FileLock
 
 driver = None
 
-@pytest.fixture(scope='module', autouse=True)
-def browser():
+
+def browser_driver(browser_name, headless=True, is_mobile=True):
     global driver
+    driver = None
     if driver is None:
-        browser_name = Config.BROWSER_NAME
-        headless = Config.HEADLESS
-        is_mobile = Config.IS_MOBILE
+        # browser_name = Config.BROWSER_NAME
+        # headless = Config.HEADLESS
+        # is_mobile = Config.IS_MOBILE
         if browser_name == "chrome":
             options = webdriver.ChromeOptions()
             # 無頭
@@ -35,37 +36,19 @@ def browser():
             options.add_experimental_option('useAutomationExtension', False)
             chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
             driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
+            print(driver.session_id)
+            if not bool(is_mobile):
+                driver.maximize_window()
     return driver
 
 
-
-@pytest.fixture(scope='module', autouse=True)
-def browser1():
-    global driver
-    if driver is None:
-        browser_name = Config.BROWSER_NAME
-        headless = False
-        is_mobile = False
-        if browser_name == "chrome":
-            options = webdriver.ChromeOptions()
-            # 無頭
-            if bool(headless):
-                options.add_argument('--headless')
-            # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
-            if bool(is_mobile):
-                options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
-            options.add_experimental_option('useAutomationExtension', False)
-            chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
-            driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
-    return driver
-
-@pytest.fixture(scope="module", autouse=True)
-def browser_close():
-    yield driver
-    driver.quit()
+#
+# @pytest.fixture(scope="module", autouse=True)
+# def browser_close():
+#     yield driver
+#     driver.quit()
 
 def _capture_screenshot(path, filename=None):
-    global driver
     if filename is None:
         filename = str(time.time()*100000).split(".")[0] + ".png"
     file_path = os.path.join(path, filename)
@@ -74,7 +57,7 @@ def _capture_screenshot(path, filename=None):
 
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture(scope="module")
 def app():
     global app_driver
     # APP定义运行环境
@@ -90,7 +73,7 @@ def app():
     return app_driver
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture(scope="module")
 def app_close():
     yield app_driver
     app_driver.quit()

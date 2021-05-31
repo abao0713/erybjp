@@ -49,7 +49,7 @@ def run_test():
 
 @user.route('/ui_test/test', methods=["GET"])
 def run_only_test():
-    pytest.main(["uiplatform/utils/business/test_check_web.py::TestHinfo"])
+    pytest.main(["-n 3","uiplatform/utils/business/test_check_web.py::TestHinfo"])
     return jsonify(code=200, msg="ok", data='')
 
 @user.route('/ui_test/test1', methods=["GET"])

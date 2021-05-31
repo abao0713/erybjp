@@ -123,7 +123,9 @@ def register_extensions(app):
 
 def register_blueprints(app):
     from uiplatform.router.runtestcase import user
-    app.register_blueprint(user, url_prefix = '/auth')
+    app.register_blueprint(user, url_prefix='/element')
+    from uiplatform.router.operationdata import manage
+    app.register_blueprint(manage)
 
 
 def register_shell_context(app):

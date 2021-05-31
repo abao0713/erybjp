@@ -8,15 +8,7 @@
 import os
 
 import pytest, time
-from uiplatform.models.elemodel import Uiresultinfo
-from flask import current_app as app
-from uiplatform.services.ali_dingtalk import alidingcheck
-from selenium import webdriver
-from config import basedir,Config
-import json
-import os
-from random import random
-from filelock import FileLock
+import requests
 
 from uiplatform.utils.common.Driver import _capture_screenshot
 
@@ -31,28 +23,30 @@ def pytest_runtest_makereport(item, call):
     """
     outcome = yield
     report = outcome.get_result()
-    model = Uiresultinfo()
+    fail_pic = ""
+    fail_result = ""
     if report.when == "setup":
         if report.outcome == 'skipped':
             # 用例如果是跳过记录为skiped
-            model.result = 'skiped'
+            result = 'skiped'
     if report.when == "call":
-        model.result = report.outcome
-        model.consume_time = report.duration
-        model.version = 1
-        print(item.funcargs.get("browser").session_id)
-        model.case_id = 123
-        model.class_type = item.name
-        model.title = item.funcargs.get("browser").title
-        model.current_url = item.funcargs.get("browser").current_url
+        result = report.outcome
+        consume_time = report.duration
+        version = 1
+        function_type = item.name
         if report.outcome == 'failed':
-            model.fail_result = report.capstdout
-            filename = _capture_screenshot(path="uiplatform/utils/data/picture")
+            fail_result = report.capstdout
+            fail_pic = _capture_screenshot(path="uiplatform/utils/data/picture")
             cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
             # alidingcheck(filename, cur_time, page=item.funcargs.get("browser").current_url)
-            model.fail_pic = filename
+
         # 多进程是这里访问数据库会出错
-        model.save()
+        json_data = {
+            "result":result,"consume_time":consume_time,"version":version,"function_type":function_type,"fail_pic":fail_pic,
+            "fail_result":fail_result
+        }
+        requests.post(url="http://127.0.0.1:5000/result",data=json_data)
+        # model.save()
     print('测试报告：%s' % report)
 
 
