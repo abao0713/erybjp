@@ -6,14 +6,40 @@
 # Date:         2021/5/19
 #----------------------------
 import pytest, time
+from selenium import webdriver
 
-from uiplatform.utils.business.conftest import browser, browser_close
+from config import basedir
 from uiplatform.utils.logicobject.H5NormalPage import *
 from uiplatform.utils.common.BaseAssert import BaseAssert
 from uiplatform.services.ali_dingtalk import alidingcheck
 from selenium.common.exceptions import NoSuchElementException
 
 
+@pytest.fixture(scope='session', autouse=True)
+def browser():
+    global driver
+    if driver is None:
+        browser_name = "chrome"
+        headless = False
+        is_mobile = False
+        if browser_name == "chrome":
+            options = webdriver.ChromeOptions()
+            # 無頭
+            if bool(headless):
+                options.add_argument('--headless')
+            # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
+            if bool(is_mobile):
+                options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
+            options.add_experimental_option('useAutomationExtension', False)
+            chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
+            driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
+    return driver
+
+
+@pytest.fixture(scope="session", autouse=True)
+def browser_close():
+    yield driver
+    driver.quit()
 
 
 
@@ -148,4 +174,4 @@ class TestHinfo:
 
 
 if __name__ == '__main__':
-    pytest.main()
+    pytest.main(["-n 5"])
