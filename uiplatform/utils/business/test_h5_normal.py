@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-# 
 #-------------------------------------------------------------------------------
-# Name:         h5_normal.py
+# Name:         test_h5_normal.py
 # Description:  
 # Author:       yuanbaojun
 # Date:         2021/5/19
@@ -13,37 +13,13 @@ from uiplatform.utils.logicobject.H5NormalPage import *
 from uiplatform.utils.common.BaseAssert import BaseAssert
 from uiplatform.services.ali_dingtalk import alidingcheck
 from selenium.common.exceptions import NoSuchElementException
-
-
-@pytest.fixture(scope='session', autouse=True)
-def browser():
-    global driver
-    if driver is None:
-        browser_name = "chrome"
-        headless = True
-        is_mobile = True
-        if browser_name == "chrome":
-            options = webdriver.ChromeOptions()
-            # 無頭
-            if bool(headless):
-                options.add_argument('--headless')
-            # options.add_argument(f'--proxy-server={ProxyServer.proxy.proxy}')
-            if bool(is_mobile):
-                options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
-            options.add_experimental_option('useAutomationExtension', False)
-            chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
-            driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
-    return driver
-
-
-@pytest.fixture(scope="session", autouse=True)
-def browser_close():
-    yield driver
-    driver.quit()
+from uiplatform.utils.business.app import browser,browser_close
 
 
 
-class TestHinfo:
+
+@pytest.mark.test
+class TestHinfo2:
     """落地页巡检测试用例"""
 
     def test_partnerpage(self, browser,browser_close):
@@ -174,4 +150,4 @@ class TestHinfo:
 
 
 if __name__ == '__main__':
-    pytest.main(["-n 5"])
+    pytest.main(["test_h5_normal.py::TestHinfo2"])
