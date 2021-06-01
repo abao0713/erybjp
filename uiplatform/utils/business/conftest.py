@@ -14,6 +14,21 @@ from uiplatform.utils.common.Driver import _capture_screenshot
 
 driver = None
 
+
+def pytest_addoption(parser):
+    parser.addoption(
+        "--seid",
+        action="store",
+        default=1111,
+        type=str,
+        help="本次运行时的唯一标识",
+    )
+
+
+@pytest.fixture(scope="session")
+def seid(request):
+    return request.config.getoption("--seid")
+
 # 用例失败时截图
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item, call):
@@ -25,15 +40,21 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
     fail_pic = ""
     fail_result = ""
+    if item.funcargs.get("seid") is None:
+        seid = 0
+    else:
+        seid = item.funcargs.get("seid")
     if report.when == "setup":
         if report.outcome == 'skipped':
             # 用例如果是跳过记录为skiped
             result = 'skiped'
+
     if report.when == "call":
         result = report.outcome
         consume_time = report.duration
         version = 1
         function_type = item.name
+
         if report.outcome == 'failed':
             fail_result = report.capstdout
             fail_pic = _capture_screenshot(path="uiplatform/utils/data/picture")
@@ -43,7 +64,7 @@ def pytest_runtest_makereport(item, call):
         # 多进程是这里访问数据库会出错
         json_data = {
             "result":result,"consume_time":consume_time,"version":version,"function_type":function_type,"fail_pic":fail_pic,
-            "fail_result":fail_result
+            "fail_result":fail_result,"session_id":seid
         }
         requests.post(url="http://127.0.0.1:5000/result",data=json_data)
         # model.save()

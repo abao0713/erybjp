@@ -117,6 +117,7 @@ def register_extensions(app):
     cors.init_app(app, resources=r'/*')
     scheduler.init_app(app)
     scheduler.start()
+
     # ckeditor.init_app(app)
     # mail.init_app(app)
     # moment.init_app(app)

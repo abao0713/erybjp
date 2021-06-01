@@ -43,6 +43,7 @@ class CaseResult(Resource):
         parser.add_argument('current_url', type=str)
         parser.add_argument('fail_result', type=str)
         parser.add_argument('fail_pic', type=str)
+        parser.add_argument('session_id', required=True, type=str)
         args = parser.parse_args()
         model = Uiresultinfo()
         caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
@@ -55,6 +56,7 @@ class CaseResult(Resource):
         model.current_url = caseinfo_model.source_url
         model.fail_result = args.get("fail_result")
         model.fail_pic = args.get("fail_pic")
+        model.session_id = args.get("session_id")
         model.save()
         return jsonify(code=200, msg="ok", data='')
 

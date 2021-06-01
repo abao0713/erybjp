@@ -14,6 +14,7 @@ import pytest, re, os
 from urllib.parse import unquote
 from threading import Thread
 from config import basedir,Config
+import uuid
 
 
 user = Blueprint('user', __name__)
@@ -49,7 +50,11 @@ def run_test():
 
 @user.route('/ui_test/test', methods=["GET"])
 def run_only_test():
-    pytest.main(["-n 3","uiplatform/utils/business/test_check_web.py::TestHinfo"])
+    session_id= uuid.uuid1()
+    pares = f"--seid={session_id}"
+    lista = ["-n 3","uiplatform/utils/business/test_check_web.py::TestHinfo"]
+    lista.append(pares)
+    pytest.main(lista)
     return jsonify(code=200, msg="ok", data='')
 
 @user.route('/ui_test/test1', methods=["GET"])

@@ -57,6 +57,7 @@ class Uiresultinfo(BaseModel):
     fail_pic = db.Column(db.String(220), default='', comment="失败时的截图")
     title = db.Column(db.String(220), default='', comment="网页标题")
     function_type = db.Column(db.String(20), comment="用例函数名称")
+    session_id = db.Column(db.String(200), comment="运行唯一值")
     current_url = db.Column(db.Text, comment="项目url")
     consume_time = db.Column(db.Integer, comment="用例执行耗时")
     version = db.Column(db.String(20), comment="版本迭代次数")

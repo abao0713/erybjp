@@ -6,13 +6,13 @@
 # Date:         2021/5/28
 #----------------------------
 
-
+import pytest
 from uiplatform.utils import BaseAssert
 from uiplatform.utils.logicobject.H5NormalPage import PartnerPage, LbkMobilePage, MonthSharePage, InvitationPage, \
     GiveLessonPage, GivequanPage, LessonOrderPage, CommunityPage, MorderPage, HiCode
 from uiplatform.utils.common.Driver import browser_driver
 
-
+@pytest.mark.usefixtures("seid")
 class TestHinfo:
     """落地页巡检测试用例"""
     def setup_class(self):
