@@ -26,9 +26,11 @@ class CaseResult(Resource):
         根据id返回查询的数据
         """
         parser = reqparse.RequestParser()
-        parser.add_argument('id', type=int)
+        parser.add_argument('session_id', type=str, required=True, help='每次运行唯一标识')
         args = parser.parse_args()
-        token = request.headers["Authorization"]
+        result = Uiresultinfo.query.filter(Uiresultinfo.session_id == args.get("session_id")).all()
+        json_data = model_to_dict(result)
+        return jsonify(code=200, msg="ok", data=json_data)
 
     def post(self):
         """

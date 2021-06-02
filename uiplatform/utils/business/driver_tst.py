@@ -29,9 +29,9 @@ def browser():
         if "Windows" in platform.system():
             chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
         elif "Linux" in platform.system():
-            chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver_mac"
-        else:
             chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver"
+        else:
+            chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver_mac"
         driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
     return driver
 
