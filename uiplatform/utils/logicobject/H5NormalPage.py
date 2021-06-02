@@ -21,7 +21,7 @@ class PartnerPage(Page):
 class LbkMobilePage(Page):
     """体验课或拓展课落地页"""
     url = "https://lbk-mobile.codemao.cn/product?utm_source=h5jiulianjie&utm_term=shorturl&utm_content=default"
-    search_element = Element(xpath="//div[contains(text(),'立即78报名')]")
+    search_element = Element(xpath="//div[contains(text(),'立即报名')]")
 
 
 class MonthSharePage(Page):
