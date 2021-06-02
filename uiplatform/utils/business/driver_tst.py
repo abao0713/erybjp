@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-# 
 #-------------------------------------------------------------------------------
-# Name:         app.py
+# Name:         driver_tst.py
 # Description:  
 # Author:       yuanbaojun
 # Date:         2021/5/19
 #----------------------------
 import pytest
-
+import platform
 from config import basedir
 from selenium import webdriver
 
@@ -26,7 +26,12 @@ def browser():
         if bool(is_mobile):
             options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
         options.add_experimental_option('useAutomationExtension', False)
-        chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
+        if "Windows" in platform.system():
+            chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
+        elif "Linux" in platform.system():
+            chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver_mac"
+        else:
+            chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver"
         driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
     return driver
 

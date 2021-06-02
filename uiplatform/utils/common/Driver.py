@@ -5,14 +5,11 @@
 # Author:       yuanbaojun
 # Date:         2021/5/18
 #----------------------------
-
-
+import platform
 import pytest, time, os
 from config import basedir,Config
 from selenium import webdriver
 from config import basedir
-from uiplatform.services.proxy_server import ProxyServer
-from filelock import FileLock
 
 
 driver = None
@@ -34,7 +31,12 @@ def browser_driver(browser_name, headless=True, is_mobile=True):
             if bool(is_mobile):
                 options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone 6/7/8'})
             options.add_experimental_option('useAutomationExtension', False)
-            chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
+            if "Windows" in platform.system():
+                chrome_driver = basedir + "\\" + r"uiplatform\utils\data\chromedriver.exe"
+            elif "Linux" in platform.system():
+                chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver_mac"
+            else:
+                chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver"
             driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
             print(driver.session_id)
             if not bool(is_mobile):

@@ -13,7 +13,7 @@ from uiplatform.utils.logicobject.H5NormalPage import *
 from uiplatform.utils.common.BaseAssert import BaseAssert
 from uiplatform.services.ali_dingtalk import alidingcheck
 from selenium.common.exceptions import NoSuchElementException
-from uiplatform.utils.business.app import browser,browser_close
+from uiplatform.utils.business.driver_tst import browser,browser_close
 
 
 
