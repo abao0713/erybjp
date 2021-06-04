@@ -15,7 +15,7 @@ def browser():
     global driver
     driver = None
     browser_name = "chrome"
-    headless = True
+    headless = False
     is_mobile = True
     if browser_name == "chrome":
         options = webdriver.ChromeOptions()

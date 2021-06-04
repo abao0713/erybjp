@@ -24,7 +24,7 @@ class BaseAssert:
         for i in text:
             assert_that(page).does_not_contain(i)
 
-
+    # 没有问题的方法
     def assert_text_in_elem(self, text, elem, mode='vague'):
         """
         判断元素包含文本，支持多个文本，支持模糊/精确匹配

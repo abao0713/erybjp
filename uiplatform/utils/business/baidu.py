@@ -8,7 +8,7 @@
 
 from uiplatform.utils import BaiduPage
 import pytest
-from uiplatform.utils.common.Driver import browser, browser_close
+from uiplatform.utils.business.driver_tst import browser, browser_close
 
 @pytest.mark.skipif()
 class TestBaidu:
@@ -23,6 +23,7 @@ class TestBaidu:
         page.get("http://www.51testing.com/html/60/n-3724060-2.html")
         page.screenshots(path="uiplatform/utils/data/picture")
         BaiduPage(browser_close)
+        page.switch_to_parent_frame()
 
 
 if __name__ == '__main__':

@@ -12,8 +12,13 @@ from ..common.BrowserPage import Page
 
 class BaiduPage(Page):
     """百度Page层，百度页面封装操作到的元素"""
-    search_input = Element(id_="kw")
+    search_input = Element(id_="kw1")
     search_button = Element(id_='su')
     ddads = Element(name='su')
+
+
+
+
+
 
 
