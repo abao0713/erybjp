@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-# 
+# -*- coding: utf-8 -*-#
 #-------------------------------------------------------------------------------
 # Name:         config.py
-# Description:  
+# Description:
 # Author:       yuanbaojun
 # Date:         2021/5/12
 #----------------------------
@@ -19,7 +19,7 @@ class Config(object):
         {
             'id': 'ybj001',  # 任务唯一ID
             'func': 'uiplatform.services.scheduler:h5check_job',
-            # 执行任务的function名称，app.test 就是 app下面的`test.py` 文件，`shishi` 是方法名称。文件模块和方法之间用冒号":"，而不是用英文的"."
+            # 执行任务的function名称，app.test 就是 app下面的`test_check_web.py` 文件，`shishi` 是方法名称。文件模块和方法之间用冒号":"，而不是用英文的"."
             'args': '',  # 如果function需要参数，就在这里添加
             'trigger': 'interval',
             'seconds': 1800
@@ -69,6 +69,14 @@ class Config(object):
     EMAIL_RECEIVER = "305634841@qq.com,2870550420@qq.com"
     # 缓存设置
     CACHE_TYPE = "redis"
+
+    # UI自动化框架的参数配置动态化
+    BROWSER_NAME = "chrome"
+    HEADLESS = True
+    IS_MOBILE = True
+
+
+
     # 静态回调, 引入APP
     @staticmethod
     def init_app(app):

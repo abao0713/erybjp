@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-# 
+# -*- coding: utf-8 -*-#
 #-------------------------------------------------------------------------------
 # Name:         H5NormalPage.py
-# Description:  
+# Description:
 # Author:       yuanbaojun
 # Date:         2021/5/19
 #----------------------------
@@ -75,3 +75,7 @@ class MorderPage(Page):
     url = "https://m.codemao.cn/v9/"
     search_element = Element(xpath="//button[contains(text(),'立即免费领取')]")
 
+class HiCode(Page):
+    """免费落地页"""
+    url = "https://hi.codemao.cn/"
+    search_element = Element(xpath="//*[@id='root']/div/div[2]/div/div[6]/div/div[2]/div/div[4]")

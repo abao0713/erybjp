@@ -42,12 +42,12 @@ class BaseAssert:
             text = [text]
         if mode == 'vague':
             for i in text:
-                assert_that(page).contains(i)
+                assert i in page, f"字符{i}存在于字符{page}"
         else:
             if isinstance(page, str):
-                assert_that(page).is_equal_to(text[0])
+                assert text[0] == page, f"字符{text[0]}等于字符{page}"
             else:
-                assert_that(str(page)).is_equal_to(text[0])
+                assert text[0] == str(page), f"字符{text[0]}等于字符{page}"
 
 
     def assert_text_not_in_elem(self, text, elem, mode='part'):
