@@ -17,4 +17,4 @@ print(url_map)
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6851, threaded=3)
+    app.run(host='0.0.0.0', port=6851)
