@@ -2,7 +2,7 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @Time : 2021/06/06 11:26
-# @project_name : 
+# @project_name :
 # @author :	yuanbaojun
 # ------------
 
