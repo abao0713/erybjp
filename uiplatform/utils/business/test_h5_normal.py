@@ -150,4 +150,4 @@ class TestHinfo2:
 
 
 if __name__ == '__main__':
-    pytest.main(["-n 3","test_h5_normal.py::TestHinfo2"])
+    pytest.main(["-n 3","test_h5_normal.py::TestHinfo2::test_morderpage"])

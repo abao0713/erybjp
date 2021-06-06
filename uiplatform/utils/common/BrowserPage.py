@@ -67,7 +67,7 @@ class Page(PageObject):
 
     def switch_to_parent_frame(self):
         """
-        selenium API
+        selenium API  iframe
         Switches focus to the parent context.
         Corresponding relationship with switch_to_frame () method.
         """

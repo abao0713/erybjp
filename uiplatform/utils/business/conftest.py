@@ -46,7 +46,7 @@ def pytest_runtest_makereport(item, call):
         seid = item.funcargs.get("seid")
     if report.when == "setup":
         if report.outcome == 'skipped':
-            # 用例如果是跳过记录为skiped
+            # 用例如果是跳过记录为skiped,后续完善不做记录
             result = 'skiped'
 
     if report.when == "call":
@@ -66,9 +66,11 @@ def pytest_runtest_makereport(item, call):
             "result":result,"consume_time":consume_time,"version":version,"function_type":function_type,"fail_pic":fail_pic,
             "fail_result":fail_result,"session_id":seid
         }
-        requests.post(url="http://127.0.0.1:5000/result",data=json_data)
+        try:
+            requests.post(url="http://127.0.0.1:5000/result",data=json_data)
+        except:
+            print("内部接口没有启动")
         # model.save()
-    print('测试报告：%s' % report)
 
 
 # def _capture_screenshot(path, filename=None):
