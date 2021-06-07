@@ -123,7 +123,7 @@ class Element(object):
                 elems = []
 
             if len(elems) == 1:
-                # app.logger.info("✅ Find element: {by}={value} ".format(by=elem[0], value=elem[1]))
+                app.logger.info("✅ Find element: {by}={value} ".format(by=elem[0], value=elem[1]))
                 print("✅ Find element: {by}={value} ".format(by=elem[0], value=elem[1]))
                 break
             elif len(elems) > 1:
@@ -134,7 +134,7 @@ class Element(object):
                 sleep(1)
         else:
             error_msg = "❌ Find 0 elements through: {by}={value}".format(by=elem[0], value=elem[1])
-            # app.logger.error(error_msg)
+            app.logger.error(error_msg)
             print(error_msg)
             raise NoSuchElementException(error_msg)
 
