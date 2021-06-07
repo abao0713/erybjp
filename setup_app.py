@@ -8,7 +8,7 @@
 
 
 from create_app import create_app
-app = create_app(config_name='development')
+app = create_app(config_name='production')
 from extensions import db
 from uiplatform.models.elemodel import UielementInfo,Uicaseinfo,Uiresultinfo
 db.create_all()
