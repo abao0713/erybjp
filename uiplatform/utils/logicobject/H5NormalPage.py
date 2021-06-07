@@ -38,9 +38,19 @@ class InvitationPage(Page):
 
 class GiveLessonPage(Page):
     """免费赠课落地页"""
-    url = "https://activity.codemao.cn/referral/give-lessons?courseType=code"
-    url2 = "https://activity.codemao.cn/referral/give-lessons?courseType=stean"
-    search_element = Element(xpath="//p[contains(text(),'请登录')]")
+    url_code = "https://activity.codemao.cn/referral/give-lessons?courseType=code"
+    url_steam = "https://activity.codemao.cn/referral/give-lessons?courseType=stean"
+    # 页面公共按钮
+    search_touxiang_button = Element(xpath="/html[1]/body[1]/div[1]/div[1]/div[1]")  # 头像栏位
+    search_yaoqing_button = Element(class_name='invite-details__331Cc')   # 邀请按钮
+    search_gonglv_button = Element(class_name='rules__2hZTP')   # 攻略按钮
+    # 登录前按钮
+    search_element = Element(class_name='login-text__15JbF')
+    search_login_button = Element(class_name='btn__2DMDt not-login-btn__71qKd')
+    # 登录后按钮
+
+
+
 
 
 class GivequanPage(Page):
