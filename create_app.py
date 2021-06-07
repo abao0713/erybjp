@@ -19,9 +19,9 @@ from extensions import cors, db
 import os
 
 
-def create_app(config_name = None):
+def create_app(config_name=None):
     if config_name is None:
-        config_name = os.environ.get('FLASK_CONFIG', 'development')
+        config_name = os.environ.get('FLASK_CONFIG', 'production')
 
     app = Flask('erybjp', static_folder="uiplatform/utils/data")
     app.config.from_object(config[config_name])
