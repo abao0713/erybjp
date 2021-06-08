@@ -11,6 +11,9 @@ from uiplatform.utils import BaseAssert
 from uiplatform.utils.logicobject.H5NormalPage import PartnerPage, LbkMobilePage, MonthSharePage, InvitationPage, \
     GiveLessonPage, GivequanPage, LessonOrderPage, CommunityPage, MorderPage, HiCode
 from uiplatform.utils.common.Driver import browser_driver
+from uiplatform.utils.common.BaseLoggers import logger
+
+
 
 @pytest.mark.usefixtures("seid")
 class TestHinfo:
@@ -19,6 +22,7 @@ class TestHinfo:
 
         global driver
         driver = browser_driver(browser_name="chrome")
+        logger.info("前置处理类处理完成")
 
     def teardown_class(self):
         driver.quit()
@@ -102,8 +106,9 @@ class TestHinfo1:
     def setup_class(self):
 
         global driver
-        driver = browser_driver(browser_name="chrome", headless=False, is_mobile=False)
+        driver = browser_driver(browser_name="chrome")
 
+    @pytest.mark.skip(reason='misunderstood the API')
     def test_fr(self):
         page = HiCode(driver=driver)
         page.get(page.url)
