@@ -77,7 +77,7 @@ class CaseResult(Resource):
         if args.get("result") == "failed":
             test_name = args.get("function_type")
             cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-            url = "http://127.0.0.1:5000/data/picture/" + args.get("fail_pic")
+            url = "http://http://139.196.165.161:6851/data/picture/" + args.get("fail_pic")
             print(url)
             text = f"#### 巡检异常预警\n> 本次在运行测试用例{test_name}时探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
             DingtalkRobot().send_markdown("巡检异常预警", text, [])
