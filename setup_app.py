@@ -8,7 +8,7 @@
 
 
 from create_app import create_app
-app = create_app(config_name='development')
+app = create_app(config_name='production')
 from extensions import db
 from uiplatform.models.elemodel import UielementInfo,Uicaseinfo,Uiresultinfo
 db.create_all()
@@ -17,4 +17,4 @@ print(url_map)
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6851, threaded=3)
+    app.run(host='0.0.0.0', port=6851)

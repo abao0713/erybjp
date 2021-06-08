@@ -15,7 +15,12 @@ from config import basedir
 driver = None
 
 
-def browser_driver(browser_name, headless=True, is_mobile=True):
+def add_cookies(json_data: dict):
+    for k,v in json_data.items():
+        pass
+
+
+def browser_driver(browser_name: str, headless=True, is_mobile=True):
     global driver
     driver = None
     if driver is None:

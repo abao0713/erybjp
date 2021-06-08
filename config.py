@@ -103,7 +103,8 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/flasken?charset=utf8"
+    SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
 config = {
     'development': DevelopmentConfig,

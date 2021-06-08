@@ -71,7 +71,6 @@ def pytest_runtest_makereport(item, call):
         except:
             print("内部接口没有启动")
         # model.save()
-    print('测试报告：%s' % report)
 
 
 # def _capture_screenshot(path, filename=None):

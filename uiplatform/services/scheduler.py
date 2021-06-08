@@ -11,4 +11,4 @@ from extensions import scheduler
 
 
 def h5check_job():
-    pytest.main(["-n 4"])
+    pytest.main(["-n 3", "uiplatform/utils/business/test_check_web.py"])

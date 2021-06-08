@@ -8,10 +8,13 @@
 
 from flask_restful import Resource, fields, marshal_with, reqparse
 from flask import Blueprint, request, jsonify
+
+from extensions import db
 from uiplatform.models.elemodel import UielementInfo, Uicaseinfo, Uiresultinfo
 from flask import current_app as app
 from flask_restful import Api,marshal_with
 from serialization import model_to_dict
+
 
 # 1.创建蓝图对象，url_prefix可以给蓝图添加统一的前缀url
 manage = Blueprint('uiplatfrom', __name__)
@@ -26,11 +29,19 @@ class CaseResult(Resource):
         根据id返回查询的数据
         """
         parser = reqparse.RequestParser()
-        parser.add_argument('session_id', type=str, required=True, help='每次运行唯一标识')
+        parser.add_argument('session_id', type=str,  help='每次运行唯一标识')
+        parser.add_argument('cur_page', type=int, help='当前属于第几页')
+        parser.add_argument('pagesize', type=int, help='每页显示的数量')
         args = parser.parse_args()
-        result = Uiresultinfo.query.filter(Uiresultinfo.session_id == args.get("session_id")).all()
+        
+        paginates = Uiresultinfo.query.join(Uicaseinfo, Uiresultinfo.case_id == Uicaseinfo.id).add_entity(Uicaseinfo).filter(
+            Uiresultinfo.session_id == args.get("session_id")).paginate(page=args.get("cur_page"), per_page=args.get("pagesize"), error_out=False)
+        # paginates = Uiresultinfo.query.join(Uicaseinfo, Uiresultinfo.case_id == Uicaseinfo.id).add_entity(
+        #     Uicaseinfo).filter(
+        #     Uiresultinfo.session_id == args.get("session_id")).all()
+        result = paginates.items
         json_data = model_to_dict(result)
-        return jsonify(code=200, msg="ok", data=json_data)
+        return jsonify(code=200, msg="ok", cur_page=paginates.page, page=paginates.pages, data=json_data)
 
     def post(self):
         """

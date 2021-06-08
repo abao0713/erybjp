@@ -19,7 +19,7 @@ from extensions import cors, db
 import os
 
 
-def create_app(config_name = None):
+def create_app(config_name=None):
     if config_name is None:
         config_name = os.environ.get('FLASK_CONFIG', 'development')
 
