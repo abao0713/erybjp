@@ -12,5 +12,5 @@ RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple -r re
 
 EXPOSE 6851
 
-CMD [ "python", "./manage.py", "runserver","-p","6851"]
+CMD [ "./runserver.sh"]
 
