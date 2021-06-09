@@ -3668,3 +3668,1149 @@ ValueError: check_hostname requires server_hostname
 2021-06-08 20:43:04,773 [werkzeug] [17036:Thread-36] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [08/Jun/2021 20:43:04] "[37mPOST /result HTTP/1.1[0m" 200 -
 2021-06-08 20:43:08,984 [werkzeug] [24660:Thread-37] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [08/Jun/2021 20:43:08] "[37mPOST /result HTTP/1.1[0m" 200 -
 2021-06-08 20:43:09,963 [werkzeug] [6192:Thread-38] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [08/Jun/2021 20:43:09] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 13:55:02,764 [werkzeug] [31504:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-06-09 17:29:15,308 [werkzeug] [10788:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-09 17:59:21,629 [werkzeug] [28148:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:21] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:21,631 [werkzeug] [10392:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:21] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:24,557 [werkzeug] [19736:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:24] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:24,653 [werkzeug] [32488:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:24] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:24,733 [werkzeug] [33456:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:24] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:24,829 [werkzeug] [9544:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:24] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:27,032 [werkzeug] [28628:Thread-8] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:27] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:27,211 [werkzeug] [13460:Thread-9] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:27] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:28,538 [werkzeug] [7896:Thread-10] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:28] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:28,731 [werkzeug] [13668:Thread-11] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:28] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:29,554 [werkzeug] [18556:Thread-12] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:29] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:29,739 [werkzeug] [13316:Thread-13] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:29] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:30,885 [werkzeug] [6508:Thread-14] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:30] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:35,137 [werkzeug] [32316:Thread-15] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:35] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:40,414 [erybjp] [2024:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 732, in _read_bytes
+    data = self._rfile.read(num_bytes)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 65, in post
+    caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 329, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+[SQL: SELECT tbl_uicase.create_by AS tbl_uicase_create_by, tbl_uicase.created_at AS tbl_uicase_created_at, tbl_uicase.update_by AS tbl_uicase_update_by, tbl_uicase.updated_at AS tbl_uicase_updated_at, tbl_uicase.remark AS tbl_uicase_remark, tbl_uicase.id AS tbl_uicase_id, tbl_uicase.name AS tbl_uicase_name, tbl_uicase.description AS tbl_uicase_description, tbl_uicase.type AS tbl_uicase_type, tbl_uicase.deptid AS tbl_uicase_deptid, tbl_uicase.version AS tbl_uicase_version, tbl_uicase.function_type AS tbl_uicase_function_type, tbl_uicase.class_type AS tbl_uicase_class_type, tbl_uicase.source_url AS tbl_uicase_source_url, tbl_uicase.devices_type AS tbl_uicase_devices_type, tbl_uicase.is_deleted AS tbl_uicase_is_deleted 
+FROM tbl_uicase 
+WHERE tbl_uicase.function_type = %(function_type_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'function_type_1': 'test_partnerpage', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-06-09 17:59:40,598 [werkzeug] [2024:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:40] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 17:59:40,610 [werkzeug] [2024:Thread-1] _internal.py:_internal:_log in 113] [ERROR]: Error on request:
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2458, in wsgi_app
+    ctx.auto_pop(error)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 452, in auto_pop
+    self.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 438, in pop
+    app_ctx.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 238, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2321, in do_teardown_appcontext
+    func(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask_sqlalchemy\__init__.py", line 897, in shutdown_session
+    self.session.commit()
+  File "<string>", line 2, in commit
+    
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 836, in commit
+    trans.commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2330, in commit
+    self._do_commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2513, in _do_commit
+    self._connection_commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2484, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 992, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1998, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 990, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 452, in connection
+    return self._revalidate_connection()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 560, in _revalidate_connection
+    self._invalid_transaction()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 532, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: http://sqlalche.me/e/14/8s2b)
+2021-06-09 17:59:44,799 [erybjp] [28284:Thread-16] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 83, in post
+    DingtalkRobot().send_markdown("巡检异常预警", text, [])
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 87, in send_markdown
+    return self.__post(data)
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 104, in __post
+    response = requests.post(self.__spliceUrl(), headers=self.headers, data=post_data)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 696, in urlopen
+    self._prepare_proxy(conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 964, in _prepare_proxy
+    conn.connect()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 359, in connect
+    conn = self._connect_tls_proxy(hostname, conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 500, in _connect_tls_proxy
+    return ssl_wrap_socket(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 997, in _create
+    raise ValueError("check_hostname requires server_hostname")
+ValueError: check_hostname requires server_hostname
+2021-06-09 17:59:44,812 [werkzeug] [28284:Thread-16] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:44] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 17:59:45,172 [werkzeug] [25980:Thread-17] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:45] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:47,562 [werkzeug] [30620:Thread-18] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:47] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 17:59:53,049 [werkzeug] [29984:Thread-19] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 17:59:53] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:40,151 [erybjp] [32024:Thread-20] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 732, in _read_bytes
+    data = self._rfile.read(num_bytes)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 65, in post
+    caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 329, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+[SQL: SELECT tbl_uicase.create_by AS tbl_uicase_create_by, tbl_uicase.created_at AS tbl_uicase_created_at, tbl_uicase.update_by AS tbl_uicase_update_by, tbl_uicase.updated_at AS tbl_uicase_updated_at, tbl_uicase.remark AS tbl_uicase_remark, tbl_uicase.id AS tbl_uicase_id, tbl_uicase.name AS tbl_uicase_name, tbl_uicase.description AS tbl_uicase_description, tbl_uicase.type AS tbl_uicase_type, tbl_uicase.deptid AS tbl_uicase_deptid, tbl_uicase.version AS tbl_uicase_version, tbl_uicase.function_type AS tbl_uicase_function_type, tbl_uicase.class_type AS tbl_uicase_class_type, tbl_uicase.source_url AS tbl_uicase_source_url, tbl_uicase.devices_type AS tbl_uicase_devices_type, tbl_uicase.is_deleted AS tbl_uicase_is_deleted 
+FROM tbl_uicase 
+WHERE tbl_uicase.function_type = %(function_type_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'function_type_1': 'test_monthmharepage', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-06-09 18:29:40,163 [werkzeug] [32024:Thread-20] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:40] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 18:29:40,178 [werkzeug] [32024:Thread-20] _internal.py:_internal:_log in 113] [ERROR]: Error on request:
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2458, in wsgi_app
+    ctx.auto_pop(error)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 452, in auto_pop
+    self.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 438, in pop
+    app_ctx.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 238, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2321, in do_teardown_appcontext
+    func(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask_sqlalchemy\__init__.py", line 897, in shutdown_session
+    self.session.commit()
+  File "<string>", line 2, in commit
+    
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 836, in commit
+    trans.commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2330, in commit
+    self._do_commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2513, in _do_commit
+    self._connection_commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2484, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 992, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1998, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 990, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 452, in connection
+    return self._revalidate_connection()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 560, in _revalidate_connection
+    self._invalid_transaction()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 532, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: http://sqlalche.me/e/14/8s2b)
+2021-06-09 18:29:40,225 [erybjp] [14396:Thread-21] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 732, in _read_bytes
+    data = self._rfile.read(num_bytes)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 65, in post
+    caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 329, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+[SQL: SELECT tbl_uicase.create_by AS tbl_uicase_create_by, tbl_uicase.created_at AS tbl_uicase_created_at, tbl_uicase.update_by AS tbl_uicase_update_by, tbl_uicase.updated_at AS tbl_uicase_updated_at, tbl_uicase.remark AS tbl_uicase_remark, tbl_uicase.id AS tbl_uicase_id, tbl_uicase.name AS tbl_uicase_name, tbl_uicase.description AS tbl_uicase_description, tbl_uicase.type AS tbl_uicase_type, tbl_uicase.deptid AS tbl_uicase_deptid, tbl_uicase.version AS tbl_uicase_version, tbl_uicase.function_type AS tbl_uicase_function_type, tbl_uicase.class_type AS tbl_uicase_class_type, tbl_uicase.source_url AS tbl_uicase_source_url, tbl_uicase.devices_type AS tbl_uicase_devices_type, tbl_uicase.is_deleted AS tbl_uicase_is_deleted 
+FROM tbl_uicase 
+WHERE tbl_uicase.function_type = %(function_type_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'function_type_1': 'test_partnerpage', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-06-09 18:29:40,235 [werkzeug] [14396:Thread-21] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:40] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 18:29:40,243 [erybjp] [22084:Thread-22] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 732, in _read_bytes
+    data = self._rfile.read(num_bytes)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 65, in post
+    caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 329, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+[SQL: SELECT tbl_uicase.create_by AS tbl_uicase_create_by, tbl_uicase.created_at AS tbl_uicase_created_at, tbl_uicase.update_by AS tbl_uicase_update_by, tbl_uicase.updated_at AS tbl_uicase_updated_at, tbl_uicase.remark AS tbl_uicase_remark, tbl_uicase.id AS tbl_uicase_id, tbl_uicase.name AS tbl_uicase_name, tbl_uicase.description AS tbl_uicase_description, tbl_uicase.type AS tbl_uicase_type, tbl_uicase.deptid AS tbl_uicase_deptid, tbl_uicase.version AS tbl_uicase_version, tbl_uicase.function_type AS tbl_uicase_function_type, tbl_uicase.class_type AS tbl_uicase_class_type, tbl_uicase.source_url AS tbl_uicase_source_url, tbl_uicase.devices_type AS tbl_uicase_devices_type, tbl_uicase.is_deleted AS tbl_uicase_is_deleted 
+FROM tbl_uicase 
+WHERE tbl_uicase.function_type = %(function_type_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'function_type_1': 'test_lbkmobilepage', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-06-09 18:29:40,270 [werkzeug] [14396:Thread-21] _internal.py:_internal:_log in 113] [ERROR]: Error on request:
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2458, in wsgi_app
+    ctx.auto_pop(error)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 452, in auto_pop
+    self.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 438, in pop
+    app_ctx.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 238, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2321, in do_teardown_appcontext
+    func(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask_sqlalchemy\__init__.py", line 897, in shutdown_session
+    self.session.commit()
+  File "<string>", line 2, in commit
+    
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 836, in commit
+    trans.commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2330, in commit
+    self._do_commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2513, in _do_commit
+    self._connection_commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2484, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 992, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1998, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 990, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 452, in connection
+    return self._revalidate_connection()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 560, in _revalidate_connection
+    self._invalid_transaction()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 532, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: http://sqlalche.me/e/14/8s2b)
+2021-06-09 18:29:40,281 [werkzeug] [22084:Thread-22] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:40] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 18:29:40,304 [werkzeug] [22084:Thread-22] _internal.py:_internal:_log in 113] [ERROR]: Error on request:
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2458, in wsgi_app
+    ctx.auto_pop(error)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 452, in auto_pop
+    self.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 438, in pop
+    app_ctx.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 238, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2321, in do_teardown_appcontext
+    func(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask_sqlalchemy\__init__.py", line 897, in shutdown_session
+    self.session.commit()
+  File "<string>", line 2, in commit
+    
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 836, in commit
+    trans.commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2330, in commit
+    self._do_commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2513, in _do_commit
+    self._connection_commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2484, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 992, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1998, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 990, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 452, in connection
+    return self._revalidate_connection()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 560, in _revalidate_connection
+    self._invalid_transaction()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 532, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: http://sqlalche.me/e/14/8s2b)
+2021-06-09 18:29:43,185 [werkzeug] [15476:Thread-23] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:43] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:43,237 [werkzeug] [15140:Thread-24] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:43] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:43,443 [werkzeug] [14248:Thread-27] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:43] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:43,443 [erybjp] [10800:Thread-26] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 83, in post
+    DingtalkRobot().send_markdown("巡检异常预警", text, [])
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 87, in send_markdown
+    return self.__post(data)
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 104, in __post
+    response = requests.post(self.__spliceUrl(), headers=self.headers, data=post_data)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 696, in urlopen
+    self._prepare_proxy(conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 964, in _prepare_proxy
+    conn.connect()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 359, in connect
+    conn = self._connect_tls_proxy(hostname, conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 500, in _connect_tls_proxy
+    return ssl_wrap_socket(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 997, in _create
+    raise ValueError("check_hostname requires server_hostname")
+ValueError: check_hostname requires server_hostname
+2021-06-09 18:29:43,449 [werkzeug] [10800:Thread-26] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:43] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 18:29:43,637 [werkzeug] [30988:Thread-25] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:43] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:43,663 [werkzeug] [2412:Thread-28] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:43] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:45,557 [werkzeug] [25816:Thread-29] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:45] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:45,786 [werkzeug] [12200:Thread-30] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:45] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:46,143 [werkzeug] [24588:Thread-31] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:46] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:46,357 [werkzeug] [24448:Thread-32] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:46] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:48,099 [werkzeug] [22352:Thread-33] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:48] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:48,293 [werkzeug] [32592:Thread-34] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:48] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:48,904 [werkzeug] [27184:Thread-35] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:48] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:48,959 [werkzeug] [28644:Thread-36] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:48] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:50,572 [werkzeug] [21448:Thread-37] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:50] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:29:53,249 [werkzeug] [8580:Thread-38] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:29:53] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:40,206 [erybjp] [32464:Thread-39] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 732, in _read_bytes
+    data = self._rfile.read(num_bytes)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 65, in post
+    caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 329, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+[SQL: SELECT tbl_uicase.create_by AS tbl_uicase_create_by, tbl_uicase.created_at AS tbl_uicase_created_at, tbl_uicase.update_by AS tbl_uicase_update_by, tbl_uicase.updated_at AS tbl_uicase_updated_at, tbl_uicase.remark AS tbl_uicase_remark, tbl_uicase.id AS tbl_uicase_id, tbl_uicase.name AS tbl_uicase_name, tbl_uicase.description AS tbl_uicase_description, tbl_uicase.type AS tbl_uicase_type, tbl_uicase.deptid AS tbl_uicase_deptid, tbl_uicase.version AS tbl_uicase_version, tbl_uicase.function_type AS tbl_uicase_function_type, tbl_uicase.class_type AS tbl_uicase_class_type, tbl_uicase.source_url AS tbl_uicase_source_url, tbl_uicase.devices_type AS tbl_uicase_devices_type, tbl_uicase.is_deleted AS tbl_uicase_is_deleted 
+FROM tbl_uicase 
+WHERE tbl_uicase.function_type = %(function_type_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'function_type_1': 'test_lbkmobilepage', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-06-09 18:59:40,217 [werkzeug] [32464:Thread-39] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:40] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 18:59:40,227 [werkzeug] [32464:Thread-39] _internal.py:_internal:_log in 113] [ERROR]: Error on request:
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2458, in wsgi_app
+    ctx.auto_pop(error)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 452, in auto_pop
+    self.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 438, in pop
+    app_ctx.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 238, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2321, in do_teardown_appcontext
+    func(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask_sqlalchemy\__init__.py", line 897, in shutdown_session
+    self.session.commit()
+  File "<string>", line 2, in commit
+    
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 836, in commit
+    trans.commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2330, in commit
+    self._do_commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2513, in _do_commit
+    self._connection_commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2484, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 992, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1998, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 990, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 452, in connection
+    return self._revalidate_connection()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 560, in _revalidate_connection
+    self._invalid_transaction()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 532, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: http://sqlalche.me/e/14/8s2b)
+2021-06-09 18:59:40,267 [erybjp] [16560:Thread-40] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 732, in _read_bytes
+    data = self._rfile.read(num_bytes)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 65, in post
+    caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 329, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+[SQL: SELECT tbl_uicase.create_by AS tbl_uicase_create_by, tbl_uicase.created_at AS tbl_uicase_created_at, tbl_uicase.update_by AS tbl_uicase_update_by, tbl_uicase.updated_at AS tbl_uicase_updated_at, tbl_uicase.remark AS tbl_uicase_remark, tbl_uicase.id AS tbl_uicase_id, tbl_uicase.name AS tbl_uicase_name, tbl_uicase.description AS tbl_uicase_description, tbl_uicase.type AS tbl_uicase_type, tbl_uicase.deptid AS tbl_uicase_deptid, tbl_uicase.version AS tbl_uicase_version, tbl_uicase.function_type AS tbl_uicase_function_type, tbl_uicase.class_type AS tbl_uicase_class_type, tbl_uicase.source_url AS tbl_uicase_source_url, tbl_uicase.devices_type AS tbl_uicase_devices_type, tbl_uicase.is_deleted AS tbl_uicase_is_deleted 
+FROM tbl_uicase 
+WHERE tbl_uicase.function_type = %(function_type_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'function_type_1': 'test_monthmharepage', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-06-09 18:59:40,277 [werkzeug] [16560:Thread-40] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:40] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 18:59:40,297 [werkzeug] [16560:Thread-40] _internal.py:_internal:_log in 113] [ERROR]: Error on request:
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2458, in wsgi_app
+    ctx.auto_pop(error)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 452, in auto_pop
+    self.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 438, in pop
+    app_ctx.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 238, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2321, in do_teardown_appcontext
+    func(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask_sqlalchemy\__init__.py", line 897, in shutdown_session
+    self.session.commit()
+  File "<string>", line 2, in commit
+    
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 836, in commit
+    trans.commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2330, in commit
+    self._do_commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2513, in _do_commit
+    self._connection_commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2484, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 992, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1998, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 990, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 452, in connection
+    return self._revalidate_connection()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 560, in _revalidate_connection
+    self._invalid_transaction()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 532, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: http://sqlalche.me/e/14/8s2b)
+2021-06-09 18:59:40,312 [erybjp] [32344:Thread-41] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 732, in _read_bytes
+    data = self._rfile.read(num_bytes)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 65, in post
+    caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1677, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 329, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\pymysql\connections.py", line 738, in _read_bytes
+    raise err.OperationalError(
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。)')
+[SQL: SELECT tbl_uicase.create_by AS tbl_uicase_create_by, tbl_uicase.created_at AS tbl_uicase_created_at, tbl_uicase.update_by AS tbl_uicase_update_by, tbl_uicase.updated_at AS tbl_uicase_updated_at, tbl_uicase.remark AS tbl_uicase_remark, tbl_uicase.id AS tbl_uicase_id, tbl_uicase.name AS tbl_uicase_name, tbl_uicase.description AS tbl_uicase_description, tbl_uicase.type AS tbl_uicase_type, tbl_uicase.deptid AS tbl_uicase_deptid, tbl_uicase.version AS tbl_uicase_version, tbl_uicase.function_type AS tbl_uicase_function_type, tbl_uicase.class_type AS tbl_uicase_class_type, tbl_uicase.source_url AS tbl_uicase_source_url, tbl_uicase.devices_type AS tbl_uicase_devices_type, tbl_uicase.is_deleted AS tbl_uicase_is_deleted 
+FROM tbl_uicase 
+WHERE tbl_uicase.function_type = %(function_type_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'function_type_1': 'test_partnerpage', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-06-09 18:59:40,325 [werkzeug] [32344:Thread-41] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:40] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 18:59:40,349 [werkzeug] [32344:Thread-41] _internal.py:_internal:_log in 113] [ERROR]: Error on request:
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\werkzeug\serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2458, in wsgi_app
+    ctx.auto_pop(error)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 452, in auto_pop
+    self.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 438, in pop
+    app_ctx.pop(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\ctx.py", line 238, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask\app.py", line 2321, in do_teardown_appcontext
+    func(exc)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\flask_sqlalchemy\__init__.py", line 897, in shutdown_session
+    self.session.commit()
+  File "<string>", line 2, in commit
+    
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 836, in commit
+    trans.commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2330, in commit
+    self._do_commit()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2513, in _do_commit
+    self._connection_commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2484, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 992, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1998, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 990, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 452, in connection
+    return self._revalidate_connection()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 560, in _revalidate_connection
+    self._invalid_transaction()
+  File "D:\AutoTest\erybjp\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 532, in _invalid_transaction
+    raise exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: Can't reconnect until invalid transaction is rolled back. (Background on this error at: http://sqlalche.me/e/14/8s2b)
+2021-06-09 18:59:42,807 [werkzeug] [21200:Thread-42] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:42] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:42,886 [werkzeug] [27072:Thread-43] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:42] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:43,057 [werkzeug] [30576:Thread-45] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:43] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:43,079 [erybjp] [17860:Thread-46] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 83, in post
+    DingtalkRobot().send_markdown("巡检异常预警", text, [])
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 87, in send_markdown
+    return self.__post(data)
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 104, in __post
+    response = requests.post(self.__spliceUrl(), headers=self.headers, data=post_data)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 696, in urlopen
+    self._prepare_proxy(conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 964, in _prepare_proxy
+    conn.connect()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 359, in connect
+    conn = self._connect_tls_proxy(hostname, conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 500, in _connect_tls_proxy
+    return ssl_wrap_socket(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 997, in _create
+    raise ValueError("check_hostname requires server_hostname")
+ValueError: check_hostname requires server_hostname
+2021-06-09 18:59:43,084 [werkzeug] [17860:Thread-46] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:43] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-09 18:59:43,177 [werkzeug] [29188:Thread-44] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:43] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:43,262 [werkzeug] [8424:Thread-47] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:43] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:45,118 [werkzeug] [10440:Thread-48] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:45] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:45,303 [werkzeug] [18924:Thread-49] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:45] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:45,907 [werkzeug] [22076:Thread-50] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:45] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:46,093 [werkzeug] [19188:Thread-51] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:46] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:46,961 [werkzeug] [24320:Thread-52] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:46] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:47,151 [werkzeug] [2592:Thread-53] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:47] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:47,840 [werkzeug] [10164:Thread-54] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:47] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:48,882 [werkzeug] [32256:Thread-55] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:48] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:49,423 [werkzeug] [3884:Thread-56] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:49] "[37mPOST /result HTTP/1.1[0m" 200 -
+2021-06-09 18:59:52,088 [werkzeug] [1848:Thread-57] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jun/2021 18:59:52] "[37mPOST /result HTTP/1.1[0m" 200 -
