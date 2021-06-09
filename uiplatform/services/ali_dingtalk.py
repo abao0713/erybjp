@@ -20,7 +20,7 @@ try:
 except AttributeError:
     JSONDecodeError = ValueError
 
-URL = "1https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
+URL = "https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
 SIGN = "SEC4cf8edcdeb0cd0066b4f42e005585c833ec119c642b0c5bf2881d39a221d4940"
 def is_not_null_and_blank_str(content):
     if content and content.strip():
@@ -130,9 +130,9 @@ class DingtalkRobot(object):
                 return result
 
 
-def alidingcheck(filename, cur_time, page='', title="巡检异常预警"):
+def alidingcheck(filename, cur_time, test_name, title="巡检异常预警"):
     url = "http://127.0.0.1:5000/data/picture/"+filename
-    text = f"#### {title}\n> 打开落地页地址{page} 探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
+    text = f"#### {title}\n> 本次在运行测试用例{test_name}时探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
     DingtalkRobot().send_markdown(title, text, [])
 
 

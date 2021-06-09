@@ -55,12 +55,17 @@ def run_only_test():
     lista = ["-n 3","uiplatform/utils/business/test_check_web.py::TestHinfo"]
     lista.append(pares)
     pytest.main(lista)
-    return jsonify(code=200, msg="ok", data='')
+    return jsonify(code=200, msg="ok", data={"session_id":session_id})
+
 
 @user.route('/ui_test/test1', methods=["GET"])
 def run_only_test01():
-    pytest.main(["uiplatform/utils/business/test_check_web.py::TestHinfo1"])
-    return jsonify(code=200, msg="ok", data='')
+    session_id = uuid.uuid1()
+    pares = f"--seid={session_id}"
+    lista = ["uiplatform/utils/business/test_check_web.py::TestHinfo1"]
+    lista.append(pares)
+    pytest.main(lista)
+    return jsonify(code=200, msg="ok", data={"session_id": session_id})
 @user.route('/ui_test/t', methods=["GET"])
 def run_po_test():
     Config.IS_MOBILE = not Config.IS_MOBILE

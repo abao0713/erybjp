@@ -20,14 +20,12 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 from .exceptions import PageElementError, PageSelectException
 from .exceptions import FindElementTypesError
-from flask import current_app as app
+from .BaseLoggers import logger
 from func_timeout import func_set_timeout
 from func_timeout.exceptions import FunctionTimedOut
 from uiplatform.utils.data.config_object import Browser
-from selenium import webdriver
-from config import basedir
-from uiplatform.utils.common.decorator import singleton
-# Map PageElement constructor arguments to webdriver locator enums
+
+
 LOCATOR_LIST = {
     # selenium
     'css': By.CSS_SELECTOR,
@@ -124,17 +122,17 @@ class Element(object):
 
             if len(elems) == 1:
                 # app.logger.info("✅ Find element: {by}={value} ".format(by=elem[0], value=elem[1]))
-                print("✅ Find element: {by}={value} ".format(by=elem[0], value=elem[1]))
+                logger.info("✅ Find element: {by}={value} ".format(by=elem[0], value=elem[1]))
                 break
             elif len(elems) > 1:
-                app.logger.info("❓ Find {n} elements through: {by}={value}".format(
+                logger.info("❓ Find {n} elements through: {by}={value}".format(
                     n=len(elems), by=elem[0], value=elem[1]))
                 break
             else:
                 sleep(1)
         else:
             error_msg = "❌ Find 0 elements through: {by}={value}".format(by=elem[0], value=elem[1])
-            # app.logger.error(error_msg)
+            logger.error(error_msg)
             print(error_msg)
             raise NoSuchElementException(error_msg)
 
@@ -228,7 +226,7 @@ class Element(object):
     def clear(self):
         """清空输入框中涉及到的文本，基本每次输入都需要调用此方法"""
         elem = self.__get_element(self.k, self.v)
-        app.logger.info("clear element: {}".format(self.desc))
+        logger.info("clear element: {}".format(self.desc))
         elem.clear()
 
     def send_keys(self, value):
@@ -236,21 +234,21 @@ class Element(object):
         输入信息value
         """
         elem = self.__get_element(self.k, self.v)
-        # app.logger.info("🖋 input element: {}".format(self.desc))
+        logger.info("🖋 input element: {}".format(self.desc))
         print("🖋 input element: {}".format(self.desc))
         elem.send_keys(value)
 
     def click(self):
         """点击操作"""
         elem = self.__get_element(self.k, self.v)
-        # app.logger.info("🖱 click element: {}".format(self.desc))
+        logger.info("🖱 click element: {}".format(self.desc))
         print("🖱 click element: {}".format(self.desc))
         elem.click()
 
     def submit(self):
         """表单提交操作"""
         elem = self.__get_element(self.k, self.v)
-        app.logger.info("submit element: {}".format(self.desc))
+        logger.info("submit element: {}".format(self.desc))
         elem.submit()
 
     @property
@@ -502,7 +500,7 @@ class Elements(object):
             elems = context.find_elements(*self.locator)
         except NoSuchElementException:
             elems = []
-        app.logger.info("✨ Find {n} elements through: {by}={value}, describe:{desc}".format(
+        logger.info("✨ Find {n} elements through: {by}={value}, describe:{desc}".format(
             n=len(elems), by=self.k, value=self.v, desc=self.describe))
         return elems
 
