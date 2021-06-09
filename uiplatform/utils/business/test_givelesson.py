@@ -34,7 +34,7 @@ class TestGiveLession:
             print("类型错误")
 
     # 首页底部状态图片检查
-    def test_shouye_img(self, browser, browser_close):
+    def test_shouye_dibu_img(self, browser, browser_close):
         page = GiveLessonPage(browser)
         page.get(page.url_code)
         shouye_img=page.search_shouye_state_img
