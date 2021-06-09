@@ -70,10 +70,6 @@ class Config(object):
     # 缓存设置
     CACHE_TYPE = "redis"
 
-    # UI自动化框架的参数配置动态化
-    BROWSER_NAME = "chrome"
-    HEADLESS = True
-    IS_MOBILE = True
 
 
 
@@ -101,10 +97,18 @@ class TestingConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:305634841@127.0.0.1/flasken?charset=utf8"
 
+    @classmethod
+    def init_app(cls, app):
+        print('>>>>>Two: This app has update')
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/flasken?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
+
+    @classmethod
+    def init_app(cls, app):
+        print('>>>>>Two: This app has update')
+
 
 config = {
     'development': DevelopmentConfig,
