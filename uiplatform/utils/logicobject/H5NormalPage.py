@@ -38,10 +38,6 @@ class InvitationPage(Page):
 class GiveLessonPage(Page):
     """免费赠课落地页"""
 
-    # cookie = {'name': 'authorization',
-    #           'value': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDb2RlbWFvIEF1dGgiLCJ1c2VyX3R5cGUiOiJzdHVkZW50IiwiZGV2aWNlX2lkIjowLCJ1c2VyX2lkIjoxMTIwNzM0NiwiaXNzIjoiQXV0aCBTZXJ2aWNlIiwicGlkIjoiOUNZdGd6MTAiLCJleHAiOjE2MjcxMjU0MjQsImlhdCI6MTYyMzIzNzQyNCwianRpIjoiZjE2ZTMzODUtNmRmZi00NzhjLTlhMzQtZDQ0ZDJiOGI5MzA4In0.Zu31TOQg4c6qKu-2vebRbDlB_Mc8v1kpciSzoGhLkVM',
-    #           # 'domain': 'codecamp-marketing-web.codemao.cn'
-    #           }
     url_code = "https://activity.codemao.cn/referral/give-lessons?courseType=code"
     url_steam = "https://activity.codemao.cn/referral/give-lessons?courseType=stean"
     # 页面公共元素
