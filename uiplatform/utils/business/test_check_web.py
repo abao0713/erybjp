@@ -106,9 +106,8 @@ class TestHinfo1:
     def setup_class(self):
 
         global driver
-        driver = browser_driver(browser_name="chrome")
+        driver = browser_driver(browser_name="chrome", is_mobile=False)
 
-    @pytest.mark.skip(reason='misunderstood the API')
     def test_fr(self):
         page = HiCode(driver=driver)
         page.get(page.url)
