@@ -58,7 +58,8 @@ def pytest_runtest_makereport(item, call):
             "fail_result":fail_result,"session_id":seid
         }
         try:
-            requests.post(url="http://139.196.165.161:6851/result", data=json_data)
+            f = requests.post(url="http://139.196.165.161:6851/result", data=json_data)
+            print(f.json())
         except:
             print("内部接口没有启动")
         # model.save()
