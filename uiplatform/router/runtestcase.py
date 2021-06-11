@@ -25,7 +25,7 @@ cur_dir = os.path.dirname(__file__).split('server')[0]
 def run_only_test():
     session_id= uuid.uuid1()
     pares = f"--seid={session_id}"
-    lista = ["-n 3","uiplatform/utils/business/test_check_web.py::TestHinfo"]
+    lista = ["uiplatform/utils/business/test_check_web.py::TestHinfo"]
     lista.append(pares)
     pytest.main(lista)
     return jsonify(code=200, msg="ok", data={"session_id":session_id})
