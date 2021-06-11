@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     image: prod_erybj_service
-    container_name: prod_erybj_service
+    container_name: prod_erybjp_service
     ports:
       - "6851:6851"
     command: uwsgi --ini uwsgi.ini
@@ -24,7 +24,7 @@ services:
 
   chrome:
     restart: always
-    image: selenium/standalone-chrome:latest
+    image: selenium/node-chrome:latest
     container_name: prod_erybjp_chrome
     ports:
       - "4444:4444"
