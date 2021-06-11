@@ -107,6 +107,7 @@ class TestHinfo1:
 
         global driver
         driver = browser_driver(browser_name="chrome", is_mobile=False)
+        logger.info(driver)
 
     def test_fr(self):
         page = HiCode(driver=driver)

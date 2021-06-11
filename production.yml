@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 
 services:
@@ -32,10 +32,6 @@ services:
       - python
     shm_size: 2g
     hostname: chrome
-    networks:
-      web:
-        external: true
-        driver:  bridge
 
 networks:
   service:
