@@ -22127,3 +22127,11 @@ ValueError: I/O operation on closed file.
 2021-06-10 20:21:55,442 [werkzeug] [30612:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [10/Jun/2021 20:21:55] "[35m[1mGET /element/ui_test/test1 HTTP/1.1[0m" 500 -
 2021-06-10 20:30:25,195 [werkzeug] [23652:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 2021-06-10 20:30:42,128 [werkzeug] [23044:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [10/Jun/2021 20:30:42] "[37mGET /element/ui_test/test1 HTTP/1.1[0m" 200 -
+2021-06-11 09:19:17,354 [werkzeug] [12392:Thread-3] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [11/Jun/2021 09:19:17] "[33mGET / HTTP/1.1[0m" 404 -
+2021-06-11 09:19:18,083 [werkzeug] [25408:Thread-4] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [11/Jun/2021 09:19:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-06-11 09:19:53,516 [werkzeug] [24916:Thread-5] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [11/Jun/2021 09:19:53] "[33mGET /auth/ui_test/test HTTP/1.1[0m" 404 -
+2021-06-11 09:20:55,543 [werkzeug] [18252:Thread-6] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [11/Jun/2021 09:20:55] "GET /element/ui_test/test HTTP/1.1" 200 -
+2021-06-11 09:21:41,386 [werkzeug] [18140:Thread-8] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [11/Jun/2021 09:21:41] "GET /element/ui_test/test1 HTTP/1.1" 200 -
+2021-06-11 09:25:05,320 [werkzeug] [12392:Thread-3] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [11/Jun/2021 09:25:05] "GET /element/ui_test/test1 HTTP/1.1" 200 -
+2021-06-11 15:12:08,811 [werkzeug] [14288:Thread-3] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [11/Jun/2021 15:12:08] "GET /element/ui_test/test1 HTTP/1.1" 200 -
+2021-06-11 15:15:18,905 [werkzeug] [17648:Thread-4] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [11/Jun/2021 15:15:18] "GET /element/ui_test/test1 HTTP/1.1" 200 -
