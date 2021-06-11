@@ -24,10 +24,11 @@ services:
 
   chrome:
     restart: always
-    image: selenium/node-chrome:latest
+    image: selenium/node-chrome-debug:latest
     container_name: prod_erybjp_chrome
     ports:
       - "4444:4444"
+      - "5904:5900"
     depends_on:
       - python
     shm_size: 2g
