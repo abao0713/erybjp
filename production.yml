@@ -1,4 +1,5 @@
-version: '3'
+version: '3.8'
+
 
 services:
   python:
@@ -29,8 +30,12 @@ services:
       - "4444:4444"
     depends_on:
       - python
+    shm_size: 2g
+    hostname: chrome
     networks:
-      - service
+      web:
+        external: true
+        driver:  bridge
 
 networks:
   service:
