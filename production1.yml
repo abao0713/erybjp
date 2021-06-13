@@ -21,17 +21,27 @@ services:
       service:
         aliases:
           - redis
-  
+  hub:
+    restart: always
+    image: selenium/hub:latest
+    container_name: prod_erybjp_hub
+    ports:
+      - "4444:4444"
+    volumes:
+      - /opt/hubconf/:/mnt
+    depends_on:
+      - python
   chrome:
     restart: always
     image: selenium/standalone-chrome-debug:latest
     container_name: prod_erybjp_chrome
     ports:
-      - "4444:4444"
-      - "5904:5900"
+      - "5901:5901"
     depends_on:
       - python
     shm_size: 2g
+    links:
+      - hub
 
 networks:
   service:
