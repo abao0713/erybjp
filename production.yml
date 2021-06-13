@@ -21,7 +21,7 @@ services:
       service:
         aliases:
           - redis
-  
+
   chrome:
     restart: always
     image: selenium/standalone-chrome-debug:latest
