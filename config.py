@@ -69,6 +69,8 @@ class Config(object):
     EMAIL_RECEIVER = "305634841@qq.com,2870550420@qq.com"
     # 缓存设置
     CACHE_TYPE = "redis"
+    # 模板自动加载设置
+    TEMPLATES_AUTO_RELOAD = True
 
 
 

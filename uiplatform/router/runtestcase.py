@@ -5,17 +5,14 @@
 # Author:       yuanbaojun
 # Date:         2021/5/18
 #----------------------------
-import traceback
-from time import strftime
-from random import randint
+
+
 from flask import Blueprint, jsonify, request
-from sqlalchemy import text
-import pytest, re, os
-from urllib.parse import unquote
-from threading import Thread
-from config import basedir,Config
+import pytest, os
 import uuid
 
+from uiplatform.utils.business.cycle_check.temple import auto_check_tem
+from uiplatform.utils.common.BaseLoggers import logger
 
 user = Blueprint('user', __name__)
 cur_dir = os.path.dirname(__file__).split('server')[0]
@@ -25,7 +22,7 @@ cur_dir = os.path.dirname(__file__).split('server')[0]
 def run_only_test():
     session_id= uuid.uuid1()
     pares = f"--seid={session_id}"
-    lista = ["uiplatform/utils/business/test_check_web.py::TestHinfo"]
+    lista = ["uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo"]
     lista.append(pares)
     pytest.main(lista)
     return jsonify(code=200, msg="ok", data={"session_id":session_id})
@@ -35,14 +32,43 @@ def run_only_test():
 def run_only_test01():
     session_id = uuid.uuid1()
     pares = f"--seid={session_id}"
-    lista = ["uiplatform/utils/business/test_check_web.py::TestHinfo1"]
+    lista = ["uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo1"]
     lista.append(pares)
     pytest.main(lista)
     return jsonify(code=200, msg="ok", data={"session_id": session_id})
 
 
-@user.route('/ui_test/t', methods=["GET"])
-def run_po_test():
-    Config.IS_MOBILE = not Config.IS_MOBILE
-    Config.HEADLESS = not Config.HEADLESS
-    return jsonify(code=200, msg="ok", data='')
+@user.route('/auto', methods=["put"])
+def run_auto_init():
+    res_data = request.get_json()
+    # case_id_list = res_data.get("case_id_list")
+    msg = "ok"
+    case_id_list = [1, 2]
+    auto_check_tem(case_id_list)
+    return jsonify(code=200, msg="ok", data="5262")
+
+@user.route('/auto/run', methods=["GET"])
+def run_auto():
+    session_id = uuid.uuid1()
+    logger.info("Page base class generation completed")
+
+    pares1 = f"--seid={session_id}"
+    lista1 = ["uiplatform/utils/business/cycle_check/test_cycle_mobile.py"]
+    lista1.append(pares1)
+    pytest.main(lista1)
+    logger.info("testcase mobile class generation completed")
+
+    pares = f"--seid={session_id}"
+    lista = ["uiplatform/utils/business/cycle_check/test_cycle_web.py"]
+    lista.append(pares)
+    pytest.main(lista)
+    logger.info("testcase web class generation completed")
+
+
+    return jsonify(code=200, msg="ok", data={"session_id": session_id})
+
+
+
+
+
+
