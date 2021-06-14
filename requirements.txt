@@ -48,3 +48,4 @@ Werkzeug==1.0.1
 uwsgi
 flask-script
 flask-migrate
+cryptography
