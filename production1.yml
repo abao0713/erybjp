@@ -23,31 +23,46 @@ services:
           - redis
   hub:
     restart: always
-    image: registry.aliyuncs.com/denverdino/selenium-hub
+    image: selenium/hub:3.141.59-iron
     container_name: prod_erybjp_hub
     ports:
       - "4444:4444"
     volumes:
       - /opt/conf/:/mnt
-    
+    environment:
+      - GRID_MAX_SESSION=5
+      - GRID_TIMEOUT=900
+      - START_XVFB=false
   chrome:
     restart: always
-    image: registry.aliyuncs.com/denverdino/selenium-node-chrome
+    image: selenium/node-chrome-debug:latest
     container_name: prod_erybjp_chrome
     ports:
       - "5901:5901"
+    depends_on:
+      - python
+    shm_size: 2g
     links:
       - hub
-    labels:
-      aliyun.scale: "3"
+    environment:
+      - HUB_HOST=hub
+      - HUB_PORT=4444
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
   firefox:
-    image: registry.aliyuncs.com/denverdino/selenium-node-firefox
+    image: selenium/node-firefox-debug:latest
     container_name: prod_erybjp_firefox
     ports:
       - "5902:5902"
+    depends_on:
+      - python
+    shm_size: 2g
     links:
       - hub
-    labels:
-      aliyun.scale: "3"
+    environment:
+      - HUB_HOST=hub
+      - HUB_PORT=4444
+      - NODE_MAX_INSTANCES=1
+      - NODE_MAX_SESSION=1
 networks:
   service:
