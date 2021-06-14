@@ -29,8 +29,7 @@ services:
       - "4444:4444"
     volumes:
       - /opt/conf/:/mnt
-    labels:
-      aliyun.routing.port_4444: http://selenium/
+    
   chrome:
     restart: always
     image: registry.aliyuncs.com/denverdino/selenium-node-chrome
