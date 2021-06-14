@@ -23,7 +23,7 @@ services:
           - redis
   hub:
     restart: always
-    image: selenium/hub:3.141.59-iron
+    image: selenium/hub:latest
     container_name: prod_erybjp_hub
     ports:
       - "4444:4444"
@@ -36,8 +36,6 @@ services:
     container_name: prod_erybjp_chrome
     ports:
       - "5901:5901"
-    depends_on:
-      - hub
     shm_size: 2g
     links:
       - hub
@@ -47,11 +45,9 @@ services:
     container_name: prod_erybjp_firefox
     ports:
       - "5902:5902"
-    depends_on:
-      - hub
     shm_size: 2g
     links:
       - hub
-    
+
 networks:
   service:
