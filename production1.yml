@@ -23,35 +23,32 @@ services:
           - redis
   hub:
     restart: always
-    image: selenium/hub:latest
+    image: registry.aliyuncs.com/denverdino/selenium-hub
     container_name: prod_erybjp_hub
     ports:
       - "4444:4444"
     volumes:
       - /opt/conf/:/mnt
-    depends_on:
-      - python
+    labels:
+      aliyun.routing.port_4444: http://selenium/
   chrome:
     restart: always
-    image: selenium/node-chrome-debug:latest
+    image: registry.aliyuncs.com/denverdino/selenium-node-chrome
     container_name: prod_erybjp_chrome
     ports:
       - "5901:5901"
-    depends_on:
-      - python
-    shm_size: 2g
     links:
       - hub
+    labels:
+      aliyun.scale: "3"
   firefox:
-    image: selenium/node-firefox-debug:latest
-    container_name: prod_erybjp_chrome
+    image: registry.aliyuncs.com/denverdino/selenium-node-firefox
+    container_name: prod_erybjp_firefox
     ports:
       - "5902:5902"
-    depends_on:
-      - python
-    shm_size: 2g
     links:
       - hub
-
+    labels:
+      aliyun.scale: "3"
 networks:
   service:
