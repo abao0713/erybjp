@@ -9,26 +9,34 @@ services:
       dockerfile: ./Dockerfile
     image: prod_erybj_service
     container_name: prod_erybjp_service
+    volumes:
+      - /etc/localtime:/etc/localtime
     ports:
       - "6851:6851"
     command: uwsgi --ini uwsgi.ini
   redis:
     image: redis:latest
     container_name: prod_erybjp_redis
+    volumes:
+      - /etc/localtime:/etc/localtime
     ports:
       - "6379:6379"
     networks:
       service:
         aliases:
           - redis
-  hub:
+  selenium-hub:
     restart: always
     image: selenium/hub:latest
-    container_name: prod_erybjp_hub
+    container_name: selenium-hub
     ports:
       - "4444:4444"
     volumes:
       - /opt/conf/:/mnt
+      - /etc/localtime:/etc/localtime
+    environment:
+      - TZ=Asia/Shanghai
+      - GRID_MAX_SESSION=10
 
   chrome:
     restart: always
@@ -36,18 +44,36 @@ services:
     container_name: prod_erybjp_chrome
     ports:
       - "5901:5901"
-    shm_size: 2g
-    links:
-      - hub
+    volumes:
+      - /dev/shm:/dev/shm
+      - /etc/localtime:/etc/localtime
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_INSTANCES=5
+      - NODE_MAX_SESSION=5
+      - START_XVFB=false
+      - TZ=Asia/Shanghai
 
   firefox:
     image: selenium/node-firefox-debug:latest
     container_name: prod_erybjp_firefox
+    volumes:
+      - /dev/shm:/dev/shm
+      - /etc/localtime:/etc/localtime
     ports:
       - "5902:5902"
-    shm_size: 2g
-    links:
-      - hub
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_INSTANCES=5
+      - NODE_MAX_SESSION=5
+      - START_XVFB=false
+      - TZ=Asia/Shanghai
 
 networks:
   service:
