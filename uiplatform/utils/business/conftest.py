@@ -18,7 +18,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--seid",
         action="store",
-        default=1111,
+        default="定时任务",
         type=str,
         help="本次运行时的唯一标识",
     )

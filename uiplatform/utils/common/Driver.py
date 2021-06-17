@@ -42,8 +42,8 @@ def browser_driver(browser_name: str, headless=True, is_mobile=True):
                 chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver"
             else:
                 chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver_mac"
-            # driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
-            driver = webdriver.Remote(command_executor="http://172.24.90.86:4444/wd/hub", desired_capabilities=DesiredCapabilities().CHROME, options=options)
+            driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
+            # driver = webdriver.Remote(command_executor="http://172.24.90.86:4444/wd/hub", desired_capabilities=DesiredCapabilities().CHROME, options=options)
             print(driver.session_id)
             if not bool(is_mobile):
                 driver.maximize_window()

@@ -11,5 +11,5 @@ from uiplatform.utils.common.BaseLoggers import logger
 
 
 def h5check_job():
-    pytest.main(["-n 9", "uiplatform/utils/business/test_check_web.py"])
+    pytest.main(["uiplatform/utils/business/cycle_check/test_check_web.py"])
     logger.info("定时任务启动")

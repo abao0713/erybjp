@@ -22,7 +22,7 @@ cur_dir = os.path.dirname(__file__).split('server')[0]
 def run_only_test():
     session_id= uuid.uuid1()
     pares = f"--seid={session_id}"
-    lista = ["-n 3", "uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo"]
+    lista = ["uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo"]
     lista.append(pares)
     pytest.main(lista)
     return jsonify(code=200, msg="ok", data={"session_id":session_id})
@@ -41,9 +41,8 @@ def run_only_test01():
 @user.route('/auto', methods=["put"])
 def run_auto_init():
     res_data = request.get_json()
-    # case_id_list = res_data.get("case_id_list")
-    msg = "ok"
-    case_id_list = [1, 2]
+    case_id_list = res_data.get("case_id_list")
+    # case_id_list = [1, 2]
     auto_check_tem(case_id_list)
     return jsonify(code=200, msg="ok", data="5262")
 

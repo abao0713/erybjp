@@ -37,18 +37,21 @@ class CaseResult(Resource):
         parser.add_argument('pagesize', type=int, help='每页显示的数量')
         args = parser.parse_args()
         
-        paginates = Uiresultinfo.query.join(Uicaseinfo, Uiresultinfo.case_id == Uicaseinfo.id).add_entity(Uicaseinfo).filter(
-            Uiresultinfo.session_id == args.get("session_id")).paginate(page=args.get("cur_page"), per_page=args.get("pagesize"), error_out=False)
-        # paginates = Uiresultinfo.query.join(Uicaseinfo, Uiresultinfo.case_id == Uicaseinfo.id).add_entity(
-        #     Uicaseinfo).filter(
-        #     Uiresultinfo.session_id == args.get("session_id")).all()
+        # paginates = Uiresultinfo.query.join(Uicaseinfo, Uiresultinfo.case_id == Uicaseinfo.id).add_entity(Uicaseinfo).filter(
+        #     Uiresultinfo.session_id == args.get("session_id")).paginate(page=args.get("cur_page"), per_page=args.get("pagesize"), error_out=False)
+        paginates = Uiresultinfo.query.join(Uicaseinfo, Uiresultinfo.case_id == Uicaseinfo.id).add_entity(
+            Uicaseinfo).filter(
+            Uiresultinfo.session_id == args.get("session_id"), Uiresultinfo.is_deleted == 0).paginate(page=args.get("cur_page"),
+                                                                        per_page=args.get("pagesize"), error_out=False).with_entities(Uiresultinfo.session_id,
+            Uiresultinfo.case_id, Uiresultinfo.result)
         result = paginates.items
+
         json_data = model_to_dict(result)
         return jsonify(code=200, msg="ok", cur_page=paginates.page, page=paginates.pages, data=json_data)
 
     def post(self):
         """
-        新增元素信息表数据
+        新增数据结果保存表数据
         """
         parser = reqparse.RequestParser()
         parser.add_argument('result', type=str, required=True, help='测试结果')

@@ -3,3 +3,10 @@
 2021-06-14 21:22:01,461 [werkzeug] [14780:Thread-4] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [14/Jun/2021 21:22:01] "GET /element/ui_test/test HTTP/1.1" 200 -
 2021-06-14 21:30:57,176 [werkzeug] [14008:MainThread] _internal.py:_internal:_log in 225] [INFO]:  * Detected change in 'E:\\Auto_test\\flask\\erybjp\\uiplatform\\utils\\common\\Driver.py', reloading
 2021-06-14 21:30:57,333 [werkzeug] [5368:MainThread] _internal.py:_internal:_log in 225] [INFO]:  * Restarting with stat
+2021-06-17 19:26:57,952 [werkzeug] [8280:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-06-17 19:27:57,218 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-06-17 19:28:14,734 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:28:14] "[33mGET / HTTP/1.1[0m" 404 -
+2021-06-17 19:28:14,868 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:28:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-06-17 19:29:57,211 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:29:57] "[37mGET /element/ui_test/test1 HTTP/1.1[0m" 200 -
+2021-06-17 19:30:18,965 [werkzeug] [29324:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-06-17 19:31:15,966 [werkzeug] [29324:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:31:15] "[37mGET /element/ui_test/test1 HTTP/1.1[0m" 200 -

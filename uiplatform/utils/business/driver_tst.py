@@ -5,6 +5,9 @@
 # Author:       yuanbaojun
 # Date:         2021/5/19
 #----------------------------
+import os
+import time
+
 import pytest
 import platform
 from config import basedir
@@ -40,3 +43,12 @@ def browser():
 def browser_close():
     yield driver
     driver.quit()
+
+
+
+def _capture_screenshot(path, filename=None):
+    if filename is None:
+        filename = str(time.time()*100000).split(".")[0] + ".png"
+    file_path = os.path.join(path, filename)
+    driver.save_screenshot(file_path)
+    return filename

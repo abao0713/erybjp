@@ -31,7 +31,7 @@ class TestHinfo:
         page = PartnerPage(driver=driver)
         page.get(page.url)
         ele = page.search_element
-        BaseAssert().assert_text_in_elem("立即88登录", ele, mode="accurate")
+        BaseAssert().assert_text_in_elem("立即登录", ele, mode="accurate")
 
 
 
