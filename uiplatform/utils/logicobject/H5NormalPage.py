@@ -8,7 +8,7 @@
 
 
 from uiplatform.utils import Element
-from ..common.BrowserPage import Page
+from uiplatform.utils.common.BrowserPage import Page
 
 
 

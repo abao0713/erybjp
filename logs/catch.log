@@ -10,3 +10,228 @@
 2021-06-17 19:29:57,211 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:29:57] "[37mGET /element/ui_test/test1 HTTP/1.1[0m" 200 -
 2021-06-17 19:30:18,965 [werkzeug] [29324:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
 2021-06-17 19:31:15,966 [werkzeug] [29324:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:31:15] "[37mGET /element/ui_test/test1 HTTP/1.1[0m" 200 -
+2021-06-17 21:00:01,084 [werkzeug] [19512:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-17 21:00:03,559 [werkzeug] [22120:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 21:00:03] "[33mGET / HTTP/1.1[0m" 404 -
+2021-06-17 21:00:41,512 [werkzeug] [22728:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-17 21:01:44,543 [werkzeug] [35128:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-17 21:01:44,904 [erybjp] [19388:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [GET]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\serialization.py", line 20, in model_to_dict
+    tmp = [dict(zip(res.__dict__.keys(), res.__dict__.values())) for res in result]
+  File "D:\AutoTest\erybjp\serialization.py", line 20, in <listcomp>
+    tmp = [dict(zip(res.__dict__.keys(), res.__dict__.values())) for res in result]
+AttributeError: Could not locate column in row for column '__dict__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 47, in get
+    json_data = model_to_dict(result)
+  File "D:\AutoTest\erybjp\serialization.py", line 29, in model_to_dict
+    raise TypeError('Type error of parameter')
+TypeError: Type error of parameter
+2021-06-17 21:01:45,010 [werkzeug] [19388:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 21:01:45] "[35m[1mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 500 -
+2021-06-18 15:27:27,470 [werkzeug] [14492:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 15:35:06,425 [werkzeug] [8092:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:07:59,565 [werkzeug] [29700:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:11:51,414 [erybjp] [29192:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [GET]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 45, in get
+    caseid_list = result.values('case_id')
+AttributeError: 'list' object has no attribute 'values'
+2021-06-18 17:11:51,501 [werkzeug] [29192:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:11:51] "[35m[1mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 500 -
+2021-06-18 17:16:38,558 [werkzeug] [32964:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:19:22,584 [werkzeug] [32120:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:20:09,406 [werkzeug] [31936:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:20:24,157 [erybjp] [25888:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [GET]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 52, in get
+    resds = Uicaseinfo.query().filter(Uicaseinfo.id==a)
+TypeError: 'BaseQuery' object is not callable
+2021-06-18 17:20:55,707 [werkzeug] [28212:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:21:56,989 [werkzeug] [25276:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:22:10,292 [werkzeug] [26060:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:22:14,240 [erybjp] [25956:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [GET]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 53, in get
+    f = re+resds[0]
+TypeError: unsupported operand type(s) for +: 'Uiresultinfo' and 'Uicaseinfo'
+2021-06-18 17:22:14,325 [werkzeug] [25956:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:22:14] "[35m[1mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 500 -
+2021-06-18 17:31:37,830 [werkzeug] [35304:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:31:56,721 [werkzeug] [36184:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:33:34,037 [werkzeug] [19552:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:34:58,673 [werkzeug] [33932:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:35:25,085 [werkzeug] [5172:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:35:43,114 [werkzeug] [24700:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:35:43] "[37mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 200 -
+2021-06-18 17:46:11,363 [werkzeug] [16996:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:46:14,046 [werkzeug] [34916:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:46:14] "[37mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 200 -
+2021-06-18 17:49:33,745 [werkzeug] [1416:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 17:49:36,355 [werkzeug] [22892:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:49:36] "[37mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 200 -
+2021-06-18 17:49:42,802 [werkzeug] [27684:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:49:42] "[37mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 200 -
+2021-06-18 17:49:51,581 [werkzeug] [2520:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:49:51] "[37mGET /result HTTP/1.1[0m" 200 -
+2021-06-18 17:50:15,994 [werkzeug] [1572:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:50:15] "[37mGET /result?pagesize=5 HTTP/1.1[0m" 200 -
+2021-06-18 17:50:34,620 [werkzeug] [28148:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:50:34] "[37mGET /result HTTP/1.1[0m" 200 -
+2021-06-18 18:19:15,019 [werkzeug] [13632:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 18:19:23,259 [werkzeug] [28368:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:19:23] "[37mGET /element HTTP/1.1[0m" 200 -
+2021-06-18 18:19:34,931 [werkzeug] [15412:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:19:34] "[37mGET /case HTTP/1.1[0m" 200 -
+2021-06-18 18:20:01,226 [werkzeug] [25524:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:01] "[37mGET /element HTTP/1.1[0m" 200 -
+2021-06-18 18:20:09,871 [werkzeug] [37796:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:09] "[37mGET /element HTTP/1.1[0m" 200 -
+2021-06-18 18:20:11,138 [werkzeug] [24596:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:11] "[37mGET /element HTTP/1.1[0m" 200 -
+2021-06-18 18:20:24,379 [werkzeug] [27144:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:24] "[37mGET /result HTTP/1.1[0m" 200 -
+2021-06-18 18:20:31,132 [werkzeug] [16492:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:31] "[37mGET /element HTTP/1.1[0m" 200 -
+2021-06-18 18:21:17,183 [werkzeug] [14012:Thread-8] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:21:17] "[37mGET /element HTTP/1.1[0m" 200 -
+2021-06-18 18:21:22,786 [werkzeug] [8136:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 18:21:40,728 [werkzeug] [33600:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:21:40] "[37mGET /element HTTP/1.1[0m" 200 -
+2021-06-18 19:17:46,532 [werkzeug] [29964:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-18 19:17:57,089 [erybjp] [7928:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
+    model.case_id = caseinfo_model.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2021-06-18 19:17:57,180 [werkzeug] [7928:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:17:57] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-18 19:17:59,786 [erybjp] [23340:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
+    model.case_id = caseinfo_model.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2021-06-18 19:17:59,875 [werkzeug] [23340:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:17:59] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-18 19:18:24,639 [erybjp] [24584:Thread-3] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
+    model.case_id = caseinfo_model.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2021-06-18 19:18:24,720 [werkzeug] [24584:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:18:24] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-18 19:18:27,520 [erybjp] [27036:Thread-4] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
+    model.case_id = caseinfo_model.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2021-06-18 19:18:27,611 [werkzeug] [27036:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:18:27] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-18 19:20:29,973 [erybjp] [36144:Thread-5] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
+    model.case_id = caseinfo_model.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2021-06-18 19:20:30,056 [werkzeug] [36144:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:20:30] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-18 19:20:32,636 [erybjp] [20140:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
+    model.case_id = caseinfo_model.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2021-06-18 19:20:32,712 [werkzeug] [20140:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:20:32] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
+2021-06-18 19:21:10,837 [erybjp] [7768:Thread-7] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
+    model.case_id = caseinfo_model.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2021-06-18 19:21:10,916 [werkzeug] [7768:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:21:10] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
