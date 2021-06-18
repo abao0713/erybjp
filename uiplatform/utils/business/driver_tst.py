@@ -45,10 +45,3 @@ def browser_close():
     driver.quit()
 
 
-
-def _capture_screenshot(path, filename=None):
-    if filename is None:
-        filename = str(time.time()*100000).split(".")[0] + ".png"
-    file_path = os.path.join(path, filename)
-    driver.save_screenshot(file_path)
-    return filename
