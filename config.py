@@ -14,6 +14,7 @@ import logging
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
+    # HOST = "http://127.0.0.1:6851/"
     HOST = "http://139.196.165.161:6851/"
     SCHEDULER_API_ENABLED = True
     JOBS = [
