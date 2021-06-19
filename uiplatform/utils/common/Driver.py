@@ -7,10 +7,15 @@
 #----------------------------
 import platform
 import pytest, time, os
+from flask import current_app
+from selenium.common.exceptions import WebDriverException
+
 from config import basedir,Config
 from selenium import webdriver
 from config import basedir
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+from uiplatform.utils.common.BaseLoggers import logger
 
 driver = None
 
@@ -20,7 +25,7 @@ def add_cookies(json_data: dict):
         pass
 
 
-def browser_driver(browser_name: str, headless=True, is_mobile=True):
+def browser_driver(browser_name: str, headless=True, is_mobile=True, is_remote=False):
     global driver
     driver = None
     if driver is None:
@@ -42,11 +47,19 @@ def browser_driver(browser_name: str, headless=True, is_mobile=True):
                 chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver"
             else:
                 chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver_mac"
-            driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
-            # driver = webdriver.Remote(command_executor="http://172.24.90.86:4444/wd/hub", desired_capabilities=DesiredCapabilities().CHROME, options=options)
+            if bool(is_remote):
+                remote = current_app.config.get("HOST")+"wd/hub"
+                driver = webdriver.Remote(command_executor=remote, desired_capabilities=DesiredCapabilities().CHROME, options=options)
+            else:
+                driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
             print(driver.session_id)
             if not bool(is_mobile):
-                driver.maximize_window()
+                try:
+                    driver.maximize_window()
+                except WebDriverException as e:
+                    driver.set_window_size(1920, 1080)  # 如果最大化失败，设置窗口大小为 1920*1080
+                    logger.info(e)
+
     return driver
 
 
