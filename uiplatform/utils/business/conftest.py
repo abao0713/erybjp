@@ -8,6 +8,8 @@
 
 import pytest
 import requests
+from flask import current_app
+
 from uiplatform.utils.common.Driver import _capture_screenshot
 
 
@@ -58,7 +60,7 @@ def pytest_runtest_makereport(item, call):
             "fail_result":fail_result,"session_id":seid
         }
         try:
-            f = requests.post(url="http://127.0.0.1:5000/result", data=json_data)
+            f = requests.post(url=current_app.config.get("HOST")+"result", data=json_data)
             print(f.json())
         except:
             print("内部接口没有启动")
