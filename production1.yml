@@ -11,7 +11,7 @@ services:
     container_name: prod_erybjp_service
     ports:
       - "6851:6851"
-    command: uwsgi --ini uwsgi.ini
+    command: python manage.py runserver -p 6851
   redis:
     image: redis:latest
     container_name: prod_erybjp_redis
