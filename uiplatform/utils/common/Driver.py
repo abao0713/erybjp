@@ -48,8 +48,9 @@ def browser_driver(browser_name: str, headless=True, is_mobile=True, is_remote=F
             else:
                 chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver_mac"
             if bool(is_remote):
-                remote = current_app.config.get("HOST")+"wd/hub"
-                driver = webdriver.Remote(command_executor=remote, desired_capabilities=DesiredCapabilities().CHROME, options=options)
+                # remote = current_app.config.get("HOST").split(":")[0]+"wd/hub"
+                # print(remote)
+                driver = webdriver.Remote(command_executor="http://139.196.165.161:4444/wd/hub", desired_capabilities=DesiredCapabilities().CHROME, options=options)
             else:
                 driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
             print(driver.session_id)
@@ -58,7 +59,7 @@ def browser_driver(browser_name: str, headless=True, is_mobile=True, is_remote=F
                     driver.maximize_window()
                 except WebDriverException as e:
                     driver.set_window_size(1920, 1080)  # 如果最大化失败，设置窗口大小为 1920*1080
-                    logger.info(e)
+                    print(e)
 
     return driver
 
