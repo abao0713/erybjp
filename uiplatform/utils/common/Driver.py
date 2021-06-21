@@ -48,7 +48,7 @@ def browser_driver(browser_name: str, headless=True, is_mobile=True, is_remote=F
             else:
                 chrome_driver = basedir + "//" + r"uiplatform/utils/data/chromedriver_mac"
             if bool(is_remote):
-                driver = webdriver.Remote(command_executor="http://172.24.90.86:4444/wd/hub", desired_capabilities=DesiredCapabilities().CHROME, options=options)
+                driver = webdriver.Remote(command_executor="http://selenium-hub:4444/wd/hub", desired_capabilities=DesiredCapabilities().CHROME, options=options)
             else:
                 driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
             print(driver.session_id)
