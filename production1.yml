@@ -47,6 +47,7 @@ services:
       - /etc/localtime:/etc/localtime
     depends_on:
       - selenium-hub
+    shm_size: 2g
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
