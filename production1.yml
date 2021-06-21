@@ -41,7 +41,7 @@ services:
     image: selenium/node-chrome-debug:latest
     container_name: prod_erybjp_chrome
     ports:
-      - "5901:5901"
+      - "5901:5555"
     volumes:
       - /dev/shm:/dev/shm
       - /etc/localtime:/etc/localtime
@@ -63,7 +63,7 @@ services:
       - /dev/shm:/dev/shm
       - /etc/localtime:/etc/localtime
     ports:
-      - "5902:5902"
+      - "5902:5555"
     depends_on:
       - selenium-hub
     environment:
