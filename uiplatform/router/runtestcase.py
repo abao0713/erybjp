@@ -10,7 +10,7 @@
 from flask import Blueprint, jsonify, request
 import pytest, os
 import uuid
-
+from threading import Thread
 from uiplatform.utils.business.cycle_check.temple import auto_check_tem
 from uiplatform.utils.common.BaseLoggers import logger
 
@@ -24,7 +24,7 @@ def run_only_test():
     pares = f"--seid={session_id}"
     lista = ["uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo"]
     lista.append(pares)
-    pytest.main(lista)
+    Thread(target=lambda: pytest.main(lista)).start()
     return jsonify(code=200, msg="ok", data={"session_id":session_id})
 
 @user.route('/ui_test/test3', methods=["GET"])
@@ -33,7 +33,7 @@ def run_only_test3():
     pares = f"--seid={session_id}"
     lista = ["-n 3","uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo"]
     lista.append(pares)
-    pytest.main(lista)
+    Thread(target=lambda: pytest.main(lista)).start()
     return jsonify(code=200, msg="ok", data={"session_id":session_id})
 
 
@@ -43,7 +43,8 @@ def run_only_test01():
     pares = f"--seid={session_id}"
     lista = ["uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo1"]
     lista.append(pares)
-    pytest.main(lista)
+    # pytest.main(lista)
+    Thread(target=lambda: pytest.main(lista)).start()
     return jsonify(code=200, msg="ok", data={"session_id": session_id})
 
 

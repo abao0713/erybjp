@@ -106,7 +106,7 @@ class TestHinfo1:
     def setup_class(self):
 
         global driver
-        driver = browser_driver(browser_name="chrome", headless=False, is_mobile=False, is_remote=True)
+        driver = browser_driver(browser_name="chrome", headless=False, is_mobile=False)
         logger.info(driver)
 
     def test_fr(self):
