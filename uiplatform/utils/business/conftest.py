@@ -62,8 +62,9 @@ def pytest_runtest_makereport(item, call):
         try:
             f = requests.post(url=current_app.config.get("HOST")+"result", data=json_data)
             print(f.json())
-        except:
+        except Exception as e:
             print("内部接口没有启动")
+            print(e)
         # model.save()
 
 
