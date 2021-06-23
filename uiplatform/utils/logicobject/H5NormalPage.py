@@ -78,4 +78,4 @@ class MorderPage(Page):
 class HiCode(Page):
     """免费落地页"""
     url = "https://hi.codemao.cn/"
-    search_element = Element(xpath="//*[@id='root']/div/div[2]/div/div[6]/div/div[2]/div/div[4]")
+    search_element = Element(xpath="//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]")

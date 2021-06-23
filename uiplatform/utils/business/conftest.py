@@ -8,8 +8,7 @@
 
 import pytest
 import requests
-from flask import current_app
-
+from config import Config
 from uiplatform.utils.common.Driver import _capture_screenshot
 
 
@@ -26,7 +25,7 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="session", autouse=True)
 def seid(request):
     return request.config.getoption("--seid")
 
@@ -45,7 +44,7 @@ def pytest_runtest_makereport(item, call):
         seid = 0
     else:
         seid = item.funcargs.get("seid")
-    if report.when == "call" or report.when == "setup":
+    if report.when == "call" or (report.when == "setup" and report.skipped):
         result = report.outcome
         consume_time = report.duration
         version = 1
@@ -60,7 +59,7 @@ def pytest_runtest_makereport(item, call):
             "fail_result":fail_result,"session_id":seid
         }
         try:
-            f = requests.post(url=current_app.config.get("HOST")+"result", data=json_data)
+            f = requests.post(url=Config.HOST+"result", data=json_data)
             print(f.json())
         except Exception as e:
             print("内部接口没有启动")

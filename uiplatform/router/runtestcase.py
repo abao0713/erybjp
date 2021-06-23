@@ -27,6 +27,7 @@ def run_only_test():
     Thread(target=lambda: pytest.main(lista)).start()
     return jsonify(code=200, msg="ok", data={"session_id":session_id})
 
+
 @user.route('/ui_test/test3', methods=["GET"])
 def run_only_test3():
     session_id= uuid.uuid1()
@@ -43,7 +44,6 @@ def run_only_test01():
     pares = f"--seid={session_id}"
     lista = ["uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo1"]
     lista.append(pares)
-    # pytest.main(lista)
     Thread(target=lambda: pytest.main(lista)).start()
     return jsonify(code=200, msg="ok", data={"session_id": session_id})
 
