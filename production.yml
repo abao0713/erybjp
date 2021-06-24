@@ -26,8 +26,8 @@ services:
       - TZ=Asia/Shanghai
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/src/app/erybjp:/etc/selenoid/
-      - /usr/src/app/erybjp/logs/:/opt/selenoid/logs/
+      - /home/yuanbaojun/app/erybjp/erybjp-master:/etc/selenoid/
+      - /home/yuanbaojun/app/erybjp/erybjp-master/logs/:/opt/selenoid/logs/
       - /etc/localtime:/etc/localtime
     command: -limit 10 -service-startup-timeout 1m -enable-file-upload -log-output-dir /opt/selenoid/logs
   selenoid-ui:
