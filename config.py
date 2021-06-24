@@ -15,7 +15,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
     # HOST = "http://127.0.0.1:6851/"
-    HOST = "http://139.196.165.161:6851/"
+    # HOST = "http://139.196.165.161:6851/"
+    HOST = "http://172.16.26.119:6851/"
     SCHEDULER_API_ENABLED = True
     JOBS = [
         {
@@ -106,7 +107,7 @@ class TestingConfig(Config):
         print('>>>>>Two: This app has update')
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/flasken?charset=utf8"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://yuanbaojun:spGzntJ5swrcjhyZdvySookIjbwY3GXL@rm-bp1udh67050zd1n0b115.mysql.rds.aliyuncs.com/erybjp?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
     @classmethod
