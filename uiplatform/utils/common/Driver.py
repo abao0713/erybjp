@@ -56,7 +56,7 @@ def browser_driver(browser_name: str, headless=True, is_mobile=True, is_remote=F
                         "enableVideo": False
                     }
                 }
-                driver = webdriver.Remote(command_executor="http://139.196.165.161:4444/wd/hub", desired_capabilities=capabilities, options=options)
+                driver = webdriver.Remote(command_executor="http://172.16.26.119:4444/wd/hub", desired_capabilities=capabilities, options=options)
             else:
                 driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
             print(driver.session_id)

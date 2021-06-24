@@ -43,4 +43,5 @@ services:
       - "5901:8080"
     command: ["--selenoid-uri", "http://selenoid:4444"]
 networks:
-  service:
+  default:
+    driver: bridge
