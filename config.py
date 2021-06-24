@@ -107,7 +107,7 @@ class TestingConfig(Config):
         print('>>>>>Two: This app has update')
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://yuanbaojun:spGzntJ5swrcjhyZdvySookIjbwY3GXL@rm-bp1udh67050zd1n0b115.mysql.rds.aliyuncs.com/erybjp?charset=utf8"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://TestDep:4Ehp1ndpfnlN9D0qvg4SZuig@rm-bp15t47j196je1u0l906.mysql.rds.aliyuncs.com/erybjp?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
     @classmethod
