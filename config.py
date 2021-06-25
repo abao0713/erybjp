@@ -99,7 +99,7 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     # 查询时会显示原始SQL语句
     SQLALCHEMY_ECHO = True
-    
+
     @classmethod
     def init_app(cls, app):
         print('>>>>>Two: This app has update')
@@ -113,7 +113,7 @@ class TestingConfig(Config):
         print('>>>>>Two: This app has update')
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://TestDep:4Ehp1ndpfnlN9D0qvg4SZuig@rm-bp1udh67050zd1n0b115.mysql.rds.aliyuncs.com:3306/erybjp?charset=utf8"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:zxjy123456@172.16.26.119:3306/erybjp?charset=utf8&autocommit=true"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
     # 设置sqlalchemy自动更跟踪数据库
     SQLALCHEMY_TRACK_MODIFICATIONS = True

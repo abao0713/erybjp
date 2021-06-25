@@ -26,7 +26,7 @@ class UielementInfo(BaseModel):
     index = db.Column(db.Integer, comment="定位方法的显示顺序")
     parent_id = db.Column(db.Integer, comment="用例信息表的id")
     version = db.Column(db.Integer, default=1, comment="版本迭代次数")
-    is_deleted = db.Column(db.Integer, default=0, comment="是否删除 0：否，1：是")
+
 
 
 class Uicaseinfo(BaseModel):
@@ -44,7 +44,7 @@ class Uicaseinfo(BaseModel):
     page_class_type = db.Column(db.String(20), comment="用例函数使用到的页面对象类")
     source_url = db.Column(db.Text, default=1, comment="用例对应的项目url")
     devices_type = db.Column(db.Integer, default=1, comment="1手机，2网页，3远程手机")
-    is_deleted = db.Column(db.Integer, default=0, comment="是否删除 0：否，1：是")
+
 
 class Uiresultinfo(BaseModel):
     """
@@ -62,6 +62,6 @@ class Uiresultinfo(BaseModel):
     current_url = db.Column(db.Text, comment="项目url")
     consume_time = db.Column(db.Integer, comment="用例执行耗时")
     version = db.Column(db.String(20), comment="版本迭代次数")
-    is_deleted = db.Column(db.Integer, default=0, comment="是否删除 0：否，1：是")
+
 
 

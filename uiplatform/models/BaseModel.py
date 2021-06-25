@@ -22,6 +22,7 @@ class BaseModel(db.Model):
     updated_at = db.Column(db.TIMESTAMP(True), comment="更新时间", nullable=False, server_default=func.now(),
                            onupdate=func.now())
     remark = db.Column(db.String(500), default='', comment="备注")
+    is_deleted = db.Column(db.Integer, default=0, comment="是否删除 0：否，1：是")
 
     def save(self):
         '''
