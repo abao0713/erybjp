@@ -9,6 +9,9 @@ services:
       dockerfile: ./Dockerfile
     image: prod_erybj_service
     container_name: prod_erybjp_service
+    network_mode: bridge
+    volumes:
+      - /home/yuanbaojun/app/erybjp/data/:/usr/src/app/erybjp/uiplatform/utils/data/
     ports:
       - "6851:6851"
     command: uwsgi --ini uwsgi.ini
@@ -43,5 +46,4 @@ services:
       - "5901:8080"
     command: ["--selenoid-uri", "http://selenoid:4444"]
 networks:
-  default:
-    driver: bridge
+  service:

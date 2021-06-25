@@ -9,6 +9,7 @@ import time
 
 from flask_restful import Resource, fields, marshal_with, reqparse
 from flask import Blueprint, request, jsonify
+from sqlalchemy.exc import InvalidRequestError
 
 from config import Config
 from extensions import db
@@ -171,7 +172,7 @@ class CaseResult(Resource):
         for json_new in json_data:
             json_new.update(case_dict_data[str(json_new["case_id"])][0])
             if "png" in json_new["fail_pic"]:
-                json_new["fail_pic"] = Config.HOST+"data/picture"+json_new["fail_pic"]
+                json_new["fail_pic"] = Config.HOST+"data/picture/"+json_new["fail_pic"]
 
         return jsonify(code=200, msg="ok", cur_page=paginates.page, page=paginates.pages, data=json_data)
 
@@ -192,6 +193,8 @@ class CaseResult(Resource):
         args = parser.parse_args()
         model = Uiresultinfo()
         caseinfo_model = Uicaseinfo.query.filter(Uicaseinfo.function_type == args.get("function_type")).first()
+        caseinfo_model.status = 'COMPLETE'
+        db.session.commit()
         model.result = args.get("result")
         model.consume_time = args.get("consume_time")
         model.version = args.get("version")
@@ -209,6 +212,7 @@ class CaseResult(Resource):
             url = Config.HOST+"data/picture/" + args.get("fail_pic")
             print(url)
             text = f"#### 巡检异常预警\n> 本次在运行测试用例{test_name}时探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
+            print(text)
             DingtalkRobot().send_markdown("巡检异常预警", text, [])
         return jsonify(code=200, msg="ok", data='')
 

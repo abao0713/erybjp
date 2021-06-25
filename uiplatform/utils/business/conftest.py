@@ -59,6 +59,7 @@ def pytest_runtest_makereport(item, call):
             "fail_result":fail_result,"session_id":seid
         }
         try:
+            print(Config.HOST+"result")
             f = requests.post(url=Config.HOST+"result", data=json_data)
             print(f.json())
         except Exception as e:

@@ -8,6 +8,8 @@
 
 
 from sqlalchemy import func
+from sqlalchemy.exc import InvalidRequestError
+
 from extensions import db
 
 
@@ -27,7 +29,11 @@ class BaseModel(db.Model):
         :return:
         '''
         db.session.add(self)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except InvalidRequestError:
+            db.session.rollback()
+
 
     def update(self):
         '''
