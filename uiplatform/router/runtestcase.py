@@ -5,56 +5,36 @@
 # Author:       yuanbaojun
 # Date:         2021/5/18
 #----------------------------
-import traceback
-from time import strftime
-from random import randint
-from flask import Blueprint, jsonify, request
-from sqlalchemy import text
-import pytest, re, os
-from urllib.parse import unquote
-from threading import Thread
-from config import basedir,Config
-import uuid
 
+
+from flask import Blueprint, jsonify, request
+import pytest, os
+import uuid
+from threading import Thread
+from uiplatform.utils.business.cycle_check.temple import auto_check_tem
+from uiplatform.utils.common.BaseLoggers import logger
 
 user = Blueprint('user', __name__)
 cur_dir = os.path.dirname(__file__).split('server')[0]
-
-
-@user.route('/ui_test/run', methods=["POST"])
-def run_test():
-    args = request.json()
-
-    result = request.form
-    try:
-        if 'cmd' not in result:
-            raise Exception('请传入cmd参数')
-        else:
-            cmd = result['cmd']
-    except Exception as e:
-        return str(e)
-    print(cmd)
-    cmd = unquote(cmd)
-    print(cmd)
-    valid_re_list = [r'run_.*\.py', r'batch_run_.*\.py']
-    for valid_re in valid_re_list:
-        if re.findall(valid_re, cmd):
-            cmd = re.sub('python ', f'python {cur_dir}', cmd)  # 执行命令加入路径
-            print(cmd)
-            Thread(target=lambda: os.system('start ' + cmd)).start()
-            return '命令已下发'
-    else:
-        return '不支持该命令，请重新输入(当前仅支持%s)' % str(valid_re_list)
-
 
 
 @user.route('/ui_test/test', methods=["GET"])
 def run_only_test():
     session_id= uuid.uuid1()
     pares = f"--seid={session_id}"
-    lista = ["-n 3","uiplatform/utils/business/test_check_web.py::TestHinfo"]
+    lista = ["uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo"]
     lista.append(pares)
-    pytest.main(lista)
+    Thread(target=lambda: pytest.main(lista)).start()
+    return jsonify(code=200, msg="ok", data={"session_id":session_id})
+
+
+@user.route('/ui_test/test3', methods=["GET"])
+def run_only_test3():
+    session_id= uuid.uuid1()
+    pares = f"--seid={session_id}"
+    lista = ["-n 3","uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo"]
+    lista.append(pares)
+    Thread(target=lambda: pytest.main(lista)).start()
     return jsonify(code=200, msg="ok", data={"session_id":session_id})
 
 
@@ -62,12 +42,42 @@ def run_only_test():
 def run_only_test01():
     session_id = uuid.uuid1()
     pares = f"--seid={session_id}"
-    lista = ["uiplatform/utils/business/test_check_web.py::TestHinfo1"]
+    lista = ["uiplatform/utils/business/cycle_check/test_check_web.py::TestHinfo1"]
+    lista.append(pares)
+    Thread(target=lambda: pytest.main(lista)).start()
+    return jsonify(code=200, msg="ok", data={"session_id": session_id})
+
+
+@user.route('/auto', methods=["put"])
+def run_auto_init():
+    res_data = request.get_json()
+    case_id_list = res_data.get("case_id_list")
+    # case_id_list = [1, 2]
+    auto_check_tem(case_id_list)
+    return jsonify(code=200, msg="ok", data="5262")
+
+@user.route('/auto/run', methods=["GET"])
+def run_auto():
+    session_id = uuid.uuid1()
+    logger.info("Page base class generation completed")
+
+    pares1 = f"--seid={session_id}"
+    lista1 = ["uiplatform/utils/business/cycle_check/test_cycle_mobile.py"]
+    lista1.append(pares1)
+    pytest.main(lista1)
+    logger.info("testcase mobile class generation completed")
+
+    pares = f"--seid={session_id}"
+    lista = ["uiplatform/utils/business/cycle_check/test_cycle_web.py"]
     lista.append(pares)
     pytest.main(lista)
+    logger.info("testcase web class generation completed")
+
+
     return jsonify(code=200, msg="ok", data={"session_id": session_id})
-@user.route('/ui_test/t', methods=["GET"])
-def run_po_test():
-    Config.IS_MOBILE = not Config.IS_MOBILE
-    Config.HEADLESS = not Config.HEADLESS
-    return jsonify(code=200, msg="ok", data='')
+
+
+
+
+
+

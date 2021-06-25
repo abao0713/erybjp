@@ -5,6 +5,9 @@
 # Author:       yuanbaojun
 # Date:         2021/5/19
 #----------------------------
+import os
+import time
+
 import pytest
 import platform
 from config import basedir
@@ -40,3 +43,5 @@ def browser():
 def browser_close():
     yield driver
     driver.quit()
+
+

@@ -14,6 +14,9 @@ import logging
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
+    # HOST = "http://127.0.0.1:5000/"
+    # HOST = "http://139.196.165.161:6851/"
+    HOST = "http://172.16.26.119:6851/"
     SCHEDULER_API_ENABLED = True
     JOBS = [
         {
@@ -69,11 +72,9 @@ class Config(object):
     EMAIL_RECEIVER = "305634841@qq.com,2870550420@qq.com"
     # 缓存设置
     CACHE_TYPE = "redis"
+    # 模板自动加载设置
+    TEMPLATES_AUTO_RELOAD = True
 
-    # UI自动化框架的参数配置动态化
-    BROWSER_NAME = "chrome"
-    HEADLESS = True
-    IS_MOBILE = True
 
 
 
@@ -92,7 +93,13 @@ class DevelopmentConfig(Config):
     MAIL_USE_TLS = True
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/flasken?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
-
+    # 设置sqlalchemy自动更跟踪数据库
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    # 设置每次请求结束后会自动提交数据库中的改动
+    SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+    # 查询时会显示原始SQL语句
+    SQLALCHEMY_ECHO = True
+    
     @classmethod
     def init_app(cls, app):
         print('>>>>>Two: This app has update')
@@ -101,10 +108,24 @@ class TestingConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:305634841@127.0.0.1/flasken?charset=utf8"
 
+    @classmethod
+    def init_app(cls, app):
+        print('>>>>>Two: This app has update')
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/flasken?charset=utf8"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://TestDep:4Ehp1ndpfnlN9D0qvg4SZuig@rm-bp1udh67050zd1n0b115.mysql.rds.aliyuncs.com:3306/erybjp?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
+    # 设置sqlalchemy自动更跟踪数据库
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    # 设置每次请求结束后会自动提交数据库中的改动
+    SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+    # 查询时会显示原始SQL语句
+    SQLALCHEMY_ECHO = True
+
+    @classmethod
+    def init_app(cls, app):
+        print('>>>>>Two: This app has update')
+
 
 config = {
     'development': DevelopmentConfig,

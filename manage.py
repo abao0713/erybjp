@@ -14,11 +14,12 @@ from extensions import db
 from uiplatform.models.elemodel import UielementInfo,Uicaseinfo,Uiresultinfo
 # from interface_platform.routes import app_user
 
-app = create_app("development")
+app = create_app("production")
 # app.register_blueprint(app_user, url_prefix='/user')
 manager = Manager(app)
 migrate = Migrate(app=app, db=db)
-
+url_map = app.url_map
+print(url_map)
 manager.add_command('db', MigrateCommand)
 
 if __name__ == '__main__':
