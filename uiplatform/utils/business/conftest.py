@@ -28,40 +28,40 @@ def pytest_addoption(parser):
 def seid(request):
     return request.config.getoption("--seid")
 
-# 用例失败时截图
-@pytest.mark.hookwrapper
-def pytest_runtest_makereport(item, call):
-    """
-    Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
-    :param item:
-    """
-    outcome = yield
-    report = outcome.get_result()
-    fail_pic = ""
-    fail_result = ""
-    if item.funcargs.get("seid") is None:
-        seid = 0
-    else:
-        seid = item.funcargs.get("seid")
-    if report.when == "call" or report.when == "setup":
-        result = report.outcome
-        consume_time = report.duration
-        version = 1
-        function_type = item.name
-
-        if report.outcome == 'failed':
-            fail_result = report.capstderr
-            fail_pic = _capture_screenshot(path="uiplatform/utils/data/picture")
-        # 多进程是这里访问数据库会出错
-        json_data = {
-            "result":result,"consume_time":consume_time,"version":version,"function_type":function_type,"fail_pic":fail_pic,
-            "fail_result":fail_result,"session_id":seid
-        }
-        try:
-            requests.post(url="http://127.0.0.1:5000/result",data=json_data)
-        except:
-            print("内部接口没有启动")
-        # model.save()
+# # 用例失败时截图
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#     """
+#     Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
+#     :param item:
+#     """
+#     outcome = yield
+#     report = outcome.get_result()
+#     fail_pic = ""
+#     fail_result = ""
+#     if item.funcargs.get("seid") is None:
+#         seid = 0
+#     else:
+#         seid = item.funcargs.get("seid")
+#     if report.when == "call" or report.when == "setup":
+#         result = report.outcome
+#         consume_time = report.duration
+#         version = 1
+#         function_type = item.name
+#
+#         if report.outcome == 'failed':
+#             fail_result = report.capstderr
+#             fail_pic = _capture_screenshot(path="uiplatform/utils/data/picture")
+#         # 多进程是这里访问数据库会出错
+#         json_data = {
+#             "result":result,"consume_time":consume_time,"version":version,"function_type":function_type,"fail_pic":fail_pic,
+#             "fail_result":fail_result,"session_id":seid
+#         }
+#         try:
+#             requests.post(url="http://127.0.0.1:5000/result",data=json_data)
+#         except:
+#             print("内部接口没有启动")
+#         # model.save()
 
 
 #
