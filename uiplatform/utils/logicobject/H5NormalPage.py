@@ -56,6 +56,13 @@ class GivequanPage(Page):
     """免费赠课-领券落地页"""
     url = "https://activity.codemao.cn/referral/zengke?utm_source=freegift&activityCode=CA0001&courseType=steam&utm_term=default&utm_content=default&shareID=12762488&avatar=https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSUgn8iam94KZicFVxicg255hFe247KlgCN575YpXUibZ3SM5afD3L7oD9VawCnu5q2zgDbtsCIic2Vicg/132&nickname=%E7%85%A7"
     search_element = Element(xpath="//p[contains(text(),'你的好友')]")
+    # 未登录时展示元素
+    search_lingqu1_element = Element(xpath="/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]",describe='页面中间领取按钮')
+    search_lingqu2_element = Element(xpath="/html[1]/body[1]/div[1]/div[1]/div[3]/img[1]",describe='底部领取按钮')
+
+
+
+
 
 
 # 定制课落地页龚绍来提供
