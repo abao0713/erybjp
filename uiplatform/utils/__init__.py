@@ -10,7 +10,6 @@ from uiplatform.utils.common import BaseAssert
 from uiplatform.utils.common import BrowserPage
 from uiplatform.utils.common import Element
 from uiplatform.utils.common import Page
-from uiplatform.utils.logicobject.Baidudupage import BaiduPage
 from uiplatform.utils.data.config_object import Browser
 
 

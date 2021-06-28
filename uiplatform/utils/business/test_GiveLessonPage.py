@@ -24,12 +24,6 @@ class TestGiveLession:
         driver = browser_driver(browser_name="chrome", is_mobile=True, is_remote=True)
         logger.info(driver)
 
-    def test_fr(self):
-        page = HiCode(driver=driver)
-        page.get(page.url)
-        ele = page.search_element
-
-
     def teardown_class(self):
         driver.quit()
 
