@@ -113,14 +113,11 @@ class TestingConfig(Config):
         print('>>>>>Two: This app has update')
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:zxjy123456@172.16.26.119:3306/erybjp?charset=utf8&autocommit=true"
+    SQLALCHEMY_DATABASE_URI =  "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/erybjp?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
-    # 设置sqlalchemy自动更跟踪数据库
-    SQLALCHEMY_TRACK_MODIFICATIONS = True
     # 设置每次请求结束后会自动提交数据库中的改动
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
-    # 查询时会显示原始SQL语句
-    SQLALCHEMY_ECHO = True
+
 
     @classmethod
     def init_app(cls, app):

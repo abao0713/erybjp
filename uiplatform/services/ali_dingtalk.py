@@ -132,7 +132,7 @@ class DingtalkRobot(object):
 
 def alidingcheck(filename, cur_time, test_name, title="巡检异常预警"):
     url = "http://172.16.26.119:6851/data/picture/162461447116295.png"
-    text = f"#### {title}\n> 本次在运行测试用例{test_name}时探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
+    text = "本次在运行测试用例test_morderpage时探针检测失败判定页面打开失败,截图如下![screenshot](http://172.16.26.119:6851/data/picture/162461447116295.png)"
     DingtalkRobot().send_markdown(title, text, [])
 
 

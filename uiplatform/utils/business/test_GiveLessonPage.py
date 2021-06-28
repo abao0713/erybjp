@@ -9,19 +9,33 @@ import pytest, time
 from selenium import webdriver
 
 from config import basedir
+from uiplatform.utils.common.BaseLoggers import logger
+from uiplatform.utils.common.Driver import browser_driver
 from uiplatform.utils.logicobject.H5NormalPage import *
 from uiplatform.utils.common.BaseAssert import BaseAssert
-from uiplatform.services.ali_dingtalk import alidingcheck
 from selenium.common.exceptions import NoSuchElementException
-from uiplatform.utils.business.driver_tst import browser, browser_close
 
 
 @pytest.mark.test
 class TestGiveLession:
+    def setup_class(self):
+
+        global driver
+        driver = browser_driver(browser_name="chrome", is_mobile=True, is_remote=True)
+        logger.info(driver)
+
+    def test_fr(self):
+        page = HiCode(driver=driver)
+        page.get(page.url)
+        ele = page.search_element
+
+
+    def teardown_class(self):
+        driver.quit()
 
     # 首页图片检查
-    def test_shouye_img(self, browser, browser_close):
-        page = GiveLessonPage(browser)
+    def test_shouye_img(self):
+        page = GiveLessonPage(driver=driver)
         page.get(page.url_code)
         shouye_img=page.search_shouye_img
         img = 'https://online-education.codemao.cn/lbk/2/lbk-activity/images/invite__5b42f.png'
@@ -34,8 +48,8 @@ class TestGiveLession:
             print("类型错误")
 
     # 首页底部状态图片检查
-    def test_shouye_dibu_img(self, browser, browser_close):
-        page = GiveLessonPage(browser)
+    def test_shouye_dibu_img(self):
+        page = GiveLessonPage(driver=driver)
         page.get(page.url_code)
         shouye_img=page.search_shouye_state_img
         img = 'https://online-education.codemao.cn/lbk/2/lbk-activity/images/not-login__a39f0.png'
@@ -49,8 +63,8 @@ class TestGiveLession:
 
 
     # 赠课首页邀请按钮,文本校验
-    def test_invite_button_text(self, browser, browser_close):
-        page = GiveLessonPage(browser)
+    def test_invite_button_text(self):
+        page = GiveLessonPage(driver=driver)
         page.get(page.url_code)
         invite_button = page.search_yaoqing_button
         # BaseAssert().assert_text_in_elem("邀请明细", invite_button)
@@ -62,15 +76,15 @@ class TestGiveLession:
             BaseAssert().assert_mutil_in_list(["邀请明细"], invite_button.get_attribute('data-element'))
         except(NoSuchElementException, AssertionError):
             print("页面元素找不到返回失败")
-        GiveLessonPage(browser_close)
+
 
      # 未登录,情况下赠课首页邀请按钮,点击跳转URL校验
-    def test_invite_button_url(self, browser, browser_close):
-        page = GiveLessonPage(browser)
+    def test_invite_button_url(self):
+        page = GiveLessonPage(driver=driver)
         page.get(page.url_code)
         page.search_yaoqing_button.click()
         time.sleep(3)
-        skip = browser.current_url  # 获取跳转页面的URL
+        skip = driver.current_url  # 获取跳转页面的URL
         skip_url = [skip[0:48]]
         try:
             login = 'https://lbk-mobile.codemao.cn/children-day/login'
@@ -81,15 +95,15 @@ class TestGiveLession:
             print("页面元素找不到返回失败")
         except(TypeError):
             print("类型错误")
-        GiveLessonPage(browser_close)
+
 
      # 未登录,点击底部登录按钮,跳转到登录页面
-    def test_login_button_url(self, browser, browser_close):
-        page = GiveLessonPage(browser)
+    def test_login_button_url(self):
+        page = GiveLessonPage(driver=driver)
         page.get(page.url_code)
         page.search_login_button.click()
         time.sleep(3)
-        skip = browser.current_url  # 获取跳转页面的URL
+        skip = driver.current_url  # 获取跳转页面的URL
         skip_url = [skip[0:48]]
         try:
             login = 'https://lbk-mobile.codemao.cn/children-day/login'
@@ -100,7 +114,7 @@ class TestGiveLession:
             print("页面元素找不到返回失败")
         except(TypeError):
             print("类型错误")
-        GiveLessonPage(browser_close)
+
 
 
     # 登录后，点击邀请明细，检查跳转url
@@ -123,4 +137,4 @@ class TestGiveLession:
 
 
 if __name__ == '__main__':
-    pytest.main(["-n 3", "test_givelesson.py::TestGiveLession"])
+    pytest.main(["-n 3", "test_GiveLessonPage.py"])
