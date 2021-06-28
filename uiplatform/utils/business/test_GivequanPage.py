@@ -85,7 +85,7 @@ class TestGiveLession:
             BaseAssert().assert_mutil_in_list(img, [page.search_lingqu2_element.get_attribute('src')])
         except(NoSuchElementException, AssertionError):
             print("页面元素找不到返回失败")
-        
+
 
 
 
