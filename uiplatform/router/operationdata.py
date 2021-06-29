@@ -78,7 +78,35 @@ class CaseInfo(Resource):
         model.create_by = args.get("create_by")
         model.save()
         return jsonify(code=200, msg="ok", data='')
-
+    def put(self):
+        """
+        新增数据结果保存表数据
+        """
+        parser = reqparse.RequestParser()
+        parser.add_argument('name', type=str, required=True, help='用例名称')
+        parser.add_argument('description', type=str, help='用例详细描述')
+        parser.add_argument('type', type=str, help='用例类型')
+        parser.add_argument('deptid', type=str, required=True, help='部门id')
+        parser.add_argument('function_type', type=str, required=True, help='用例方法名称')
+        parser.add_argument('page_class_type', type=str, required=True, help='用例需要的对象类')
+        parser.add_argument('source_url', type=str, required=True, help='用例对象的项目地址')
+        parser.add_argument('devices_type', type=str, required=True, help='设备类型')
+        parser.add_argument('update_by', required=True, type=str, help='更新人')
+        parser.add_argument('create_by', required=True, type=str, help='创建人')
+        args = parser.parse_args()
+        model = Uicaseinfo()
+        model.name = args.get("name")
+        model.description = args.get("description")
+        model.type = args.get("type")
+        model.deptid = args.get("deptid")
+        model.function_type = args.get("function_type")
+        model.page_class_type = args.get("page_class_type")
+        model.source_url = args.get("source_url")
+        model.devices_type = args.get("devices_type")
+        model.update_by = args.get("update_by")
+        model.create_by = args.get("create_by")
+        model.update()
+        return jsonify(code=200, msg="updata is success", data='')
 
 restfulapi.add_resource(CaseInfo, '/case')
 
@@ -90,12 +118,12 @@ class CaseElement(Resource):
         根据id返回查询的数据
         """
         parser = reqparse.RequestParser()
-        parser.add_argument('id', type=str, help='每次运行唯一标识')
+        parser.add_argument('id', type=str, help='需要传入用例的id值')
         parser.add_argument('cur_page', type=int, help='当前属于第几页')
         parser.add_argument('pagesize', type=int, help='每页显示的数量')
         args = parser.parse_args()
         if args.get("id"):
-            paginates = UielementInfo.query.filter(UielementInfo.id == args.get("id"), UielementInfo.is_deleted == 0).paginate(
+            paginates = UielementInfo.query.filter(UielementInfo.parent_id == args.get("id"), UielementInfo.is_deleted == 0).paginate(
                 page=args.get("cur_page"), per_page=args.get("pagesize", 3), error_out=False)
         else:
             paginates = UielementInfo.query.filter(
@@ -137,6 +165,33 @@ class CaseElement(Resource):
         model.create_by = args.get("update_by")
         model.save()
         return jsonify(code=200, msg="ok", data='')
+    def put(self):
+        """
+        新增数据结果保存表数据
+        """
+        parser = reqparse.RequestParser()
+        parser.add_argument('type', type=str, help='测试类型')
+        parser.add_argument('remark', type=str, help='元素描述')
+        parser.add_argument('assert_text', type=str, help='断言信息')
+        parser.add_argument('key', type=str, required=True, help='定位方法')
+        parser.add_argument('name', type=str, help='定位描述')
+        parser.add_argument('value',required=True,  type=str, help='定位方法对应的元素信息')
+        parser.add_argument('page_class',required=True,  type=str, help='页面对象类名称')
+        parser.add_argument('index', required=True,  type=int, help='索引，巡检传0')
+        parser.add_argument('update_by', required=True, type=str, help='更新人')
+        args = parser.parse_args()
+        model = UielementInfo()
+        model.type = args.get("type")
+        model.remark = args.get("remark")
+        model.assert_text = args.get("assert_text")
+        model.key = args.get("key")
+        model.name = args.get("name")
+        model.value = args.get("value")
+        model.page_class = args.get("page_class")
+        model.index = args.get("index")
+        model.create_by = args.get("update_by")
+        model.update()
+        return jsonify(code=200, msg="update is success", data='')
 
 
 restfulapi.add_resource(CaseElement, '/element')
