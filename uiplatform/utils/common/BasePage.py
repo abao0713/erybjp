@@ -66,7 +66,7 @@ class PageObject(object):
         self.driver = driver
         self.root_uri = url if url else getattr(self.driver, 'url', None)
 
-    def get(self, uri, headless=True, browser_name='chrome', is_mobile=True):
+    def get(self, uri):
         """
         :param uri:  URI to GET, based off of the root_uri attribute.
         """

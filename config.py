@@ -16,7 +16,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     # HOST = "http://127.0.0.1:5000/"
     # HOST = "http://139.196.165.161:6851/"
-    HOST = "http://172.16.26.119:6851/"
+    # HOST = "http://172.16.26.119:6851/"
     SCHEDULER_API_ENABLED = True
     JOBS = [
         {
@@ -91,6 +91,7 @@ class Config(object):
 class DevelopmentConfig(Config):
     DEBUG = True
     MAIL_USE_TLS = True
+    HOST = "http://127.0.0.1:5000/"
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/flasken?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
     # 设置sqlalchemy自动更跟踪数据库
@@ -106,14 +107,16 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:305634841@127.0.0.1/flasken?charset=utf8"
+    HOST = "http://139.196.165.161:6851/"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/flasken?charset=utf8"
 
     @classmethod
     def init_app(cls, app):
         print('>>>>>Two: This app has update')
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI =  "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/erybjp?charset=utf8"
+    HOST = "http://172.16.26.119:6851/"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:xsdwadrcsefbjjbshjjd@139.196.165.161/erybjp?charset=utf8"
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
     # 设置每次请求结束后会自动提交数据库中的改动
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
