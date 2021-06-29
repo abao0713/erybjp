@@ -21,7 +21,8 @@ import os
 
 def create_app(config_name=None):
     if config_name is None:
-        config_name = os.environ.get('FLASK_CONFIG', 'development')
+        config_name = os.environ.get('FLASK_ENV', 'development')
+        print(f"识别当前环境为{config_name}")
 
     app = Flask('erybjp', static_folder="uiplatform/utils/data")
     app.config.from_object(config[config_name])
