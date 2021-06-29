@@ -11,7 +11,8 @@ services:
     container_name: prod_erybjp_service
     network_mode: bridge
     volumes:
-      - /home/yuanbaojun/app/erybjp/data/:/usr/src/app/erybjp/uiplatform/utils/data/
+      - /home/yuanbaojun/app/erybjp/data/picture/:/usr/src/app/erybjp/uiplatform/utils/data/picture/
+      - /home/yuanbaojun/app/erybjp/data/logs/:/usr/src/app/erybjp/logs/
     ports:
       - "6851:6851"
     command: uwsgi --ini uwsgi.ini
@@ -30,7 +31,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/yuanbaojun/app/erybjp/erybjp-master:/etc/selenoid/
-      - /home/yuanbaojun/app/erybjp/erybjp-master/logs/:/opt/selenoid/logs/
+      - /home/yuanbaojun/app/erybjp/data/selenoid-logs/:/opt/selenoid/logs/
       - /etc/localtime:/etc/localtime
     command: -limit 10 -service-startup-timeout 1m -enable-file-upload -log-output-dir /opt/selenoid/logs
   selenoid-ui:
