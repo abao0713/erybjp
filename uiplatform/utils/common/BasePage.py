@@ -74,6 +74,24 @@ class PageObject(object):
         self.driver.get(root_uri + uri)
         self.driver.implicitly_wait(4)
 
+    def add_cookies(self, cookies_dict):
+        self.driver.add_cookie(cookies_dict)
+
+    def get_all_cookies(self):
+        return self.driver.get_cookies()
+
+    def delete_all_cookie(self):
+        self.driver.delete_all_cookies()
+
+    def get_one_cookies(self, name):
+        return self.driver.get_cookie(name)
+
+    def delete_one_cookies(self, name):
+        self.driver.delete_cookie(name)
+
+    def get_page_source(self):
+        return self.driver.page_source
+
 
 class Element(object):
     """
