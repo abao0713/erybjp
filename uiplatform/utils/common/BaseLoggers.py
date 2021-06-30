@@ -27,7 +27,7 @@ class JFMlogging(object):
         log_path = 'logs'  # 日志存放目录
         if not os.path.exists(log_path):
             os.mkdir(log_path)
-        log_file = os.path.join(log_path, 'systemlog.log')
+        log_file = os.path.join("log_path", 'systemlog.log')
 
         # 日志记录到文件
         file_handler = logging.handlers.TimedRotatingFileHandler(log_file, 'midnight', 1)
