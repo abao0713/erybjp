@@ -5,10 +5,11 @@
 # Author:       yuanbaojun
 # Date:         2021/5/27
 #----------------------------
+import os
 
 import pytest
 import requests
-from config import Config
+from config import Config, config
 from uiplatform.utils.common.Driver import _capture_screenshot
 
 
@@ -59,8 +60,9 @@ def pytest_runtest_makereport(item, call):
             "fail_result":fail_result,"session_id":seid
         }
         try:
-            print(Config.HOST+"result")
-            f = requests.post(url=Config.HOST+"result", data=json_data)
+            config_name = os.environ.get('FLASK_ENV', 'development')
+            print(config[config_name].HOST+"result")
+            f = requests.post(url=config[config_name].HOST+"result", data=json_data)
             print(f.json())
         except Exception as e:
             print("内部接口没有启动")
