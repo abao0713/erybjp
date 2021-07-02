@@ -31,7 +31,7 @@ class CaseInfo(Resource):
 
     def get(self):
         """
-        根据id返回查询的数据
+        根据id返回查询的数据测试用例
         """
         parser = reqparse.RequestParser()
         parser.add_argument('id', type=str, help='用例id')
@@ -52,7 +52,7 @@ class CaseInfo(Resource):
 
     def post(self):
         """
-        新增数据结果保存表数据
+        新增测试用例保存表数据
         """
         parser = reqparse.RequestParser()
         parser.add_argument('name', type=str, required=True, help='用例名称')
@@ -81,7 +81,7 @@ class CaseInfo(Resource):
         return jsonify(code=200, msg="ok", data='')
     def put(self):
         """
-        新增数据结果保存表数据
+        新增测试用例保存表数据
         """
         parser = reqparse.RequestParser()
         parser.add_argument('name', type=str, required=True, help='用例名称')
@@ -137,7 +137,7 @@ class CaseElement(Resource):
 
     def post(self):
         """
-        新增数据结果保存表数据
+        新增元素保存表数据
         """
         parser = reqparse.RequestParser()
         parser.add_argument('type', type=str, help='测试类型')
@@ -168,7 +168,7 @@ class CaseElement(Resource):
         return jsonify(code=200, msg="ok", data='')
     def put(self):
         """
-        新增数据结果保存表数据
+        新增元素保存表数据
         """
         parser = reqparse.RequestParser()
         parser.add_argument('type', type=str, help='测试类型')
