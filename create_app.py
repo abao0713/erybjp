@@ -12,7 +12,7 @@ import logging
 from logging.handlers import TimedRotatingFileHandler
 from logging.handlers import SMTPHandler
 from flask import Flask
-from config import config
+from config import config, Config
 from extensions import scheduler
 # from interface_platform.extensions import bootstrap, db, moment, ckeditor, mail, loginManager
 from extensions import cors, db
@@ -21,8 +21,8 @@ import os
 
 def create_app(config_name=None):
     if config_name is None:
-        config_name = os.environ.get('FLASK_ENV', 'development')
-        print(f"识别当前环境为{config_name}")
+        config_name = Config.FLASK_ENV
+    print(f"识别当前环境为{config_name}")
 
     app = Flask('erybjp', static_folder="uiplatform/utils/data")
     app.config.from_object(config[config_name])

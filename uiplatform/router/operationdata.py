@@ -12,7 +12,7 @@ from flask_restful import Resource, fields, marshal_with, reqparse
 from flask import Blueprint, request, jsonify
 from sqlalchemy.exc import InvalidRequestError
 
-from config import config
+from config import config, Config
 from extensions import db
 from uiplatform.models.elemodel import UielementInfo, Uicaseinfo, Uiresultinfo
 from flask_restful import Api,marshal_with
@@ -228,7 +228,7 @@ class CaseResult(Resource):
         for json_new in json_data:
             json_new.update(case_dict_data[str(json_new["case_id"])][0])
             if "png" in json_new["fail_pic"]:
-                config_name = os.environ.get('FLASK_ENV', 'development')
+                config_name = Config.FLASK_ENV
                 json_new["fail_pic"] = config[config_name].HOST+"data/picture/"+json_new["fail_pic"]
 
         return jsonify(code=200, msg="ok", cur_page=paginates.page, page=paginates.pages, data=json_data)
@@ -264,7 +264,7 @@ class CaseResult(Resource):
         if args.get("result") == "failed":
             test_name = args.get("function_type")
             cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-            config_name = os.environ.get('FLASK_ENV', 'development')
+            config_name = Config.FLASK_ENV
             url = config[config_name].HOST+"data/picture/" + args.get("fail_pic")
             print(url)
             text = f"#### 巡检异常预警\n> 本次在运行测试用例{test_name}时探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"

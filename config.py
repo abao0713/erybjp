@@ -74,7 +74,7 @@ class Config(object):
     CACHE_TYPE = "redis"
     # 模板自动加载设置
     TEMPLATES_AUTO_RELOAD = True
-
+    FLASK_ENV = "production"
 
 
 
@@ -82,9 +82,8 @@ class Config(object):
     @staticmethod
     def init_app(app):
         #  环境参数 默认为production
-        ENV = "production"
         DEBUG = "development"
-        PORT = 5000
+        PORT = 6851
         return
 
 
