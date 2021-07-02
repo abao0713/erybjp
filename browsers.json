@@ -40,7 +40,7 @@
       "10.0": {
         "image": "browsers/android:10.0",
         "port": "4444",
-        "path": "/wd/hub",
+        "path": "/",
         "env": ["EMULATOR_ARGS=-http-proxy=*proxy*"]
       }
     }
