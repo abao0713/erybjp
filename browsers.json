@@ -33,5 +33,16 @@
         "path": "/"
       }
     }
+  },
+  "android": {
+    "default": "10.0",
+    "versions": {
+      "10.0": {
+        "image": "browsers/android:10.0",
+        "port": "4444",
+        "path": "/wd/hub",
+        "env": ["EMULATOR_ARGS=-http-proxy=*proxy*"]
+      }
+    }
   }
 }
