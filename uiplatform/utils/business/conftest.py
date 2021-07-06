@@ -60,7 +60,7 @@ def pytest_runtest_makereport(item, call):
             "fail_result":fail_result,"session_id":seid
         }
         try:
-            config_name = os.environ.get('FLASK_ENV', 'development')
+            config_name = Config.FLASK_ENV
             print(config[config_name].HOST+"result")
             f = requests.post(url=config[config_name].HOST+"result", data=json_data)
             print(f.json())
