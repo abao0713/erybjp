@@ -8,6 +8,7 @@
 
 
 from uiplatform.utils import Element
+from uiplatform.utils.common import Elements
 from uiplatform.utils.common.BrowserPage import Page
 
 
@@ -94,3 +95,16 @@ class HiCode(Page):
     """免费落地页"""
     url = "https://hi.codemao.cn/"
     search_element = Element(xpath="//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]")
+
+class  Jenkins(Page):
+       url_login = "https://jenkins.codemao.cn/login"  #登录页
+       host = "https://jenkins.codemao.cn" #jenkins的域名,用于登录之后重定向
+       username_element = Element(css = "#j_username") #登录用户名
+       password_element = Element(css = "input[name='j_password']")#登录密码
+       button_element = Element(css = ".submit-button") #登录按钮
+       ele_search = Element(css = "form[role='search'] #search-box") #服务搜索框
+       ele_server_gather = Elements(css = '.yui-ac-bd>ul>li')  #各个环境服务集合
+       new_staging_bulid_element = Element(css='.build-search-row+tr [class="pane build-name"]') #staging环境服务最新构建编号
+       new_production_built_element = Element(css='.build-search-row+tr [class="pane build-name"]') #production环境服务最新构建编号
+       product_para_element = Element(css="a[title='Parameters']")
+       new_production_built_data = Element(css = '.pane>tbody:nth-of-type(2) .setting-input')

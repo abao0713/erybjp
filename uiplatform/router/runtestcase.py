@@ -5,13 +5,14 @@
 # Author:       yuanbaojun
 # Date:         2021/5/18
 #----------------------------
-
+import time
 
 from flask import Blueprint, jsonify, request
 import pytest, os
 import uuid
 from threading import Thread
 from uiplatform.utils.business.cycle_check.temple import auto_check_tem
+from uiplatform.utils.business.cycle_check.test_jenkins_stage_production import TestJenkinsCompare
 from uiplatform.utils.common.BaseLoggers import logger
 
 user = Blueprint('user', __name__)
@@ -77,7 +78,11 @@ def run_auto():
     return jsonify(code=200, msg="ok", data={"session_id": session_id})
 
 
-
-
-
+@user.route('/henkins/check', methods=["post"])
+def jenkins_check():
+    arg = request.get_json()
+    jen = TestJenkinsCompare()
+    num = str(time.time()*100000).split(".")[0]
+    jen.aliding_jenkins(arg.get("servername_list"), num)
+    return jsonify(code=200, msg="ok", data=num)
 
