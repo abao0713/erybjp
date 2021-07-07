@@ -61,10 +61,10 @@ class TestHinfo:
 
     def test_giveLessonpage(self):
         page = GiveLessonPage(driver=driver)
-        page.get(page.url)
+        page.get(page.url_code)
         ele = page.search_element
         BaseAssert().assert_text_in_elem("请登录", ele)
-        page.get(page.url2)
+        page.get(page.url_steam)
         ele_new = page.search_element
         BaseAssert().assert_text_in_elem("请登录", ele_new)
         # GiveLessonPage(browser_close)
