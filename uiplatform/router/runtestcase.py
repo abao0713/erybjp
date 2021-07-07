@@ -83,6 +83,7 @@ def jenkins_check():
     arg = request.get_json()
     jen = TestJenkinsCompare()
     num = str(time.time()*100000).split(".")[0]
-    jen.aliding_jenkins(arg.get("servername_list"), num)
+    servername_list = arg.get("servername_list")
+    Thread(target=lambda: jen.aliding_jenkins(servername_list, num)).start()
     return jsonify(code=200, msg="ok", data=num)
 

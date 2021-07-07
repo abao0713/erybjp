@@ -80,7 +80,7 @@ class  TestJenkinsCompare:
                  logger.info(f"测试验收通过，{servername}的staging与线上编号{staging_num}<>{production_num}保持一致")
              else:
                  logger.critical(f"测试未通过，请检查服务{servername}的staging与线上的编号{staging_num}！={production_num}")
-                 check.append({servername: f"staging最新构建编号{servername}不等于生产环境构建参数{production_num}"})
+                 check.append({servername: f"staging最新构建编号{staging_num}不等于生产环境构建参数{production_num}"})
          self.tearDown()
          return check
 
@@ -88,7 +88,7 @@ class  TestJenkinsCompare:
      def aliding_jenkins(self,servername_list,num):
          jen = TestJenkinsCompare()
          data = jen.test_staging_production_compare(servername_list)
-         text = f"检测结果通知'''{data}'''"
+         text = f"检测唯一标识码{num}结果通知{data}，请注意查收！"
          DingtalkRobot().send_markdown("jenkins服务占用检测结果通知", text, [])
 
 

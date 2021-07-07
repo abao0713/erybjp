@@ -1,26 +1,83 @@
-2021-06-14 21:19:22,593 [werkzeug] [6344:MainThread] _internal.py:_internal:_log in 225] [INFO]:  * Restarting with stat
-2021-06-14 21:21:51,603 [werkzeug] [4704:Thread-3] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [14/Jun/2021 21:21:51] "GET /element/ui_test/test HTTP/1.1" 200 -
-2021-06-14 21:22:01,461 [werkzeug] [14780:Thread-4] _internal.py:_internal:_log in 225] [INFO]: 127.0.0.1 - - [14/Jun/2021 21:22:01] "GET /element/ui_test/test HTTP/1.1" 200 -
-2021-06-14 21:30:57,176 [werkzeug] [14008:MainThread] _internal.py:_internal:_log in 225] [INFO]:  * Detected change in 'E:\\Auto_test\\flask\\erybjp\\uiplatform\\utils\\common\\Driver.py', reloading
-2021-06-14 21:30:57,333 [werkzeug] [5368:MainThread] _internal.py:_internal:_log in 225] [INFO]:  * Restarting with stat
-2021-06-17 19:26:57,952 [werkzeug] [8280:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
-2021-06-17 19:27:57,218 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
-2021-06-17 19:28:14,734 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:28:14] "[33mGET / HTTP/1.1[0m" 404 -
-2021-06-17 19:28:14,868 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:28:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2021-06-17 19:29:57,211 [werkzeug] [27180:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:29:57] "[37mGET /element/ui_test/test1 HTTP/1.1[0m" 200 -
-2021-06-17 19:30:18,965 [werkzeug] [29324:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
-2021-06-17 19:31:15,966 [werkzeug] [29324:MainThread] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 19:31:15] "[37mGET /element/ui_test/test1 HTTP/1.1[0m" 200 -
-2021-06-17 21:00:01,084 [werkzeug] [19512:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-17 21:00:03,559 [werkzeug] [22120:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 21:00:03] "[33mGET / HTTP/1.1[0m" 404 -
-2021-06-17 21:00:41,512 [werkzeug] [22728:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-17 21:01:44,543 [werkzeug] [35128:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-17 21:01:44,904 [erybjp] [19388:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [GET]
+2021-07-07 17:58:31,939 [werkzeug] [28712:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 18:00:38,690 [werkzeug] [4056:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 18:00:42,594 [werkzeug] [27408:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 18:00:42] "[33mGET / HTTP/1.1[0m" 404 -
+2021-07-07 18:00:42,755 [werkzeug] [2412:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 18:00:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-07-07 18:02:43,754 [werkzeug] [30196:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 18:02:43] "[31m[1mPOST /element/henkins/check HTTP/1.1[0m" 405 -
+2021-07-07 18:03:00,737 [werkzeug] [30688:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 18:03:33,448 [werkzeug] [28832:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 18:05:01,453 [werkzeug] [11912:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 18:05:56,114 [werkzeug] [23896:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 18:08:46,792 [erybjp] [29260:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [GET]
 Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\serialization.py", line 20, in model_to_dict
-    tmp = [dict(zip(res.__dict__.keys(), res.__dict__.values())) for res in result]
-  File "D:\AutoTest\erybjp\serialization.py", line 20, in <listcomp>
-    tmp = [dict(zip(res.__dict__.keys(), res.__dict__.values())) for res in result]
-AttributeError: Could not locate column in row for column '__dict__'
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\AutoTest\erybjp\uiplatform\router\runtestcase.py", line 87, in jenkins_check
+    jen.aliding_jenkins(arg, num)
+  File "D:\AutoTest\erybjp\uiplatform\utils\business\cycle_check\test_jenkins_stage_production.py", line 91, in aliding_jenkins
+    DingtalkRobot().send_markdown("jenkins服务占用检测结果通知", text, [])
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 87, in send_markdown
+    return self.__post(data)
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 104, in __post
+    response = requests.post(self.__spliceUrl(), headers=self.headers, data=post_data)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 696, in urlopen
+    self._prepare_proxy(conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 964, in _prepare_proxy
+    conn.connect()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 359, in connect
+    conn = self._connect_tls_proxy(hostname, conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 500, in _connect_tls_proxy
+    return ssl_wrap_socket(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 997, in _create
+    raise ValueError("check_hostname requires server_hostname")
+ValueError: check_hostname requires server_hostname
+2021-07-07 18:08:46,810 [werkzeug] [29260:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 18:08:46] "[35m[1mGET /element/henkins/check?servername_list=["lbk_activity"] HTTP/1.1[0m" 500 -
+2021-07-07 19:16:07,671 [werkzeug] [2412:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 19:17:31,799 [werkzeug] [30284:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 19:19:25,812 [werkzeug] [6336:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 19:19:30,416 [werkzeug] [13580:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 19:19:30] "[31m[1mGET /element/henkins/check?servername_list=["lbk_activity","lbk_web_common"] HTTP/1.1[0m" 405 -
+2021-07-07 19:19:41,884 [erybjp] [29888:Thread-7] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 During handling of the above exception, another exception occurred:
 
@@ -29,210 +86,125 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 47, in get
-    json_data = model_to_dict(result)
-  File "D:\AutoTest\erybjp\serialization.py", line 29, in model_to_dict
-    raise TypeError('Type error of parameter')
-TypeError: Type error of parameter
-2021-06-17 21:01:45,010 [werkzeug] [19388:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [17/Jun/2021 21:01:45] "[35m[1mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 500 -
-2021-06-18 15:27:27,470 [werkzeug] [14492:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 15:35:06,425 [werkzeug] [8092:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:07:59,565 [werkzeug] [29700:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:11:51,414 [erybjp] [29192:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [GET]
+  File "D:\AutoTest\erybjp\uiplatform\router\runtestcase.py", line 84, in jenkins_check
+    arg = request.get_json()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-07 19:19:41,900 [werkzeug] [29888:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 19:19:41] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-07 19:20:09,365 [werkzeug] [27520:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 19:23:43,104 [werkzeug] [21596:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 19:24:43,434 [erybjp] [23660:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
   File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
   File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 45, in get
-    caseid_list = result.values('case_id')
-AttributeError: 'list' object has no attribute 'values'
-2021-06-18 17:11:51,501 [werkzeug] [29192:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:11:51] "[35m[1mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 500 -
-2021-06-18 17:16:38,558 [werkzeug] [32964:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:19:22,584 [werkzeug] [32120:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:20:09,406 [werkzeug] [31936:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:20:24,157 [erybjp] [25888:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [GET]
+  File "D:\AutoTest\erybjp\uiplatform\router\runtestcase.py", line 88, in jenkins_check
+    jen.aliding_jenkins(arg.get("servername_list"), num)
+  File "D:\AutoTest\erybjp\uiplatform\utils\business\cycle_check\test_jenkins_stage_production.py", line 89, in aliding_jenkins
+    data = jen.test_staging_production_compare(servername_list)
+  File "D:\AutoTest\erybjp\uiplatform\utils\business\cycle_check\test_jenkins_stage_production.py", line 76, in test_staging_production_compare
+    production_num = self.test_production_server(servername)
+  File "D:\AutoTest\erybjp\uiplatform\utils\business\cycle_check\test_jenkins_stage_production.py", line 64, in test_production_server
+    self.page.product_para_element.click()
+  File "D:\AutoTest\erybjp\uiplatform\utils\common\BasePage.py", line 261, in click
+    elem = self.__get_element(self.k, self.v)
+  File "D:\AutoTest\erybjp\uiplatform\utils\common\BasePage.py", line 185, in __get_element
+    self.__find_element((By.CSS_SELECTOR, value))
+  File "D:\AutoTest\erybjp\uiplatform\utils\common\BasePage.py", line 155, in __find_element
+    raise NoSuchElementException(error_msg)
+selenium.common.exceptions.NoSuchElementException: Message: ❌ Find 0 elements through: css selector=a[title='Parameters']
+
+2021-07-07 19:24:43,454 [werkzeug] [23660:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 19:24:43] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-07 19:43:57,329 [werkzeug] [29016:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 19:44:40,566 [erybjp] [31496:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
 Traceback (most recent call last):
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
   File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
   File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 52, in get
-    resds = Uicaseinfo.query().filter(Uicaseinfo.id==a)
-TypeError: 'BaseQuery' object is not callable
-2021-06-18 17:20:55,707 [werkzeug] [28212:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:21:56,989 [werkzeug] [25276:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:22:10,292 [werkzeug] [26060:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:22:14,240 [erybjp] [25956:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [GET]
-Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 53, in get
-    f = re+resds[0]
-TypeError: unsupported operand type(s) for +: 'Uiresultinfo' and 'Uicaseinfo'
-2021-06-18 17:22:14,325 [werkzeug] [25956:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:22:14] "[35m[1mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 500 -
-2021-06-18 17:31:37,830 [werkzeug] [35304:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:31:56,721 [werkzeug] [36184:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:33:34,037 [werkzeug] [19552:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:34:58,673 [werkzeug] [33932:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:35:25,085 [werkzeug] [5172:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:35:43,114 [werkzeug] [24700:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:35:43] "[37mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 200 -
-2021-06-18 17:46:11,363 [werkzeug] [16996:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:46:14,046 [werkzeug] [34916:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:46:14] "[37mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 200 -
-2021-06-18 17:49:33,745 [werkzeug] [1416:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 17:49:36,355 [werkzeug] [22892:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:49:36] "[37mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 200 -
-2021-06-18 17:49:42,802 [werkzeug] [27684:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:49:42] "[37mGET /result?session_id=dd3eedd1-c849-11eb-916b-5405db9ba20f HTTP/1.1[0m" 200 -
-2021-06-18 17:49:51,581 [werkzeug] [2520:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:49:51] "[37mGET /result HTTP/1.1[0m" 200 -
-2021-06-18 17:50:15,994 [werkzeug] [1572:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:50:15] "[37mGET /result?pagesize=5 HTTP/1.1[0m" 200 -
-2021-06-18 17:50:34,620 [werkzeug] [28148:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 17:50:34] "[37mGET /result HTTP/1.1[0m" 200 -
-2021-06-18 18:19:15,019 [werkzeug] [13632:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 18:19:23,259 [werkzeug] [28368:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:19:23] "[37mGET /element HTTP/1.1[0m" 200 -
-2021-06-18 18:19:34,931 [werkzeug] [15412:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:19:34] "[37mGET /case HTTP/1.1[0m" 200 -
-2021-06-18 18:20:01,226 [werkzeug] [25524:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:01] "[37mGET /element HTTP/1.1[0m" 200 -
-2021-06-18 18:20:09,871 [werkzeug] [37796:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:09] "[37mGET /element HTTP/1.1[0m" 200 -
-2021-06-18 18:20:11,138 [werkzeug] [24596:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:11] "[37mGET /element HTTP/1.1[0m" 200 -
-2021-06-18 18:20:24,379 [werkzeug] [27144:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:24] "[37mGET /result HTTP/1.1[0m" 200 -
-2021-06-18 18:20:31,132 [werkzeug] [16492:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:20:31] "[37mGET /element HTTP/1.1[0m" 200 -
-2021-06-18 18:21:17,183 [werkzeug] [14012:Thread-8] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:21:17] "[37mGET /element HTTP/1.1[0m" 200 -
-2021-06-18 18:21:22,786 [werkzeug] [8136:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 18:21:40,728 [werkzeug] [33600:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 18:21:40] "[37mGET /element HTTP/1.1[0m" 200 -
-2021-06-18 19:17:46,532 [werkzeug] [29964:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-06-18 19:17:57,089 [erybjp] [7928:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
-Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
-    model.case_id = caseinfo_model.id
-AttributeError: 'NoneType' object has no attribute 'id'
-2021-06-18 19:17:57,180 [werkzeug] [7928:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:17:57] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
-2021-06-18 19:17:59,786 [erybjp] [23340:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
-Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
-    model.case_id = caseinfo_model.id
-AttributeError: 'NoneType' object has no attribute 'id'
-2021-06-18 19:17:59,875 [werkzeug] [23340:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:17:59] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
-2021-06-18 19:18:24,639 [erybjp] [24584:Thread-3] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
-Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
-    model.case_id = caseinfo_model.id
-AttributeError: 'NoneType' object has no attribute 'id'
-2021-06-18 19:18:24,720 [werkzeug] [24584:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:18:24] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
-2021-06-18 19:18:27,520 [erybjp] [27036:Thread-4] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
-Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
-    model.case_id = caseinfo_model.id
-AttributeError: 'NoneType' object has no attribute 'id'
-2021-06-18 19:18:27,611 [werkzeug] [27036:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:18:27] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
-2021-06-18 19:20:29,973 [erybjp] [36144:Thread-5] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
-Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
-    model.case_id = caseinfo_model.id
-AttributeError: 'NoneType' object has no attribute 'id'
-2021-06-18 19:20:30,056 [werkzeug] [36144:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:20:30] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
-2021-06-18 19:20:32,636 [erybjp] [20140:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
-Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
-    model.case_id = caseinfo_model.id
-AttributeError: 'NoneType' object has no attribute 'id'
-2021-06-18 19:20:32,712 [werkzeug] [20140:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:20:32] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
-2021-06-18 19:21:10,837 [erybjp] [7768:Thread-7] app.py:app:log_exception in 1891] [ERROR]: Exception on /result [POST]
-Traceback (most recent call last):
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 467, in wrapper
-    resp = resource(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask\views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "D:\AutoTest\erybjp\venv\lib\site-packages\flask_restful\__init__.py", line 582, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "D:\AutoTest\erybjp\uiplatform\router\operationdata.py", line 199, in post
-    model.case_id = caseinfo_model.id
-AttributeError: 'NoneType' object has no attribute 'id'
-2021-06-18 19:21:10,916 [werkzeug] [7768:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [18/Jun/2021 19:21:10] "[35m[1mPOST /result HTTP/1.1[0m" 500 -
-2021-06-23 11:50:36,617 [werkzeug] [22200:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+  File "D:\AutoTest\erybjp\uiplatform\router\runtestcase.py", line 88, in jenkins_check
+    jen.aliding_jenkins(arg.get("servername_list"), num)
+  File "D:\AutoTest\erybjp\uiplatform\utils\business\cycle_check\test_jenkins_stage_production.py", line 92, in aliding_jenkins
+    DingtalkRobot().send_markdown("jenkins服务占用检测结果通知", text, [])
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 87, in send_markdown
+    return self.__post(data)
+  File "D:\AutoTest\erybjp\uiplatform\services\ali_dingtalk.py", line 104, in __post
+    response = requests.post(self.__spliceUrl(), headers=self.headers, data=post_data)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 696, in urlopen
+    self._prepare_proxy(conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connectionpool.py", line 964, in _prepare_proxy
+    conn.connect()
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 359, in connect
+    conn = self._connect_tls_proxy(hostname, conn)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\connection.py", line 500, in _connect_tls_proxy
+    return ssl_wrap_socket(
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "D:\AutoTest\erybjp\venv\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\yuanbaojun\AppData\Local\Programs\Python\Python38\lib\ssl.py", line 997, in _create
+    raise ValueError("check_hostname requires server_hostname")
+ValueError: check_hostname requires server_hostname
+2021-07-07 19:44:40,577 [werkzeug] [31496:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 19:44:40] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-07 19:47:54,903 [werkzeug] [27436:Thread-14] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 19:47:54] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-07 20:21:45,959 [werkzeug] [32708:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 20:22:03,808 [werkzeug] [29188:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 20:22:03] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-07 20:22:39,056 [werkzeug] [27520:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 20:22:39] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-07 20:25:31,001 [werkzeug] [32604:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 20:25:31] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-07 20:27:52,658 [werkzeug] [20320:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-07 20:27:56,009 [werkzeug] [20288:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 20:27:56] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
