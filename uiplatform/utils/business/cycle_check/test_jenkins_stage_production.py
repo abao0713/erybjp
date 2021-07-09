@@ -10,13 +10,14 @@ from uiplatform.utils.logicobject.H5NormalPage import Jenkins, LbkMobilePage, Mo
 from uiplatform.utils.common.Driver import browser_driver
 from uiplatform.utils.common.BaseLoggers import logger
 from selenium import webdriver
+from multiprocessing import Pool,Manager
+
 class  TestJenkinsCompare:
      def setUp(self):
          global driver
          driver = browser_driver("chrome",headless=False,is_mobile=False, is_remote=True)
          logger.info('driver驱动器已获取成功')
      def tearDown(self):
-         time.sleep(10)
          driver.quit()
 
      def test_login_page(self):
@@ -43,7 +44,7 @@ class  TestJenkinsCompare:
                  servername_env_data.click()
                  self.page.ele_search.send_keys(Keys.ENTER)
                  new_staging_bulid_num = self.page.new_staging_bulid_element.text
-                 print(new_staging_bulid_num,"staging编号")
+                 print(new_staging_bulid_num,f"{servername}的staging编号")
                  return new_staging_bulid_num
          logger.info(f'{servername}不存在staging环境')
 
@@ -63,41 +64,50 @@ class  TestJenkinsCompare:
                  driver.implicitly_wait(5)
                  self.page.product_para_element.click()
                  new_production_built_data = self.page.new_production_built_data.get_attribute("value")
-                 print(new_production_built_data,"="*10)
                  return "#"+new_production_built_data
          logger.info(f'{servername}不存在production环境')
 
-     def test_staging_production_compare(self,servername_list:list):
+     def test_staging_production_compare(self,servername:str,server_error_list):
+         '''
+         server_error_list:如果单独调用则写个列表即可，如果是直接并行调用aliding_jenkins则不用管
+         '''
          self.setUp()
          self.test_login_page()
-         check = []
-         for servername in servername_list:
-             print(servername)
-             staging_num = self.test_staging_server(servername)
-             production_num = self.test_production_server(servername)
-             print(staging_num,production_num,"是否相等呢")
-             if staging_num == production_num:
-                 logger.info(f"测试验收通过，{servername}的staging与线上编号{staging_num}<>{production_num}保持一致")
-             else:
-                 logger.critical(f"测试未通过，请检查服务{servername}的staging与线上的编号{staging_num}！={production_num}")
-                 check.append({servername: f"staging最新构建编号{staging_num}不等于生产环境构建参数{production_num}"})
+         print(servername)
+         staging_num = self.test_staging_server(servername)
+         production_num = self.test_production_server(servername)
+         print(staging_num,production_num,"staging与线上参数对比")
+         if staging_num == production_num:
+             logger.info(f"测试验收通过，{servername}的staging与线上编号参数{staging_num}<>{production_num}保持一致")
+         else:
+             logger.critical(f"测试未通过，请检查服务{servername}的staging与线上的编号参数{staging_num}！={production_num}")
+             server_error_list.append({servername: f"staging最新构建编号{staging_num}不等于生产环境构建参数{production_num}"})
          self.tearDown()
-         return check
+         return server_error_list
 
 
      def aliding_jenkins(self,servername_list,num):
-         jen = TestJenkinsCompare()
-         data = jen.test_staging_production_compare(servername_list)
-         text = f"检测唯一标识码{num}结果通知{data}，请注意查收！"
-         DingtalkRobot().send_markdown("jenkins服务占用检测结果通知", text, [])
+         start_time = time.time()
+         manage = Manager()
+         self.server_error_list = manage.list()
+         pool = Pool(processes=len(servername_list))
+         for i in range(len(servername_list)):
+             pool.apply_async(self.test_staging_production_compare,
+                              (servername_list[i], self.server_error_list))
+         pool.close()
+         pool.join()
+         end_time = time.time()
+         logger.info(f"校验对比耗时：{end_time-start_time}")
+         if len(self.server_error_list)>0:
+             text = "检测唯一标识码{}结果通知{}，请注意查收！".format(num,self.server_error_list)
+             DingtalkRobot().send_markdown("jenkins服务占用检测结果通知", text, [])
+         else:
+             logger.info("jenkins服务占用检测结果为服务无占用问题")
+
 
 
 
 
 if  __name__  == "__main__":
-    jen = TestJenkinsCompare()
-    a = jen.test_staging_production_compare(["codemaster_codecamp_marketing"])
-    print(a)
-
-
-
+    TestJenkinsCompare().aliding_jenkins(["codemaster_codecamp_service",'lbk_web_customer',"lbk_activity","lbk_web_admin"],11111)
+ 

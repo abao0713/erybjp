@@ -208,3 +208,777 @@ ValueError: check_hostname requires server_hostname
 2021-07-07 20:25:31,001 [werkzeug] [32604:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 20:25:31] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
 2021-07-07 20:27:52,658 [werkzeug] [20320:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 2021-07-07 20:27:56,009 [werkzeug] [20288:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [07/Jul/2021 20:27:56] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-09 12:01:53,258 [werkzeug] [3208:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 13:41:57,236 [werkzeug] [10956:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:41:57] "[33mPOST /jenkins/check HTTP/1.1[0m" 404 -
+2021-07-09 13:42:41,102 [werkzeug] [5980:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:42:41] "[33mPOST /jenkins/check HTTP/1.1[0m" 404 -
+2021-07-09 13:42:42,969 [werkzeug] [13012:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:42:42] "[33mPOST /jenkins/check HTTP/1.1[0m" 404 -
+2021-07-09 13:43:30,920 [werkzeug] [8336:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 13:43:46,136 [werkzeug] [15152:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:43:46] "[33mPOST /jenkins/check HTTP/1.1[0m" 404 -
+2021-07-09 13:44:25,651 [erybjp] [4888:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/jenkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:44:25,735 [werkzeug] [4888:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:44:25] "[35m[1mPOST /element/jenkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:45:13,930 [erybjp] [2020:Thread-3] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/jenkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:45:13,931 [werkzeug] [2020:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:45:13] "[35m[1mPOST /element/jenkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:45:45,457 [werkzeug] [3220:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 13:45:49,755 [erybjp] [10108:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/jenkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:45:49,773 [werkzeug] [10108:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:45:49] "[35m[1mPOST /element/jenkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:47:38,545 [erybjp] [14308:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/jenkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:47:38,559 [werkzeug] [14308:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:47:38] "[35m[1mPOST /element/jenkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:47:48,067 [werkzeug] [7476:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 13:47:49,857 [erybjp] [13956:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/jenkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:47:49,862 [werkzeug] [13956:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:47:49] "[35m[1mPOST /element/jenkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:48:32,725 [werkzeug] [9928:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 13:48:34,233 [erybjp] [12868:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/jenkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 84, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:48:34,247 [werkzeug] [12868:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:48:34] "[35m[1mPOST /element/jenkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:50:03,462 [werkzeug] [7032:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 13:50:10,103 [werkzeug] [10120:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:50:10] "[33mPOST /element/jenkins/check HTTP/1.1[0m" 404 -
+2021-07-09 13:50:42,538 [erybjp] [16212:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:50:42,543 [werkzeug] [16212:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:50:42] "[35m[1mPOST //element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:51:07,780 [erybjp] [5176:Thread-3] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:51:07,786 [werkzeug] [5176:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:51:07] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:55:33,050 [werkzeug] [13788:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:55:33] "[37mOPTIONS /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-09 13:55:37,540 [erybjp] [9320:Thread-5] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:55:37,554 [werkzeug] [9320:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:55:37] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:56:59,528 [werkzeug] [3708:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:56:59] "[37mGET /element/auto/run HTTP/1.1[0m" 200 -
+2021-07-09 13:57:52,355 [erybjp] [9268:Thread-7] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:57:52,368 [werkzeug] [9268:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:57:52] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:58:03,066 [erybjp] [15976:Thread-8] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:58:03,072 [werkzeug] [15976:Thread-8] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:58:03] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:58:03,971 [erybjp] [1920:Thread-9] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:58:03,984 [werkzeug] [1920:Thread-9] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:58:03] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:58:08,585 [erybjp] [9040:Thread-10] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:58:08,590 [werkzeug] [9040:Thread-10] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:58:08] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:58:34,440 [erybjp] [4524:Thread-11] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 13:58:34,451 [werkzeug] [4524:Thread-11] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 13:58:34] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 13:58:57,018 [werkzeug] [6840:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 14:00:17,249 [werkzeug] [15312:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 14:00:17] "[37mGET /scheduler/jobs HTTP/1.1[0m" 200 -
+2021-07-09 14:00:24,762 [erybjp] [15100:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 14:00:24,773 [werkzeug] [15100:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 14:00:24] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 14:00:47,754 [erybjp] [3708:Thread-3] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 14:00:47,761 [werkzeug] [3708:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 14:00:47] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 15:17:02,000 [werkzeug] [14784:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 15:17:18,850 [werkzeug] [10056:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 15:17:43,771 [erybjp] [15688:Thread-6] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/henkins/check [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 370, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 83, in jenkins_check
+    arg = request.get_json()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-09 15:17:43,792 [werkzeug] [15688:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 15:17:43] "[35m[1mPOST /element/henkins/check HTTP/1.1[0m" 500 -
+2021-07-09 15:18:28,341 [werkzeug] [15240:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 15:19:21,745 [werkzeug] [8148:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 15:23:26,738 [werkzeug] [16192:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 15:23:30,857 [werkzeug] [15320:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 15:23:30] "[33mPOST /element/jenkins/check HTTP/1.1[0m" 404 -
+2021-07-09 15:24:20,660 [werkzeug] [12836:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 15:24:20] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-09 15:26:09,976 [werkzeug] [7580:Thread-18] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 15:26:09] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-09 15:31:17,679 [werkzeug] [7328:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-09 15:31:36,454 [werkzeug] [10232:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 15:31:36] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-09 15:32:40,542 [werkzeug] [6088:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 15:32:40] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
