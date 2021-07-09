@@ -1,0 +1,37 @@
+[2021-07-09 13:56:59,296] [INFO] [C13513] [runtestcase.py - line:63] Page base class generation completed
+[2021-07-09 13:56:59,481] [INFO] [C13513] [runtestcase.py - line:69] testcase mobile class generation completed
+[2021-07-09 13:56:59,527] [INFO] [C13513] [runtestcase.py - line:75] testcase web class generation completed
+[2021-07-09 14:28:55,871] [INFO] [C13513] [scheduler.py - line:16] 定时任务启动
+[2021-07-09 14:28:57,519] [INFO] [C13513] [test_check_web.py - line:25] 前置处理类处理完成
+[2021-07-09 14:29:41,634] [INFO] [C13513] [test_check_web.py - line:110] <selenium.webdriver.remote.webdriver.WebDriver (session="74bd386c58810b994ed9c3a68187669a")>
+[2021-07-09 15:24:22,382] [INFO] [C13513] [test_jenkins_stage_production.py - line:17] driver驱动器已获取成功
+[2021-07-09 15:24:32,595] [INFO] [C13513] [test_jenkins_stage_production.py - line:42] lbk_activity存在staging环境
+[2021-07-09 15:24:42,022] [INFO] [C13513] [test_jenkins_stage_production.py - line:57] lbk_activity存在production环境
+[2021-07-09 15:24:51,498] [INFO] [C13513] [test_jenkins_stage_production.py - line:80] 测试验收通过，lbk_activity的staging与线上编号#93<>#93保持一致
+[2021-07-09 15:26:11,717] [INFO] [C13513] [test_jenkins_stage_production.py - line:17] driver驱动器已获取成功
+[2021-07-09 15:26:22,150] [INFO] [C13513] [test_jenkins_stage_production.py - line:42] lbk_activity存在staging环境
+[2021-07-09 15:26:31,677] [INFO] [C13513] [test_jenkins_stage_production.py - line:57] lbk_activity存在production环境
+[2021-07-09 15:26:40,948] [INFO] [C13513] [test_jenkins_stage_production.py - line:80] 测试验收通过，lbk_activity的staging与线上编号#93<>#93保持一致
+[2021-07-09 15:31:41,617] [INFO] [C13513] [test_jenkins_stage_production.py - line:19] driver驱动器已获取成功
+[2021-07-09 15:31:51,887] [INFO] [C13513] [test_jenkins_stage_production.py - line:43] lbk_activity存在staging环境
+[2021-07-09 15:32:01,530] [INFO] [C13513] [test_jenkins_stage_production.py - line:58] lbk_activity存在production环境
+[2021-07-09 15:32:10,741] [INFO] [C13513] [test_jenkins_stage_production.py - line:81] 测试验收通过，lbk_activity的staging与线上编号参数#93<>#93保持一致
+[2021-07-09 15:32:10,957] [INFO] [C13513] [test_jenkins_stage_production.py - line:100] 校验对比耗时：34.50357937812805
+[2021-07-09 15:32:10,958] [INFO] [C13513] [test_jenkins_stage_production.py - line:105] jenkins服务占用检测结果为服务无占用问题
+[2021-07-09 15:32:46,921] [INFO] [C13513] [test_jenkins_stage_production.py - line:19] driver驱动器已获取成功
+[2021-07-09 15:32:47,221] [INFO] [C13513] [test_jenkins_stage_production.py - line:19] driver驱动器已获取成功
+[2021-07-09 15:32:47,551] [INFO] [C13513] [test_jenkins_stage_production.py - line:19] driver驱动器已获取成功
+[2021-07-09 15:32:47,668] [INFO] [C13513] [test_jenkins_stage_production.py - line:19] driver驱动器已获取成功
+[2021-07-09 15:32:58,773] [INFO] [C13513] [test_jenkins_stage_production.py - line:43] codemaster_codecamp_service存在staging环境
+[2021-07-09 15:32:58,826] [INFO] [C13513] [test_jenkins_stage_production.py - line:43] lbk_web_customer存在staging环境
+[2021-07-09 15:32:59,280] [INFO] [C13513] [test_jenkins_stage_production.py - line:43] lbk_web_admin存在staging环境
+[2021-07-09 15:32:59,293] [INFO] [C13513] [test_jenkins_stage_production.py - line:43] lbk_activity存在staging环境
+[2021-07-09 15:33:08,816] [INFO] [C13513] [test_jenkins_stage_production.py - line:58] lbk_web_customer存在production环境
+[2021-07-09 15:33:09,122] [INFO] [C13513] [test_jenkins_stage_production.py - line:58] codemaster_codecamp_service存在production环境
+[2021-07-09 15:33:09,954] [INFO] [C13513] [test_jenkins_stage_production.py - line:58] lbk_activity存在production环境
+[2021-07-09 15:33:10,256] [INFO] [C13513] [test_jenkins_stage_production.py - line:58] lbk_web_admin存在production环境
+[2021-07-09 15:33:18,640] [INFO] [C13513] [test_jenkins_stage_production.py - line:81] 测试验收通过，lbk_web_customer的staging与线上编号参数#98<>#98保持一致
+[2021-07-09 15:33:19,241] [CRITICAL] [C13513] [test_jenkins_stage_production.py - line:83] 测试未通过，请检查服务codemaster_codecamp_service的staging与线上的编号参数#1013！=#1000
+[2021-07-09 15:33:19,967] [INFO] [C13513] [test_jenkins_stage_production.py - line:81] 测试验收通过，lbk_activity的staging与线上编号参数#93<>#93保持一致
+[2021-07-09 15:33:20,264] [CRITICAL] [C13513] [test_jenkins_stage_production.py - line:83] 测试未通过，请检查服务lbk_web_admin的staging与线上的编号参数#68！=#67
+[2021-07-09 15:33:20,610] [INFO] [C13513] [test_jenkins_stage_production.py - line:100] 校验对比耗时：40.06840634346008
