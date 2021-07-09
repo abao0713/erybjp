@@ -110,3 +110,4 @@ class  TestJenkinsCompare:
 
 if  __name__  == "__main__":
     TestJenkinsCompare().aliding_jenkins(["codemaster_codecamp_service",'lbk_web_customer',"lbk_activity","lbk_web_admin"],11111)
+ 
