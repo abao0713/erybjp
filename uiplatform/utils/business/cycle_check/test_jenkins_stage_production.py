@@ -1,3 +1,5 @@
+#__author__:wanyiliu
+
 import time
 
 # import pytest
@@ -11,6 +13,7 @@ from uiplatform.utils.common.Driver import browser_driver
 from uiplatform.utils.common.BaseLoggers import logger
 from selenium import webdriver
 from multiprocessing import Pool,Manager
+
 
 class  TestJenkinsCompare:
      def setUp(self):
@@ -112,4 +115,3 @@ class  TestJenkinsCompare:
 
 if  __name__  == "__main__":
     TestJenkinsCompare().aliding_jenkins(["codemaster_codecamp_service",'lbk_web_customer',"lbk_activity","lbk_web_admin"],11111)
- 
