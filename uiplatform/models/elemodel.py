@@ -41,6 +41,7 @@ class Uicaseinfo(BaseModel):
     deptid = db.Column(db.String(50), comment="部门唯一码")
     version = db.Column(db.String(20), comment="版本迭代次数")
     function_type = db.Column(db.String(20), comment="用例函数名称")
+    class_type = db.Column(db.String(20), comment="用例函数所在的类")
     page_class_type = db.Column(db.String(20), comment="用例函数使用到的页面对象类")
     source_url = db.Column(db.Text, default=1, comment="用例对应的项目url")
     devices_type = db.Column(db.Integer, default=1, comment="1手机，2网页，3远程手机")
