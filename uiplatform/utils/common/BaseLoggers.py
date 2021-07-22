@@ -26,9 +26,9 @@ class Log(object):
         resultPath = os.path.join(basedir, "logs")
         if not os.path.exists(resultPath):
             os.mkdir(resultPath)
-        logPath = os.path.join(resultPath, str(datetime.now().strftime("%Y%m%d%H%M")))
-        if not os.path.exists(logPath):
-            os.mkdir(logPath)
+        # logPath = os.path.join(resultPath, str(datetime.now().strftime("%Y%m%d%H%M")))
+        # if not os.path.exists(logPath):
+        #     os.mkdir(logPath)
 
         # 创建一个logger
         self.logger = logging.getLogger(logger)
