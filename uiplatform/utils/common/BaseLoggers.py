@@ -8,42 +8,135 @@
 
 
 import os
-import os.path
-import socket
+from config import basedir
 import logging
-import logging.handlers
-from .decorator import singleton
+from datetime import datetime
+import threading
+import time
 
 
 
-@singleton
-class JFMlogging(object):
-    def __init__(self):
-        self.logger = logging.getLogger("mylog")
-        host_name = socket.gethostname()
-        logging_msg_format = f'[%(asctime)s] [%(levelname)s] [{host_name}] [%(module)s.py - line:%(lineno)d] %(message)s'
-        self.logger.setLevel(logging.INFO)
+class Log(object):
+    def __init__(self, logger):
+        '''''
+            指定保存日志的文件路径，日志级别，以及调用文件
+            将日志存入到指定的文件中
+        '''
+        global logPath, resultPath, basedir
+        resultPath = os.path.join(basedir, "logs")
+        if not os.path.exists(resultPath):
+            os.mkdir(resultPath)
+        logPath = os.path.join(resultPath, str(datetime.now().strftime("%Y%m%d%H%M")))
+        if not os.path.exists(logPath):
+            os.mkdir(logPath)
 
-        log_path = 'logs'  # 日志存放目录
-        if not os.path.exists(log_path):
-            os.mkdir(log_path)
-        log_file = os.path.join(log_path, 'systemlog.log')
+        # 创建一个logger
+        self.logger = logging.getLogger(logger)
+        self.logger.setLevel(logging.DEBUG)
 
-        # 日志记录到文件
-        file_handler = logging.handlers.TimedRotatingFileHandler(log_file, 'midnight', 1)
-        file_handler.setFormatter(logging.Formatter(logging_msg_format))
-        self.logger.addHandler(file_handler)
+        fh = logging.FileHandler(os.path.join(resultPath, "output.log"))
+        fh.setLevel(logging.INFO)
+        fh.setLevel(logging.DEBUG)
 
-        # 日志输出到命令行
-        logging.raiseExceptions = False  # 关闭记录方法的异常提示
-        stream_handler = logging.StreamHandler()
-        stream_handler.setFormatter(logging.Formatter(logging_msg_format))
-        self.logger.addHandler(stream_handler)
+        # 再创建一个handler，用于输出到控制台
+        ch = logging.StreamHandler()
+        ch.setLevel(logging.INFO)
+        ch.setLevel(logging.DEBUG)
 
-    def getloger(self):
+        # 定义handler的输出格式
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        fh.setFormatter(formatter)
+        ch.setFormatter(formatter)
+
+        # 给logger添加handler
+        self.logger.addHandler(fh)
+        self.logger.addHandler(ch)
+
+    def get_logger(self):
+        """
+        get logger
+        :return:
+        """
         return self.logger
 
+    def build_start_line(self, case_no):
+        """
+        write start line
+        :return:
+        """
+        self.logger.info("--------" + case_no + " START--------")
 
-logger = JFMlogging().getloger()
+    def build_end_line(self, case_no):
+        """
+        write end line
+        :return:
+        """
+        self.logger.info("--------" + case_no + " END--------")
+
+    def build_case_line(self, case_name, msg):
+        """
+        write test case line
+        :param case_name:
+        :param code:
+        :param msg:
+        :return:
+        """
+        self.logger.info(case_name+"----msg:"+msg)
+
+    def get_result_path(self):
+        """
+        get result file path
+        :return:
+        """
+        path = os.path.join(basedir, "my_report")
+        result_path = os.path.join(path, "my_report.html")
+        return result_path
+
+    def get_report_path(self):
+        """
+        get test report path
+        :return:
+        """
+        return logPath
+
+    def write_result(self, result):
+        """
+        :param result:
+        :return:
+        """
+        result_path = os.path.join(logPath, "report.txt")
+        fb = open(result_path, "wb")
+        try:
+            fb.write(result)
+        except FileNotFoundError as ex:
+            pass
 
 
+class MyLog:
+    log = None
+    mutex = threading.Lock()
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def get_log(logger):
+
+        if MyLog.log is None:
+            MyLog.mutex.acquire()
+            MyLog.log = Log(logger)
+            MyLog.mutex.release()
+
+        return MyLog.log
+
+
+log = MyLog.get_log("logger")
+logger = log.get_logger()
+
+
+if __name__ == "__main__":
+    log = MyLog.get_log("logger")
+    Logger = log.get_logger()
+    Logger.debug("test debug")
+    Logger.info("test info")
+    log.get_report_path()
