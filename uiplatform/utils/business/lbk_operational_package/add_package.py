@@ -1,14 +1,15 @@
 import time
-from faker import Faker  # 随机数
+# from faker import Faker  # 随机数
 from selenium import webdriver
 from random import choice
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
 import logging
+# from threading import Thread
+from urllib3 import exceptions
 
 
-def checkout_windows(window,driver):
-
+def checkout_windows(window, driver):
     for current_window in driver.window_handles:
         if current_window != window:
             driver.switch_to.window(current_window)
@@ -22,10 +23,12 @@ def type_value(elements, css, get_attribute, type_name='课包类型'):
         print(f"{type_name}为{element_text},所对应的值是{element_value}", end=';')
         if element == elements[-1]:
             print('')
+    # 随机选择
     Select_attribute = choice(elements)
     Select_attribute.click()
-    logging.info(f"所选择的{type_name}类型为{Select_attribute.text}")
+    logging.info(f"随机选择：所选择的{type_name}类型为{Select_attribute.text}")
     return Select_attribute
+
 
 def go_url():
     url_home = 'https://test-lbk-operational.codemao.cn/packages'
@@ -74,9 +77,6 @@ def go_url():
     time.sleep(4)
     driver.implicitly_wait(5)
     driver.get(url_home)
-    # time.sleep(2)
-    # driver.find_element_by_class_name(add_package_button_class).click()
-    # driver.find_element_by_css_selector('#root > div > section > div.ant-layout > main > div:nth-child(2) > div > section:nth-child(2) > div > div:nth-child(1) > a > button').click()
     driver.find_element_by_xpath(add_package_button_xpath).click()
     print(driver.current_url)
 
@@ -92,8 +92,7 @@ def go_url():
     #         driver.close()
     #         driver.switch_to.window(current_window)
 
-
-    checkout_windows(window_1,driver)
+    checkout_windows(window_1, driver)
     package_name = 'Auto测试' + time.strftime('%H:%M:%S', time.localtime())
     print(package_name)
     # time.sleep(2)
@@ -109,7 +108,6 @@ def go_url():
 
     logging.basicConfig(level=logging.INFO, format='%(asctime)s -- [line:%(lineno)d] %(message)s',
                         datefmt='%Y-%m-%d.%H:%M:%S')
-
     # print(content_lists.text)
     # for element in content_lists:
     #     element_text = element.text
@@ -129,8 +127,6 @@ def go_url():
     # package_type = choice(content_lists)
     # package_type.click()
     # print(f"所选择的课包内容类型为{package_type.text}")
-
-
     # def random(elements):
     #     package_type = choice(elements)
     #     package_type.click()
@@ -159,7 +155,7 @@ def go_url():
     driver.find_element_by_css_selector(add_zhangjieUrl_button).click()
     logging.info('页面跳转至添加章节页面')
     window_zhangjie = driver.current_window_handle
-    checkout_windows(window_zhangjie,driver)
+    checkout_windows(window_zhangjie, driver)
     logging.info('获取添加章节页面句柄成功，跳转至章节页面')
     driver.find_element_by_css_selector(add_zhangjie_button).click()
     logging.info('点击添加按钮成功,出现章节弹框')
@@ -173,6 +169,12 @@ def go_url():
     driver.switch_to.window(driver.window_handles[1])
     driver.refresh()
     logging.info('切换到原新增课包页面，并且刷新')
+    driver.quit()
+
 
 if __name__ == '__main__':
-    go_url()
+    for i in range(10):
+        try:
+            go_url()
+        except exceptions:
+            go_url()
