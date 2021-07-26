@@ -61,26 +61,6 @@ class GivequanPage(Page):
     search_lingqu1_element = Element(xpath="/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]",describe='页面中间领取按钮')
     search_lingqu2_element = Element(xpath="/html[1]/body[1]/div[1]/div[1]/div[3]/img[1]",describe='底部领取按钮')
 
-class  lbk_operational(Page):
-    """运营后台-新增课包"""
-    url_home = 'https://test-lbk-operational.codemao.cn/packages'
-    #跳转到登录页面
-    url_login = 'https://test-internal-account.codemao.cn/login'
-    admin_css = '[placeholder~=用户名]'
-    pwd_css = '[placeholder~=密码]'
-    submit_login_button = '.ant-btn'
-    adm_pwd = 'rc-tabs-0-tab-2'
-
-    # 跳转 https://test-lbk-operational.codemao.cn/packages/add
-    # add_package_button_css = 'ant-btn ant-btn-primary'
-    # add_package_button_class = 'ant-btn ant-btn-primary'
-    add_package_button_xpath = '//*[@id="root"]/div/section/div[2]/main/div[2]/div/section[1]/div/div[1]/a/button'
-    package_new_name_css = '[placeholder ~=请输入课程名称，限制20个字以内 ]'
-    content_list = '#contentType'  # 主要内容类型,包含编程课，艺术课，数学课,工程思维
-    teaching_platform = '[title ~= 教学平台]'  # NEMO KIDS IDE BOX2
-    businessType_css = '#businessType'  # 业务类型
-    attribute_css = '#attribute'  # 课包属性
-    submit_add_package = '.ant-btn ant-btn-primary'
 
 
 

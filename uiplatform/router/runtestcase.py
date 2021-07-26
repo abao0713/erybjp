@@ -78,7 +78,7 @@ def run_auto():
     return jsonify(code=200, msg="ok", data={"session_id": session_id})
 
 
-@user.route('/jenkins/check', methods=["post"])
+@user.route('/henkins/check', methods=["post"])
 def jenkins_check():
     arg = request.get_json()
     jen = TestJenkinsCompare()
@@ -87,8 +87,3 @@ def jenkins_check():
     Thread(target=lambda: jen.aliding_jenkins(servername_list, num)).start()
     return jsonify(code=200, msg="ok", data=num)
 
-@user.route('/uicase/autotest', methods=["post"])
-def testcase_run():
-    arg = request.get_json()
-    # 查询指定目录下文件夹
-    pass
