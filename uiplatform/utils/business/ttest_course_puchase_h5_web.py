@@ -76,11 +76,10 @@ class  PurchasePacket:
 
     def  setUp(self):
         global driver
-        driver = browser_driver(browser_name="chrome",headless=False,is_mobile=True,is_remote=True)
+        driver = browser_driver(browser_name="chrome",headless=False,is_mobile=True,is_remote=False)
         driver.maximize_window()
 
     def tearDowm(self):
-        time.sleep(10)
         driver.quit()
 
     def purse_price_not_zero(self):
@@ -96,16 +95,17 @@ class  PurchasePacket:
             '''图形验证码功能暂时未完成'''
             png_code = driver.find_element(By.CSS_SELECTOR,"#tcaptcha_iframe_drag")
             driver.switch_to.frame(png_code)
-            #选择拖动滑块的节点
-            slide_element = driver.find_element_by_css_selector("#tcaptcha_drag_thumb")
-            #获取滑块图片的节点
-            slideBlock_ele = driver.find_element_by_css_selector("#slideBlock")
-            #获取缺口背景图片节点
-            slideBg = driver.find_element_by_css_selector("#slideBg")[1]
-        except Exception as e:
-            logger.info('图片验证码存在，造成阻塞，请等待一段时间重新运行')
-            error.append("图片验证码存在，造成阻塞，请等待一段时间重新运行")
+            logger.critical('图片验证码存在，造成阻塞，请等待一段时间重新运行或手动执行')
+            error.append("图片验证码存在，请等待一段时间重新运行或手动执行")
             return {"message":"图片验证码存在，请等待一段时间重新运行或手动执行"}
+            # #选择拖动滑块的节点
+            # slide_element = driver.find_element_by_css_selector("#tcaptcha_drag_thumb")
+            # #获取滑块图片的节点
+            # slideBlock_ele = driver.find_element_by_css_selector("#slideBlock")
+            # #获取缺口背景图片节点
+            # slideBg = driver.find_element_by_css_selector("#slideBg")[1]
+        except Exception as e:
+            logger.info('图片验证码不存在，可以正常运行')
         finally:
             if not error:
                 course.code_ele = self.get_phone_code()

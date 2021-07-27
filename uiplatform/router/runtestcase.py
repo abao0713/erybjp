@@ -96,7 +96,7 @@ def testcase_run():
 
 @user.route('/buy/testpacket',methods=["get"])
 def test_purchase_packet():
-    '''购买非0元体验课'''
+    '''购买非0元体验课 '''
     buy = PurchasePacket()
     message = buy.purse_price_not_zero()
     exce_result = {"message":"非0体验课购买成功"}
