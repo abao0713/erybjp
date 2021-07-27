@@ -16,7 +16,7 @@ from uiplatform.utils.common.BaseLoggers import logger
 from config import Config,basedir
 
 
-png_path = os.path.join(basedir,r"uiplatform\utils","data",'picture')
+png_path = os.path.join(basedir, r"uiplatform","utils","data","picture")
 
 logger.info(f"最原始的图片路径:{png_path}")
 if not os.path.exists(png_path):
