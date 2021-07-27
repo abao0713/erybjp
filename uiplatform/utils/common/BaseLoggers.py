@@ -44,7 +44,7 @@ class Log(object):
         ch.setLevel(logging.DEBUG)
 
         # 定义handler的输出格式
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter('%(asctime)s - %(funcName)s %(name)s - %(levelname)s - %(message)s')
         fh.setFormatter(formatter)
         ch.setFormatter(formatter)
 
@@ -135,8 +135,9 @@ logger = log.get_logger()
 
 
 if __name__ == "__main__":
-    log = MyLog.get_log("logger")
-    Logger = log.get_logger()
-    Logger.debug("test debug")
-    Logger.info("test info")
-    log.get_report_path()
+    # log = MyLog.get_log("logger")
+    # Logger = log.get_logger()
+    # Logger.debug("test debug")
+    # Logger.info("test info")
+    # log.get_report_path()
+    pass

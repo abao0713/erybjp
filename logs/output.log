@@ -1,0 +1,266 @@
+2021-07-26 16:13:52,374 - logger - INFO - <selenium.webdriver.remote.webdriver.WebDriver (session="cfa0776f619da67f7837ef895b437074")>
+2021-07-26 16:22:04,520 - logger - INFO - 测试环境登录接口返回token成功
+2021-07-26 16:22:06,128 - logger - INFO - 请求头为:{'Authorization': 'Token 2a36e549d85b4a03345f78159118cc1c967593dd', 'cookies': 'monkey_token=2a36e549d85b4a03345f78159118cc1c967593dd'}
+2021-07-26 16:22:06,242 - logger - INFO - 删除订单记录成功
+2021-07-26 16:22:15,076 - logger - INFO - 图片验证码存在，造成阻塞，请等待一段时间重新运行
+2021-07-26 16:22:15,356 - logger - INFO - 获取验证码成功为775842
+2021-07-26 16:25:32,763 - logger - INFO - 测试环境登录接口返回token成功
+2021-07-26 16:25:34,359 - logger - INFO - 请求头为:{'Authorization': 'Token 2a36e549d85b4a03345f78159118cc1c967593dd', 'cookies': 'monkey_token=2a36e549d85b4a03345f78159118cc1c967593dd'}
+2021-07-26 16:25:34,459 - logger - INFO - 删除订单记录成功
+2021-07-26 16:25:43,368 - logger - INFO - 图片验证码存在，造成阻塞，请等待一段时间重新运行
+2021-07-26 16:25:43,567 - logger - INFO - 获取验证码成功为775842
+2021-07-26 16:36:00,887 - logger - INFO - 测试环境登录接口返回token成功
+2021-07-26 16:36:02,449 - logger - INFO - 请求头为:{'Authorization': 'Token 2a36e549d85b4a03345f78159118cc1c967593dd', 'cookies': 'monkey_token=2a36e549d85b4a03345f78159118cc1c967593dd'}
+2021-07-26 16:36:02,562 - logger - INFO - 删除订单记录成功
+2021-07-26 16:36:11,550 - logger - INFO - 图片验证码存在，造成阻塞，请等待一段时间重新运行
+2021-07-26 16:43:47,368 - logger - INFO - 测试环境登录接口返回token成功
+2021-07-26 16:43:49,095 - logger - INFO - 请求头为:{'Authorization': 'Token 2a36e549d85b4a03345f78159118cc1c967593dd', 'cookies': 'monkey_token=2a36e549d85b4a03345f78159118cc1c967593dd'}
+2021-07-26 16:43:49,205 - logger - INFO - 删除订单记录成功
+2021-07-26 16:43:56,505 - logger - INFO - 图片验证码存在，造成阻塞，请等待一段时间重新运行
+2021-07-26 17:05:56,125 - logger - INFO - 定时任务启动
+2021-07-26 17:05:57,687 - logger - INFO - 前置处理类处理完成
+2021-07-26 17:06:42,807 - logger - INFO - <selenium.webdriver.remote.webdriver.WebDriver (session="bb25b4dec3a7e97efdb8b1ca120bf29b")>
+2021-07-26 17:35:56,115 - logger - INFO - 定时任务启动
+2021-07-26 17:35:57,669 - logger - INFO - 前置处理类处理完成
+2021-07-26 17:36:43,270 - logger - INFO - <selenium.webdriver.remote.webdriver.WebDriver (session="8fe9797db19191d35c5a6327dbcee96a")>
+2021-07-26 18:05:56,128 - logger - INFO - 定时任务启动
+2021-07-26 18:05:57,637 - logger - INFO - 前置处理类处理完成
+2021-07-26 18:06:41,338 - logger - INFO - <selenium.webdriver.remote.webdriver.WebDriver (session="1ba6e178c77e3f1d716cf4ca7e289122")>
+2021-07-26 19:05:56,104 - logger - INFO - 定时任务启动
+2021-07-26 19:05:57,590 - logger - INFO - 前置处理类处理完成
+2021-07-26 19:06:40,746 - logger - INFO - <selenium.webdriver.remote.webdriver.WebDriver (session="d528a64e990b4764fb7578d74b729bd2")>
+2021-07-26 19:18:13,881 - logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in upload_one_picture
+    png = os.path.join(png_path,picname)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'
+
+2021-07-26 19:18:20,268 - logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in upload_one_picture
+    png = os.path.join(png_path,picname)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'
+
+2021-07-26 19:19:35,136 - logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in upload_one_picture
+    png = os.path.join(png_path,str(picname))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'
+
+2021-07-26 19:20:37,084 - logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in upload_one_picture
+    png = os.path.join(png_path,str(picname))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'
+
+2021-07-26 19:20:53,103 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:21:39,811 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:22:09,514 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:22:27,054 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:22:42,581 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:28:22,862 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:28:34,666 - logger - CRITICAL - 上传的图片为列表
+2021-07-26 19:29:35,577 - logger - CRITICAL - 上传的图片为列表
+2021-07-26 19:30:23,709 - logger - CRITICAL - 上传的图片为列表
+2021-07-26 19:32:59,188 - logger - CRITICAL - 上传的图片非列表
+2021-07-26 19:35:23,479 - logger - CRITICAL - 上传的图片为列表
+2021-07-26 19:35:27,534 - logger - CRITICAL - 上传的图片为列表
+2021-07-26 19:37:05,679 - logger - CRITICAL - 上传的图片为列表
+2021-07-26 19:37:45,731 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:38:54,334 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:39:06,832 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:45:35,172 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:45:47,678 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:46:28,504 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:46:42,196 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:52:28,760 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:54:06,216 - logger - INFO - 上传文件的路径:D:\测试学习文档\data\picture\162581216725779.png
+2021-07-26 19:54:06,217 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:55:41,065 - logger - INFO - 最原始的图片路径:D:\测试学习文档\data\picture
+2021-07-26 19:55:44,349 - logger - INFO - 上传文件的路径:D:\测试学习文档\data\picture\162581216725779.png
+2021-07-26 19:55:44,350 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 19:57:19,064 - logger - INFO - 上传文件的路径:D:\测试学习文档\data\picture\162581216725779.png
+2021-07-26 19:57:19,064 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:05:07,177 - logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:05:33,104 - logger - INFO - 上传文件的路径:D:\测试学习文档\data\picture\162581216725779.png
+2021-07-26 20:05:33,104 - logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:09:02,346 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\data\picture
+2021-07-26 20:09:05,705 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\data\picture\162581216725779.png
+2021-07-26 20:09:05,705 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:11:21,820 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档
+2021-07-26 20:12:32,486 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\data\picture
+2021-07-26 20:13:08,769 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\data\picture
+2021-07-26 20:13:11,914 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\data\picture\162581216725779.png
+2021-07-26 20:13:11,914 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:15:02,258 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master
+2021-07-26 20:17:55,720 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\data\picture\162581216725779.png
+2021-07-26 20:17:55,721 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:18:00,917 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master
+2021-07-26 20:18:25,163 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:18:43,602 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:18:43,615 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:cb8aGIXFuQJHoXm6XYv1pjJK0cI=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTIxNjcyNTc3OS5wbmciLCJkZWFkbGluZSI6MTYyNzMwNTUyM30=
+2021-07-26 20:18:44,562 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 65, in upload_one_picture
+    self.__delete_png(picname)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in __delete_png
+    os.rmdir(png)
+NotADirectoryError: [WinError 267] 目录名称无效。: 'D:\\测试学习文档\\erybjp-master\\uiplatform\\utils\\data\\picture\\162581216725779.png'
+
+2021-07-26 20:20:32,116 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:20:32,116 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:0kDOn9NZp1lp5_X8-1BnAAmGWnw=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTIxNjcyNTc3OS5wbmciLCJkZWFkbGluZSI6MTYyNzMwNTYzMn0=
+2021-07-26 20:20:32,202 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 65, in upload_one_picture
+    self.__delete_png(picname)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in __delete_png
+    os.rmdir(png)
+NotADirectoryError: [WinError 267] 目录名称无效。: 'D:\\测试学习文档\\erybjp-master\\uiplatform\\utils\\data\\picture\\162581216725779.png'
+
+2021-07-26 20:20:43,530 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:20:47,336 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:20:47,336 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:iRG435SL5wgb2xg6N4V3x2Fscnw=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTIxNjcyNTc3OS5wbmciLCJkZWFkbGluZSI6MTYyNzMwNTY0N30=
+2021-07-26 20:20:47,409 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 65, in upload_one_picture
+    self.__delete_png(picname)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in __delete_png
+    os.rmdir(png)
+NotADirectoryError: [WinError 267] 目录名称无效。: 'D:\\测试学习文档\\erybjp-master\\uiplatform\\utils\\data\\picture\\162581216725779.png'
+
+2021-07-26 20:22:56,029 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:22:56,029 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:NvGZXsrE86QnTGw7qozZk3Ks0r0=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTIxNjcyNTc3OS5wbmciLCJkZWFkbGluZSI6MTYyNzMwNTc3Nn0=
+2021-07-26 20:22:56,132 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 65, in upload_one_picture
+    self.__delete_png(picname)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in __delete_png
+    os.rmdir(png)
+NotADirectoryError: [WinError 267] 目录名称无效。: 'D:\\测试学习文档\\erybjp-master\\uiplatform\\utils\\data\\picture\\162581216725779.png'
+
+2021-07-26 20:26:14,586 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:26:14,586 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:TCvqZVVURT9mVSuYjf5JJ6XcAKM=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTIxNjcyNTc3OS5wbmciLCJkZWFkbGluZSI6MTYyNzMwNTk3NH0=
+2021-07-26 20:26:14,670 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 65, in upload_one_picture
+    self.__delete_png(picname)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 47, in __delete_png
+    os.remove(png)
+NotADirectoryError: [WinError 267] 目录名称无效。: 'D:\\测试学习文档\\erybjp-master\\uiplatform\\utils\\data\\picture\\162581216725779.png'
+
+2021-07-26 20:27:09,926 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:27:14,704 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:27:17,615 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:27:17,616 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:i7ubikoGfWhcpEgM_2RT0DHSmvM=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTIxNjcyNTc3OS5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjAzN30=
+2021-07-26 20:27:17,663 - __delete_png logger - CRITICAL - 删除图片:162581216725779.png成功
+2021-07-26 20:27:17,664 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 66, in upload_one_picture
+    imagine_file = f"http://{self.host}/"+ret.get(picname)
+TypeError: can only concatenate str (not "NoneType") to str
+
+2021-07-26 20:28:47,670 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:28:47,670 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:28:49,026 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:28:49,026 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:29:18,348 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:29:21,536 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:29:21,536 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:29:24,428 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581216725779.png
+2021-07-26 20:29:24,429 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:29:31,606 - upload_one_picture logger - CRITICAL - 上传的图片非列表
+2021-07-26 20:29:38,487 - upload_one_picture logger - CRITICAL - 上传的图片非列表
+2021-07-26 20:29:48,177 - upload_one_picture logger - CRITICAL - 上传的图片为列表
+2021-07-26 20:30:22,910 - upload_one_picture logger - CRITICAL - 上传的图片为列表
+2021-07-26 20:30:33,787 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:30:33,787 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:qK7STgt0mVcJ3kR6EQAZOQqygMY=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTc3MDYyMTIwMy5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjIzM30=
+2021-07-26 20:30:33,945 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 65, in upload_one_picture
+    imagine_file = f"http://{self.host}/"+ret.get(picname)
+TypeError: can only concatenate str (not "NoneType") to str
+
+2021-07-26 20:33:09,225 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:33:21,439 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:33:21,439 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:QXR31VUcLa-AYEnVX2Kn5DBgxWw=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTc3MDYyMTIwMy5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjQwMX0=
+2021-07-26 20:33:21,504 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 63, in upload_one_picture
+    imagine_file = f"http://{self.host}/"+ret.get(picname)
+TypeError: can only concatenate str (not "NoneType") to str
+
+2021-07-26 20:33:39,474 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:33:54,814 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:33:54,814 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:njhOtq98FwDTsiR-3lZGWVWgiuw=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTc3MDYyMTIwMy5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjQzNH0=
+2021-07-26 20:33:54,866 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 63, in upload_one_picture
+    imagine_file = f"http://{self.host}/"+ret.get(picname)
+TypeError: can only concatenate str (not "NoneType") to str
+
+2021-07-26 20:35:08,842 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:35:11,641 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:35:11,641 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:Knrz63hZt8Jx3podJdiLAXcwKmg=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTc3MDYyMTIwMy5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjUxMX0=
+2021-07-26 20:35:11,723 - upload_one_picture logger - INFO - 上传成功，图片地址为http://qwugfk1sd.hn-bkt.clouddn.com/None
+2021-07-26 20:37:41,026 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:37:48,896 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:37:48,896 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:crjGFZ2xJ7l44_au5gqg_7_CCTs=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTc3MDYyMTIwMy5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjY2OH0=
+2021-07-26 20:37:48,993 - upload_one_picture logger - INFO - None
+2021-07-26 20:37:48,993 - upload_one_picture logger - INFO - 上传成功，图片地址为http://qwugfk1sd.hn-bkt.clouddn.com/None
+2021-07-26 20:40:03,933 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:40:07,215 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:40:07,216 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:1O0vUSvqjjtnr5beydA1tfoXTks=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTc3MDYyMTIwMy5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjgwN30=
+2021-07-26 20:40:07,307 - upload_one_picture logger - INFO - 图片的路径162581770621203.png
+2021-07-26 20:40:07,307 - upload_one_picture logger - INFO - 上传成功，图片地址为http://qwugfk1sd.hn-bkt.clouddn.com/162581770621203.png
+2021-07-26 20:40:46,798 - <module> logger - INFO - 最原始的图片路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture
+2021-07-26 20:40:52,233 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:40:52,233 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:8JrzflsV_0j6YB6ce5PeUKIE2Vc=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjU4MTc3MDYyMTIwMy5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjg1Mn0=
+2021-07-26 20:40:52,357 - upload_one_picture logger - INFO - 图片的路径162581770621203.png
+2021-07-26 20:40:52,357 - upload_one_picture logger - INFO - 上传成功，图片地址为http://qwugfk1sd.hn-bkt.clouddn.com/162581770621203.png
+2021-07-26 20:40:52,357 - __delete_png logger - CRITICAL - 删除图片:162581770621203.png成功
+2021-07-26 20:40:54,712 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:40:54,712 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:40:56,592 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:40:56,592 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:40:57,339 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162581770621203.png
+2021-07-26 20:40:57,339 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:41:37,209 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\162729039032527.png
+2021-07-26 20:41:37,209 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:Lc_mQH2eukPMNPirru9IDgtSTEo=:eyJzY29wZSI6InBpY3R1cmVwYXRoOjE2MjcyOTAzOTAzMjUyNy5wbmciLCJkZWFkbGluZSI6MTYyNzMwNjg5N30=
+2021-07-26 20:41:37,279 - upload_one_picture logger - INFO - 图片的路径162729039032527.png
+2021-07-26 20:41:37,279 - upload_one_picture logger - INFO - 上传成功，图片地址为http://qwugfk1sd.hn-bkt.clouddn.com/162729039032527.png
+2021-07-26 20:41:37,280 - __delete_png logger - CRITICAL - 删除图片:162729039032527.png成功
+2021-07-26 20:41:49,358 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\
+2021-07-26 20:41:49,358 - __get_token logger - INFO - 获取token为:njsuxJI2hz72OgiynZhb1a6mvxZbhKk26Vq78BDv:42T3j-bb6a7Md9QeB76zRJRLRRw=:eyJzY29wZSI6InBpY3R1cmVwYXRoOiIsImRlYWRsaW5lIjoxNjI3MzA2OTA5fQ==
+2021-07-26 20:41:49,372 - upload_one_picture logger - CRITICAL - 七彩云上传接口报错:
+Traceback (most recent call last):
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\comsrc.py", line 62, in upload_one_picture
+    ret,info = put_file(token,picname,png)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\qiniu\services\storage\uploader.py", line 73, in put_file
+    with open(file_path, 'rb') as input_stream:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\测试学习文档\\erybjp-master\\uiplatform\\utils\\data\\picture\\'
+
+2021-07-26 20:41:54,975 - upload_one_picture logger - CRITICAL - 上传的图片非列表
+2021-07-26 20:42:04,465 - upload_one_picture logger - CRITICAL - 上传的图片为列表
+2021-07-26 20:42:19,908 - upload_one_picture logger - CRITICAL - 上传的图片非列表
+2021-07-26 20:42:24,702 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\22
+2021-07-26 20:42:24,702 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:42:30,273 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\22
+2021-07-26 20:42:30,273 - upload_one_picture logger - CRITICAL - 上传的文件不存在
+2021-07-26 20:42:33,709 - upload_one_picture logger - INFO - 上传文件的路径:D:\测试学习文档\erybjp-master\uiplatform\utils\data\picture\33
+2021-07-26 20:42:33,710 - upload_one_picture logger - CRITICAL - 上传的文件不存在

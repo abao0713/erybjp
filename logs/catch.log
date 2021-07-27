@@ -982,3 +982,417 @@ TypeError: The view function did not return a valid response. The function eithe
 2021-07-09 15:31:17,679 [werkzeug] [7328:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
 2021-07-09 15:31:36,454 [werkzeug] [10232:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 15:31:36] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
 2021-07-09 15:32:40,542 [werkzeug] [6088:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [09/Jul/2021 15:32:40] "[37mPOST /element/henkins/check HTTP/1.1[0m" 200 -
+2021-07-26 16:12:00,780 [werkzeug] [13004:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 16:12:57,921 [werkzeug] [8128:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 16:12:57] "[33mGET /ui_test/test1 HTTP/1.1[0m" 404 -
+2021-07-26 16:13:50,067 [werkzeug] [23372:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 16:13:50] "[37mGET /element/ui_test/test1 HTTP/1.1[0m" 200 -
+2021-07-26 16:21:28,801 [werkzeug] [27476:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 16:22:23,045 [erybjp] [2968:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/buy/testpacket [GET]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\business\lbk_operational_package\runtestcase.py", line 99, in test_purchase_packet
+    message = buy.purse_price_not_zero()
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\business\ttest_course_puchase_h5_web.py", line 109, in purse_price_not_zero
+    course.code_ele = self.get_phone_code()
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\BasePage.py", line 124, in __set__
+    self.send_keys(value)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\BasePage.py", line 254, in send_keys
+    elem = self.__get_element(self.k, self.v)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\BasePage.py", line 185, in __get_element
+    self.__find_element((By.CSS_SELECTOR, value))
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\BasePage.py", line 155, in __find_element
+    raise NoSuchElementException(error_msg)
+selenium.common.exceptions.NoSuchElementException: Message: ❌ Find 0 elements through: css selector=input[placeholder="请输入验证码"]
+
+2021-07-26 16:22:23,091 [werkzeug] [2968:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 16:22:23] "[35m[1mGET /element/buy/testpacket HTTP/1.1[0m" 500 -
+2021-07-26 16:25:51,213 [erybjp] [28232:Thread-14] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/buy/testpacket [GET]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\business\lbk_operational_package\runtestcase.py", line 99, in test_purchase_packet
+    message = buy.purse_price_not_zero()
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\business\ttest_course_puchase_h5_web.py", line 109, in purse_price_not_zero
+    course.pay_button_ele.click()
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\BasePage.py", line 124, in __set__
+    self.send_keys(value)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\BasePage.py", line 254, in send_keys
+    elem = self.__get_element(self.k, self.v)
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\BasePage.py", line 185, in __get_element
+    self.__find_element((By.CSS_SELECTOR, value))
+  File "D:\测试学习文档\erybjp-master\uiplatform\utils\common\BasePage.py", line 155, in __find_element
+    raise NoSuchElementException(error_msg)
+selenium.common.exceptions.NoSuchElementException: Message: ❌ Find 0 elements through: css selector=input[placeholder="请输入验证码"]
+
+2021-07-26 16:25:51,228 [werkzeug] [28232:Thread-14] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 16:25:51] "[35m[1mGET /element/buy/testpacket HTTP/1.1[0m" 500 -
+2021-07-26 16:35:57,347 [werkzeug] [26848:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 16:36:11,884 [werkzeug] [784:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 16:36:11] "[37mGET /element/buy/testpacket HTTP/1.1[0m" 200 -
+2021-07-26 16:43:56,710 [werkzeug] [14660:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 16:43:56] "[37mGET /element/buy/testpacket HTTP/1.1[0m" 200 -
+2021-07-26 19:16:47,197 [werkzeug] [18972:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:17:31,086 [erybjp] [9760:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 115, in upload_picture
+    pictureName = arg.get("picturename")
+AttributeError: 'NoneType' object has no attribute 'get'
+2021-07-26 19:17:31,092 [werkzeug] [9760:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:17:31] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:18:13,882 [erybjp] [17252:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-26 19:18:13,883 [werkzeug] [17252:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:18:13] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:18:20,269 [erybjp] [12884:Thread-3] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-26 19:18:20,270 [werkzeug] [12884:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:18:20] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:19:35,136 [erybjp] [3668:Thread-4] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-26 19:19:35,137 [werkzeug] [3668:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:19:35] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:20:37,085 [erybjp] [7020:Thread-5] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-26 19:20:37,085 [werkzeug] [7020:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:20:37] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:20:44,908 [werkzeug] [29140:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:20:53,103 [erybjp] [5844:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-26 19:20:53,105 [werkzeug] [5844:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:20:53] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:21:39,811 [erybjp] [3176:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-26 19:21:39,812 [werkzeug] [3176:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:21:39] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:22:09,514 [erybjp] [13984:Thread-3] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2021-07-26 19:22:09,515 [werkzeug] [13984:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:22:09] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:22:23,334 [werkzeug] [22748:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:22:27,055 [werkzeug] [27100:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:22:27] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:22:42,582 [erybjp] [25456:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 117, in upload_picture
+    if pictureName in result:
+TypeError: unhashable type: 'list'
+2021-07-26 19:22:42,584 [werkzeug] [25456:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:22:42] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:28:22,863 [erybjp] [17112:Thread-3] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 117, in upload_picture
+    if pictureName in result:
+TypeError: unhashable type: 'list'
+2021-07-26 19:28:22,864 [werkzeug] [17112:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:28:22] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:28:32,404 [werkzeug] [18576:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:28:34,667 [erybjp] [15600:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 117, in upload_picture
+    if pictureName in result:
+TypeError: unhashable type: 'list'
+2021-07-26 19:28:34,671 [werkzeug] [15600:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:28:34] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:29:35,578 [erybjp] [24232:Thread-2] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 117, in upload_picture
+    result = upload.upload_one_picture(pictureName)
+TypeError: unhashable type: 'list'
+2021-07-26 19:29:35,579 [werkzeug] [24232:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:29:35] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:30:20,633 [werkzeug] [10788:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:30:23,710 [erybjp] [29604:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 118, in upload_picture
+    if pictureName in result:
+TypeError: unhashable type: 'list'
+2021-07-26 19:30:23,726 [werkzeug] [29604:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:30:23] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 19:32:59,189 [werkzeug] [15548:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:32:59] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:35:17,251 [werkzeug] [19184:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:35:23,481 [werkzeug] [22436:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:35:23] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:35:27,535 [werkzeug] [20608:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:35:27] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:37:03,135 [werkzeug] [9544:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:37:05,681 [werkzeug] [30300:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:37:05] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:37:45,732 [werkzeug] [9404:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:37:45] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:38:54,334 [werkzeug] [24252:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:38:54] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:39:04,386 [werkzeug] [24972:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:39:06,833 [werkzeug] [21812:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:39:06] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:44:59,531 [werkzeug] [14132:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:45:35,173 [werkzeug] [26996:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:45:35] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:45:43,269 [werkzeug] [22468:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:45:47,679 [werkzeug] [23972:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:45:47] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:46:28,504 [werkzeug] [6228:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:46:28] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:46:40,876 [werkzeug] [21664:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:46:42,198 [werkzeug] [19948:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:46:42] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:52:26,191 [werkzeug] [30124:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:52:28,762 [werkzeug] [21116:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:52:28] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:52:45,057 [werkzeug] [30516:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:54:04,317 [werkzeug] [14284:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:54:06,218 [werkzeug] [3392:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:54:06] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:55:41,921 [werkzeug] [20408:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 19:55:44,351 [werkzeug] [26272:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:55:44] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 19:57:19,065 [werkzeug] [1400:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 19:57:19] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:05:33,106 [werkzeug] [13812:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:05:33] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:09:03,115 [werkzeug] [22832:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:09:05,706 [werkzeug] [7008:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:09:05] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:11:22,444 [werkzeug] [21568:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:12:33,136 [werkzeug] [3616:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:13:09,446 [werkzeug] [5284:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:13:11,916 [werkzeug] [13820:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:13:11] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:15:02,973 [werkzeug] [2468:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:17:55,722 [werkzeug] [29916:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:17:55] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:18:01,680 [werkzeug] [24492:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:18:31,944 [werkzeug] [27972:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:18:44,576 [werkzeug] [13352:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:18:44] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:20:32,203 [werkzeug] [21132:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:20:32] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:20:44,267 [werkzeug] [25140:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:20:47,410 [werkzeug] [30036:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:20:47] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:22:56,133 [werkzeug] [28420:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:22:56] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:26:14,672 [werkzeug] [1452:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:26:14] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:27:15,375 [werkzeug] [9080:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:27:17,665 [werkzeug] [29788:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:27:17] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:28:47,671 [werkzeug] [13940:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:28:47] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:28:49,027 [werkzeug] [14088:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:28:49] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:29:19,120 [werkzeug] [28052:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:29:21,537 [werkzeug] [340:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:29:21] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:29:24,430 [werkzeug] [468:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:29:24] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:29:31,607 [werkzeug] [21840:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:29:31] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:29:38,488 [werkzeug] [17204:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:29:38] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:29:48,179 [werkzeug] [16980:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:29:48] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:30:22,911 [werkzeug] [10320:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:30:22] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:30:33,946 [werkzeug] [26188:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:30:33] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:33:09,912 [werkzeug] [19996:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:33:21,506 [werkzeug] [8080:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:33:21] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:33:40,217 [werkzeug] [29468:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:33:54,868 [werkzeug] [25132:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:33:54] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:35:09,599 [werkzeug] [2088:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:35:11,723 [erybjp] [4328:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 122, in upload_picture
+    return jsonify(code=500,success=False,message=result["message"])
+TypeError: string indices must be integers
+2021-07-26 20:35:11,730 [werkzeug] [4328:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:35:11] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 20:37:41,802 [werkzeug] [18932:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:37:48,993 [erybjp] [9128:Thread-1] app.py:app:log_exception in 1891] [ERROR]: Exception on /element/upload/picture [POST]
+Traceback (most recent call last):
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_restful\__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lx\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\测试学习文档\erybjp-master\uiplatform\router\runtestcase.py", line 122, in upload_picture
+    return jsonify(code=500,success=False,message=result["message"])
+TypeError: string indices must be integers
+2021-07-26 20:37:48,996 [werkzeug] [9128:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:37:48] "[35m[1mPOST /element/upload/picture HTTP/1.1[0m" 500 -
+2021-07-26 20:40:04,575 [werkzeug] [14116:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:40:07,308 [werkzeug] [15340:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:40:07] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:40:47,632 [werkzeug] [16588:MainThread] _internal.py:_internal:_log in 113] [INFO]:  * Running on http://127.0.0.1:6851/ (Press CTRL+C to quit)
+2021-07-26 20:40:52,359 [werkzeug] [16432:Thread-1] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:40:52] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:40:54,713 [werkzeug] [10024:Thread-2] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:40:54] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:40:56,592 [werkzeug] [14724:Thread-3] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:40:56] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:40:57,340 [werkzeug] [4248:Thread-4] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:40:57] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:41:37,281 [werkzeug] [16288:Thread-5] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:41:37] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:41:49,373 [werkzeug] [29444:Thread-6] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:41:49] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:41:54,975 [werkzeug] [24600:Thread-7] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:41:54] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:42:04,466 [werkzeug] [10636:Thread-8] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:42:04] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:42:19,908 [werkzeug] [15408:Thread-9] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:42:19] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:42:24,703 [werkzeug] [13636:Thread-10] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:42:24] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:42:30,274 [werkzeug] [2428:Thread-11] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:42:30] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -
+2021-07-26 20:42:33,710 [werkzeug] [6348:Thread-12] _internal.py:_internal:_log in 113] [INFO]: 127.0.0.1 - - [26/Jul/2021 20:42:33] "[37mPOST /element/upload/picture HTTP/1.1[0m" 200 -

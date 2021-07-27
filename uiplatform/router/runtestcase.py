@@ -14,7 +14,8 @@ from threading import Thread
 from uiplatform.utils.business.cycle_check.temple import auto_check_tem
 from uiplatform.utils.business.cycle_check.test_jenkins_stage_production import TestJenkinsCompare
 from uiplatform.utils.common.BaseLoggers import logger
-
+from uiplatform.utils.business.ttest_course_puchase_h5_web import PurchasePacket
+from uiplatform.utils.common.comsrc import UploadPicture
 user = Blueprint('user', __name__)
 cur_dir = os.path.dirname(__file__).split('server')[0]
 
@@ -92,3 +93,32 @@ def testcase_run():
     arg = request.get_json()
     # 查询指定目录下文件夹
     pass
+
+@user.route('/buy/testpacket',methods=["get"])
+def test_purchase_packet():
+    '''购买非0元体验课 '''
+    buy = PurchasePacket()
+    message = buy.purse_price_not_zero()
+    exce_result = {"message":"非0体验课购买成功"}
+    if message == exce_result:
+        return jsonify(code=200,success=True,message=message["message"])
+    elif "图片验证码" in message:
+        return jsonify(code=500,success=False,message=message["message"])
+    else:
+        buy.sendding_buy_testpacket()
+        return jsonify(code=500,success=False,message=message["message"])
+
+@user.route('/upload/onepicture',methods=["POST"])
+def upload_picture():
+    upload = UploadPicture()
+    arg = request.get_json()
+    pictureName = arg.get("picturename")
+    print(pictureName)
+    result = upload.upload_one_picture(pictureName)
+    if isinstance(pictureName,str):
+        if pictureName in result:
+            return jsonify(code=200,success=True,picturename=result)
+        else:
+            return jsonify(code=500,success=False,message=result["message"])
+    else:
+        return jsonify(code=500, success=False, message=result["message"])

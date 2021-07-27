@@ -75,7 +75,10 @@ class Config(object):
     # 模板自动加载设置
     TEMPLATES_AUTO_RELOAD = True
     FLASK_ENV = "production"
-
+    #七牛云域名设置
+    QINIU_HOST = "qwugfk1sd.hn-bkt.clouddn.com"
+    #七牛云空间名称
+    QINIU_BACKET_NAME = "picturepath"
 
 
     # 静态回调, 引入APP

@@ -128,3 +128,30 @@ class  Jenkins(Page):
        new_production_built_element = Element(css='.build-search-row+tr [class="pane build-name"]') #production环境服务最新构建编号
        product_para_element = Element(css="a[title='Parameters']")
        new_production_built_data = Element(css = '.pane>tbody:nth-of-type(2) .setting-input')
+
+
+class TestCource(Page):
+    '''测试环境购买体验课'''
+    test_url_not_zero = "https://test-lbk-mobile.codemao.cn/integration/order?id=1546"  # 体验课价格不为0
+    phone_ele = Element(css='input[type="tel"]')  # 手机号码文本框
+    code_ele = Element(css='input[placeholder="请输入验证码"]')  # 验证码文本框
+    code_button_ele = Element(css='input[placeholder="请输入验证码"]~div')  # 获取验证码按钮
+    pay_button_ele = Element(css='div[class="button__TWz7N"]')  # 点击支付按钮
+    pay_type_ele = Elements(css='.name__3vOQb')  # 选择支付方式，第一个元素为微信支付，第二个元素为支付宝支付
+    test_use_phone = 18664939035  # 测试体验课购买用的手机号码
+
+    # 获取测试环境cookie登录接口的数据
+    login_url = "http://172.16.26.119/api/login"
+    login_method = "POST"
+    login_request_body = {"username": "wanyiliu", "password": "_Pk199353pk"}
+
+    # 测试环境删除订单接口的数据
+    delete_order_url = 'http://172.16.26.119/api/data/market/orders/delete'
+    delete_order_cookie = {"cookie": "monkey_token=2a36e549d85b4a03345f78159118cc1c967593dd"}
+    delete_order_method = "POST"
+    delete_order_request_body = {"userId": "1105500443", "env": "test"}
+
+    # 获取测试环境手机号验证码接口的数据
+    get_phone_code_url = 'http://172.16.26.119/api/data/third/platform/sms'
+    code_request_body = {"phoneNumber": "18664939036"}
+    get_code_method = "POST"
