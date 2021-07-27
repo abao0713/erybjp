@@ -20,6 +20,7 @@ from serialization import model_to_dict
 
 # 1.创建蓝图对象，url_prefix可以给蓝图添加统一的前缀url
 from uiplatform.services.ali_dingtalk import DingtalkRobot
+from uiplatform.utils.common.comsrc import UploadPicture
 
 manage = Blueprint('uiplatfrom', __name__)
 # 2.创建蓝图对应的api对象
@@ -228,8 +229,8 @@ class CaseResult(Resource):
         for json_new in json_data:
             json_new.update(case_dict_data[str(json_new["case_id"])][0])
             if "png" in json_new["fail_pic"]:
-                config_name = Config.FLASK_ENV
-                json_new["fail_pic"] = config[config_name].HOST+"data/picture/"+json_new["fail_pic"]
+                config_name = Config.QINIU_HOST
+                json_new["fail_pic"] = config_name+"/"+json_new["fail_pic"]
 
         return jsonify(code=200, msg="ok", cur_page=paginates.page, page=paginates.pages, data=json_data)
 
@@ -262,14 +263,17 @@ class CaseResult(Resource):
         model.session_id = args.get("session_id")
         model.save()
         if args.get("result") == "failed":
-            test_name = args.get("function_type")
+            test_name = model.title
             cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-            config_name = Config.FLASK_ENV
-            url = config[config_name].HOST+"data/picture/" + args.get("fail_pic")
-            print(url)
-            text = f"#### 巡检异常预警\n> 本次在运行测试用例{test_name}时探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
-            print(text)
-            DingtalkRobot(webhook=config[config_name].DINGURL,sign=config[config_name].DINGSIGN).send_markdown("巡检异常预警", text, [])
+            result_url = UploadPicture().upload_one_picture(args.get("fail_pic"))
+            if "http" in result_url:
+                print(result_url)
+                text = f"#### 巡检异常预警\n> 本次在运行测试用例 {test_name} 时探针检测失败判定页面打开失败,截图如下![screenshot]({result_url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({result_url}) \n"
+                print(text)
+                config_name = Config.FLASK_ENV
+                DingtalkRobot(webhook=config[config_name].DINGURL,sign=config[config_name].DINGSIGN).send_markdown("巡检异常预警", text, [])
+            else:
+                print(result_url["message"])
         return jsonify(code=200, msg="ok", data='')
 
 
