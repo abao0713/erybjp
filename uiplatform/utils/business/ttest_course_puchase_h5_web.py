@@ -17,10 +17,9 @@ from uiplatform.utils.common.Driver import browser_driver
 from uiplatform.utils.common.BaseAssert import BaseAssert
 import os
 from uiplatform.services.ali_dingtalk import DingtalkRobot
+from config import basedir
 
-
-# png = os.path.join(os.path.abspath("../"),f"data\picture\{str(time.time()*100000).split('.')[0]}.png") #失败之后截图
-png = os.path.join(os.path.abspath("../"),r"data\picture\testpacketbuy.png") #失败之后截图
+png = os.path.join(basedir,r"uiplatform\utils",r"data\picture\testpacketbuy.png") #失败之后截图
 
 
 class  PurchasePacket:
