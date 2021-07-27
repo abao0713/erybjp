@@ -76,7 +76,7 @@ class  PurchasePacket:
 
     def  setUp(self):
         global driver
-        driver = browser_driver(browser_name="chrome",headless=False,is_mobile=True,is_remote=False)
+        driver = browser_driver(browser_name="chrome",headless=False,is_mobile=True,is_remote=True)
         driver.maximize_window()
 
     def tearDowm(self):
