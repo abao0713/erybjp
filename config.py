@@ -75,7 +75,10 @@ class Config(object):
     # 模板自动加载设置
     TEMPLATES_AUTO_RELOAD = True
     FLASK_ENV = "production"
-
+    #七牛云域名设置
+    QINIU_HOST = "qwugfk1sd.hn-bkt.clouddn.com"
+    #七牛云空间名称
+    QINIU_BACKET_NAME = "picturepath"
 
 
     # 静态回调, 引入APP
@@ -99,7 +102,12 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     # 查询时会显示原始SQL语句
     SQLALCHEMY_ECHO = True
-
+    # 钉钉服务配置
+    DINGURL = "https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
+    DINGSIGN = "SEC4cf8edcdeb0cd0066b4f42e005585c833ec119c642b0c5bf2881d39a221d4940"
+    # 钉钉服务配置
+    DINGURL_CHECK = "https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
+    DINGSIGN_CHECK = "SEC4cf8edcdeb0cd0066b4f42e005585c833ec119c642b0c5bf2881d39a221d4940"
     @classmethod
     def init_app(cls, app):
         print('>>>>>Two: This app has update')
@@ -119,7 +127,12 @@ class ProductionConfig(Config):
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
     # 设置每次请求结束后会自动提交数据库中的改动
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
-
+    # 钉钉服务配置
+    DINGURL = "https://oapi.dingtalk.com/robot/send?access_token=94365d973019b26147e61de5e1ef23ad86d5ce8a4f36e6c56a03b72c681c8705"
+    DINGSIGN = "SEC4cf8edcdeb0cd0066b4f42e005585c833ec119c642b0c5bf2881d39a221d4940"
+    # 钉钉服务配置
+    DINGURL_CHECK = "https://oapi.dingtalk.com/robot/send?access_token=e8d376fc62d90de95d3905d9e4ad4f28b8c13cffdf0a36b82bcf6376e7a2f59a"
+    DINGSIGN_CHECK = "SECe38026d8d3fa1d406842069effbd67d2ef0768409e2d89d2cb69bb48c3d86e59"
 
     @classmethod
     def init_app(cls, app):

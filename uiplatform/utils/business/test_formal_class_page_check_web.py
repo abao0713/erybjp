@@ -18,7 +18,7 @@ class TestFormalClassPage:
 
     def setup_class(self):
         global driver
-        driver = browser_driver(browser_name="chrome", headless=False)
+        driver = browser_driver(browser_name="chrome", headless=False, is_remote=True)
         logger.info("前置处理类处理完成")
 
     def teardown_class(self):

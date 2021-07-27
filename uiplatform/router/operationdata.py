@@ -269,7 +269,7 @@ class CaseResult(Resource):
             print(url)
             text = f"#### 巡检异常预警\n> 本次在运行测试用例{test_name}时探针检测失败判定页面打开失败,截图如下![screenshot]({url})\n >\n> ###### {cur_time}提示，详情点击查看 [预警截图]({url}) \n"
             print(text)
-            DingtalkRobot().send_markdown("巡检异常预警", text, [])
+            DingtalkRobot(webhook=config[config_name].DINGURL,sign=config[config_name].DINGSIGN).send_markdown("巡检异常预警", text, [])
         return jsonify(code=200, msg="ok", data='')
 
 

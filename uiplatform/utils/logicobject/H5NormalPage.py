@@ -61,6 +61,26 @@ class GivequanPage(Page):
     search_lingqu1_element = Element(xpath="/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]",describe='页面中间领取按钮')
     search_lingqu2_element = Element(xpath="/html[1]/body[1]/div[1]/div[1]/div[3]/img[1]",describe='底部领取按钮')
 
+class  lbk_operational(Page):
+    """运营后台-新增课包"""
+    url_home = 'https://test-lbk-operational.codemao.cn/packages'
+    #跳转到登录页面
+    url_login = 'https://test-internal-account.codemao.cn/login'
+    admin_css = '[placeholder~=用户名]'
+    pwd_css = '[placeholder~=密码]'
+    submit_login_button = '.ant-btn'
+    adm_pwd = 'rc-tabs-0-tab-2'
+
+    # 跳转 https://test-lbk-operational.codemao.cn/packages/add
+    # add_package_button_css = 'ant-btn ant-btn-primary'
+    # add_package_button_class = 'ant-btn ant-btn-primary'
+    add_package_button_xpath = '//*[@id="root"]/div/section/div[2]/main/div[2]/div/section[1]/div/div[1]/a/button'
+    package_new_name_css = '[placeholder ~=请输入课程名称，限制20个字以内 ]'
+    content_list = '#contentType'  # 主要内容类型,包含编程课，艺术课，数学课,工程思维
+    teaching_platform = '[title ~= 教学平台]'  # NEMO KIDS IDE BOX2
+    businessType_css = '#businessType'  # 业务类型
+    attribute_css = '#attribute'  # 课包属性
+    submit_add_package = '.ant-btn ant-btn-primary'
 
 
 
@@ -108,3 +128,30 @@ class  Jenkins(Page):
        new_production_built_element = Element(css='.build-search-row+tr [class="pane build-name"]') #production环境服务最新构建编号
        product_para_element = Element(css="a[title='Parameters']")
        new_production_built_data = Element(css = '.pane>tbody:nth-of-type(2) .setting-input')
+
+
+class TestCource(Page):
+    '''测试环境购买体验课'''
+    test_url_not_zero = "https://test-lbk-mobile.codemao.cn/integration/order?id=1546"  # 体验课价格不为0
+    phone_ele = Element(css='input[type="tel"]')  # 手机号码文本框
+    code_ele = Element(css='input[placeholder="请输入验证码"]')  # 验证码文本框
+    code_button_ele = Element(css='input[placeholder="请输入验证码"]~div')  # 获取验证码按钮
+    pay_button_ele = Element(css='div[class="button__TWz7N"]')  # 点击支付按钮
+    pay_type_ele = Elements(css='.name__3vOQb')  # 选择支付方式，第一个元素为微信支付，第二个元素为支付宝支付
+    test_use_phone = 18664939035  # 测试体验课购买用的手机号码
+
+    # 获取测试环境cookie登录接口的数据
+    login_url = "http://172.16.26.119/api/login"
+    login_method = "POST"
+    login_request_body = {"username": "wanyiliu", "password": "_Pk199353pk"}
+
+    # 测试环境删除订单接口的数据
+    delete_order_url = 'http://172.16.26.119/api/data/market/orders/delete'
+    delete_order_cookie = {"cookie": "monkey_token=2a36e549d85b4a03345f78159118cc1c967593dd"}
+    delete_order_method = "POST"
+    delete_order_request_body = {"userId": "1105500443", "env": "test"}
+
+    # 获取测试环境手机号验证码接口的数据
+    get_phone_code_url = 'http://172.16.26.119/api/data/third/platform/sms'
+    code_request_body = {"phoneNumber": "18664939036"}
+    get_code_method = "POST"

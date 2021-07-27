@@ -1,5 +1,3 @@
-#__author__:wanyiliu
-
 import time
 
 # import pytest
@@ -13,7 +11,6 @@ from uiplatform.utils.common.Driver import browser_driver
 from uiplatform.utils.common.BaseLoggers import logger
 from selenium import webdriver
 from multiprocessing import Pool,Manager
-
 
 class  TestJenkinsCompare:
      def setUp(self):
@@ -103,7 +100,9 @@ class  TestJenkinsCompare:
          logger.info(f"校验对比耗时：{end_time-start_time}")
          if len(self.server_error_list)>0:
              text = "检测唯一标识码{}结果通知{}，请注意查收！".format(num,self.server_error_list)
-             DingtalkRobot().send_markdown("jenkins服务占用检测结果通知", text, [])
+             from config import Config, config
+             config_name = Config.FLASK_ENV
+             DingtalkRobot(webhook=config[config_name].DINGURL_CHECK,sign=config[config_name].DINGSIGN_CHECK).send_markdown("jenkins服务占用检测结果通知", text, [])
          else:
              logger.info("jenkins服务占用检测结果为服务无占用问题")
 
@@ -113,3 +112,4 @@ class  TestJenkinsCompare:
 
 if  __name__  == "__main__":
     TestJenkinsCompare().aliding_jenkins(["codemaster_codecamp_service",'lbk_web_customer',"lbk_activity","lbk_web_admin"],11111)
+ 
